@@ -1,6 +1,7 @@
 // Site-wide business details.
-// Backed by server/data/site-config.json so the Admin > Site Settings page
-// can edit contact info at runtime without touching code.
+// Backed by a JSON file so the Admin > Site Settings page can edit contact
+// info at runtime without touching code. On Render, set REVA_DATA_DIR to a
+// mounted persistent-disk path (for example /var/data).
 //
 // Admin credentials come from environment variables (ADMIN_USERNAME /
 // ADMIN_PASSWORD) when set, e.g. on Render, so the real password never has
@@ -8,7 +9,8 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA_FILE = path.join(__dirname, 'data', 'site-config.json');
+const DATA_DIR = process.env.REVA_DATA_DIR || path.join(__dirname, 'data');
+const DATA_FILE = path.join(DATA_DIR, 'site-config.json');
 
 const DEFAULTS = {
   siteName: 'REVA Acoustic',
@@ -37,6 +39,7 @@ function readConfig() {
 }
 
 function writeConfig(nextConfig) {
+  fs.mkdirSync(DATA_DIR, { recursive: true });
   fs.writeFileSync(DATA_FILE, JSON.stringify(nextConfig, null, 2));
 }
 
