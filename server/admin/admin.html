@@ -19,25 +19,60 @@
     height: 76px;
   }
   .admin-header img { height: 28px; }
-  .admin-wrap { padding: 40px 0 80px; }
-  .admin-tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 28px;
-  }
-  .admin-tab {
-    border: 1px solid #d7d7cf;
+  .admin-wrap { padding: 0; }
+  .admin-layout { display: flex; align-items: flex-start; gap: 0; padding: 32px 0 80px; }
+  .admin-sidebar {
+    width: 220px;
+    flex-shrink: 0;
     background: #fff;
-    padding: 10px 20px;
-    border-radius: 999px;
-    font-size: 0.88rem;
-    font-weight: 600;
-    cursor: pointer;
+    border: 1px solid #e7e7e2;
+    border-radius: var(--radius);
+    padding: 16px;
+    position: sticky;
+    top: 32px;
   }
-  .admin-tab.active {
-    background: var(--ink);
-    color: #fff;
-    border-color: var(--ink);
+  .side-nav-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+    padding: 10px 14px;
+    border-radius: 8px;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: var(--ink);
+    cursor: pointer;
+    margin-bottom: 2px;
+  }
+  .side-nav-item:hover { background: #f3f3ee; }
+  .side-nav-item.active { background: var(--ink); color: #fff; }
+  .side-nav-parent { display: flex; align-items: center; justify-content: space-between; gap: 8px; }
+  .side-nav-parent .chevron { display: inline-block; font-size: 0.7rem; transition: transform 0.15s ease; }
+  .side-nav-group.open .side-nav-parent .chevron { transform: rotate(90deg); }
+  .side-nav-children { display: none; padding-left: 10px; margin: 2px 0 6px; }
+  .side-nav-group.open .side-nav-children { display: block; }
+  .side-nav-child {
+    display: block;
+    width: 100%;
+    text-align: left;
+    border: none;
+    background: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    color: var(--muted);
+    cursor: pointer;
+    margin-bottom: 1px;
+  }
+  .side-nav-child:hover { background: #f3f3ee; color: var(--ink); }
+  .side-nav-child.active { background: #eceae2; color: var(--ink); font-weight: 600; }
+  .admin-main { flex: 1; min-width: 0; padding-left: 28px; }
+  @media (max-width: 860px) {
+    .admin-layout { flex-direction: column; }
+    .admin-sidebar { width: 100%; position: static; display: flex; flex-wrap: wrap; gap: 4px; }
+    .side-nav-group { width: 100%; }
+    .admin-main { padding-left: 0; padding-top: 24px; }
   }
   .admin-panel { display: none; }
   .admin-panel.active { display: block; }
@@ -251,6 +286,75 @@
     background: #fff;
     cursor: pointer;
   }
+
+  /* ---- Report ---- */
+  .report-subpanel { display: none; }
+  .report-subpanel.active { display: block; }
+  .report-toolbar { display: flex; gap: 12px; align-items: center; margin-bottom: 16px; flex-wrap: wrap; }
+  .report-toolbar select { padding: 6px 10px; border: 1px solid #d7d7cf; border-radius: 8px; font-size: 0.85rem; }
+  .report-toolbar label { font-size: 0.82rem; display: flex; align-items: center; gap: 6px; }
+  .chart-card {
+    background: #fff;
+    border: 1px solid #e7e7e2;
+    border-radius: var(--radius);
+    padding: 20px;
+    margin-bottom: 20px;
+    overflow-x: auto;
+  }
+  .chart-card h4 { margin: 0 0 14px; font-size: 0.9rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.05em; }
+  .device-split { display: flex; gap: 16px; margin-bottom: 20px; flex-wrap: wrap; }
+  .device-pill {
+    flex: 1;
+    min-width: 140px;
+    background: #fff;
+    border: 1px solid #e7e7e2;
+    border-radius: 12px;
+    padding: 14px 18px;
+  }
+  .device-pill .pct { font-size: 1.3rem; font-weight: 700; }
+  .device-pill .lbl { font-size: 0.76rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .platform-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+  }
+  .platform-card { background: #fff; border: 1px solid #e7e7e2; border-radius: var(--radius); padding: 18px; }
+  .platform-card h4 { margin: 0 0 10px; font-size: 1rem; }
+  .platform-card .stat-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.84rem;
+    padding: 4px 0;
+    border-bottom: 1px dashed #eceae2;
+  }
+  .platform-card .stat-row:last-child { border-bottom: none; }
+  .goal-progress { background: #eceae2; border-radius: 999px; height: 22px; overflow: hidden; margin: 14px 0; }
+  .goal-progress-fill {
+    background: var(--ink);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding-right: 10px;
+    white-space: nowrap;
+  }
+  .goal-stat-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0; }
+  @media (max-width: 700px) { .goal-stat-grid { grid-template-columns: 1fr; } }
+  .goal-stat-cell { border-left: 4px solid var(--ink); padding: 10px 14px; background: #fafaf7; border-radius: 8px; font-size: 0.86rem; }
+  .goal-stat-cell .lbl { font-size: 0.74rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 4px; }
+  .goal-stat-cell.website { border-left-color: #4a90d9; }
+  .goal-stat-cell.portal { border-left-color: #d9534f; }
+  .goal-stat-cell.combined { border-left-color: #2fb37a; }
+  .goal-form-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0 16px; }
+  @media (max-width: 700px) { .goal-form-grid { grid-template-columns: 1fr; } }
+  .empty-note { color: var(--muted); font-size: 0.85rem; padding: 12px 0; }
+  .report-feed { list-style: none; padding: 0; margin: 0; }
+  .report-feed li { padding: 8px 0; border-bottom: 1px dashed #eceae2; font-size: 0.85rem; }
+  .report-feed li:last-child { border-bottom: none; }
 </style>
 </head>
 <body>
@@ -267,14 +371,32 @@
 
 <section class="admin-wrap">
   <div class="container">
-    <div class="admin-tabs">
-      <button class="admin-tab active" data-tab="quotes">Quote Requests</button>
-      <button class="admin-tab" data-tab="products">Products</button>
-      <button class="admin-tab" data-tab="finishes">Finishes</button>
-      <button class="admin-tab" data-tab="settings">Site Settings</button>
-    </div>
+    <div class="admin-layout">
+      <aside class="admin-sidebar">
+        <button class="side-nav-item active" data-tab="quotes">Quote Requests</button>
+        <button class="side-nav-item" data-tab="products">Products</button>
+        <button class="side-nav-item" data-tab="finishes">Finishes</button>
+        <button class="side-nav-item" data-tab="settings">Site Settings</button>
+        <div class="side-nav-group" id="side-nav-report-group">
+          <button class="side-nav-item side-nav-parent" data-tab="report">
+            <span>Report</span><span class="chevron">&#9656;</span>
+          </button>
+          <div class="side-nav-children">
+            <button class="side-nav-child active" data-subtab="landing">Landing Pages</button>
+            <button class="side-nav-child" data-subtab="search">Search</button>
+            <button class="side-nav-child" data-subtab="whatsapp">WhatsApp Clicks</button>
+            <button class="side-nav-child" data-subtab="platform">Platform Traffic</button>
+            <button class="side-nav-child" data-subtab="goal">Traffic Goal</button>
+          </div>
+        </div>
+      </aside>
 
+      <main class="admin-main">
     <div class="admin-panel active" id="panel-quotes">
+      <div class="chart-card">
+        <h4>Monthly Website Enquiry</h4>
+        <div id="quotes-chart"></div>
+      </div>
       <div class="summary-row" id="quotes-summary"></div>
       <div class="admin-card" style="overflow-x:auto;">
         <table class="quotes-table" id="quotes-table">
@@ -373,17 +495,150 @@
         </form>
       </div>
     </div>
+
+    <div class="admin-panel" id="panel-report">
+      <div class="report-subpanel active" id="report-panel-landing">
+        <div class="report-toolbar">
+          <select id="landing-month"></select>
+          <label><input type="checkbox" id="landing-unique-ip" /> Unique IP only</label>
+        </div>
+        <div class="chart-card">
+          <h4>Monthly Landing Pages</h4>
+          <div id="landing-chart"></div>
+        </div>
+        <div class="summary-row" id="landing-summary"></div>
+        <div class="device-split" id="landing-device"></div>
+        <div class="admin-card" style="overflow-x:auto;">
+          <table class="quotes-table" id="landing-table">
+            <thead><tr><th>When</th><th>Page</th><th>Engine From</th><th>Region</th><th>Device</th></tr></thead>
+            <tbody id="landing-tbody"><tr><td colspan="5" class="loading-row">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="report-subpanel" id="report-panel-search">
+        <div class="report-toolbar">
+          <select id="search-month"></select>
+          <label><input type="checkbox" id="search-top" /> Top 50 keywords</label>
+        </div>
+        <div class="chart-card">
+          <h4>Monthly Website Search</h4>
+          <div id="search-chart"></div>
+        </div>
+        <div class="summary-row" id="search-summary"></div>
+        <div class="admin-card" style="overflow-x:auto;">
+          <table class="quotes-table" id="search-table">
+            <thead id="search-thead"><tr><th>When</th><th>Keyword</th><th>Type</th><th>From</th><th>Results</th></tr></thead>
+            <tbody id="search-tbody"><tr><td colspan="5" class="loading-row">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="report-subpanel" id="report-panel-whatsapp">
+        <div class="report-toolbar">
+          <select id="whatsapp-month"></select>
+          <label><input type="checkbox" id="whatsapp-unique-ip" /> Unique IP only</label>
+        </div>
+        <div class="chart-card">
+          <h4>Monthly WhatsApp Clicks</h4>
+          <div id="whatsapp-chart"></div>
+        </div>
+        <div class="summary-row" id="whatsapp-summary"></div>
+        <div class="admin-card" style="overflow-x:auto;">
+          <table class="quotes-table" id="whatsapp-table">
+            <thead><tr><th>When</th><th>Page</th><th>Source</th><th>Engine</th><th>Region</th></tr></thead>
+            <tbody id="whatsapp-tbody"><tr><td colspan="5" class="loading-row">Loading...</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="report-subpanel" id="report-panel-platform">
+        <div class="chart-card">
+          <h4>Monthly Unique Platform Traffic</h4>
+          <div id="platform-chart"></div>
+        </div>
+        <div class="platform-grid" id="platform-grid"></div>
+        <div class="admin-card">
+          <h4 style="margin-top:0;color:var(--muted);font-size:0.9rem;text-transform:uppercase;letter-spacing:0.05em;">Recent Arrivals</h4>
+          <ul class="report-feed" id="platform-feed"></ul>
+        </div>
+      </div>
+
+      <div class="report-subpanel" id="report-panel-goal">
+        <div class="admin-card" style="margin-bottom:20px;">
+          <p id="goal-defaults-note" class="empty-note" style="display:none;">Using default values — set your own goal below.</p>
+          <p id="goal-sentence" style="font-size:0.95rem;"></p>
+          <div class="goal-progress"><div class="goal-progress-fill" id="goal-progress-fill" style="width:0%;"></div></div>
+          <p class="empty-note">Portal visitors read 0 — no marketplace/portal feed is connected for this site.</p>
+          <div class="goal-stat-grid" id="goal-stat-grid"></div>
+        </div>
+        <div class="chart-card">
+          <h4>Daily Visitors vs. Goal</h4>
+          <div id="goal-chart"></div>
+        </div>
+        <div class="admin-card" style="max-width:720px;">
+          <h3 style="margin-top:0;">Goal Settings</h3>
+          <form id="goal-form">
+            <div class="goal-form-grid">
+              <div class="field">
+                <label for="goal-start">Start date</label>
+                <input type="date" id="goal-start" name="start" />
+              </div>
+              <div class="field">
+                <label for="goal-target">Visitor target</label>
+                <input type="number" id="goal-target" name="target" min="1" />
+              </div>
+              <div class="field">
+                <label for="goal-until">Deadline</label>
+                <input type="date" id="goal-until" name="until" />
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Save Goal</button>
+            <div id="goal-status" class="form-status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+      </main>
+    </div>
   </div>
 </section>
 
 <script>
   // ---- Tabs ----
-  document.querySelectorAll('.admin-tab').forEach((tab) => {
-    tab.addEventListener('click', () => {
-      document.querySelectorAll('.admin-tab').forEach((t) => t.classList.remove('active'));
-      document.querySelectorAll('.admin-panel').forEach((p) => p.classList.remove('active'));
-      tab.classList.add('active');
-      document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
+  function activateMainTab(key) {
+    document.querySelectorAll('.side-nav-item').forEach((el) => el.classList.remove('active'));
+    document.querySelectorAll('.admin-panel').forEach((p) => p.classList.remove('active'));
+    document.querySelector(`.side-nav-item[data-tab="${key}"]`).classList.add('active');
+    document.getElementById(`panel-${key}`).classList.add('active');
+  }
+
+  function activateReportSubtab(key) {
+    document.querySelectorAll('.side-nav-child').forEach((el) => el.classList.remove('active'));
+    document.querySelectorAll('.report-subpanel').forEach((p) => p.classList.remove('active'));
+    document.querySelector(`.side-nav-child[data-subtab="${key}"]`).classList.add('active');
+    document.getElementById(`report-panel-${key}`).classList.add('active');
+    loadReportSubtab(key);
+  }
+
+  document.querySelectorAll('.side-nav-item:not(.side-nav-parent)').forEach((item) => {
+    item.addEventListener('click', () => activateMainTab(item.dataset.tab));
+  });
+
+  const reportGroup = document.getElementById('side-nav-report-group');
+  reportGroup.querySelector('.side-nav-parent').addEventListener('click', () => {
+    reportGroup.classList.toggle('open');
+    activateMainTab('report');
+    const activeChild = reportGroup.querySelector('.side-nav-child.active');
+    activateReportSubtab(activeChild ? activeChild.dataset.subtab : 'landing');
+  });
+
+  reportGroup.querySelectorAll('.side-nav-child').forEach((child) => {
+    child.addEventListener('click', (e) => {
+      e.stopPropagation();
+      reportGroup.classList.add('open');
+      activateMainTab('report');
+      activateReportSubtab(child.dataset.subtab);
     });
   });
 
@@ -392,6 +647,85 @@
 
   function escapeHtml(str) {
     return String(str || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  // ---- Shared report chart helper ----
+  const MONTH_ABBR = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+
+  function axisLabel(labelKey, value) {
+    if (labelKey === 'month') {
+      const mm = parseInt(String(value).slice(5, 7), 10);
+      return MONTH_ABBR[mm - 1] || value;
+    }
+    return String(value).slice(5);
+  }
+
+  function drawChart(containerEl, series, opts = {}) {
+    const { type = 'bar', valueKey = 'total', labelKey = 'month', color = 'var(--ink)', marker = null, height = 160 } = opts;
+    if (!containerEl) return;
+    if (!series || !series.length) {
+      containerEl.innerHTML = '<p class="empty-note">No data yet.</p>';
+      return;
+    }
+
+    const width = type === 'bar' ? Math.max(320, Math.min(900, series.length * 42)) : 760;
+    const padL = 36, padR = 10, padT = 16, padB = 28;
+    const plotW = width - padL - padR;
+    const plotH = height - padT - padB;
+    const max = Math.max(1, ...series.map((d) => Number(d[valueKey]) || 0));
+
+    let inner = '';
+    for (let i = 0; i <= 4; i += 1) {
+      const y = padT + (plotH * i) / 4;
+      const val = Math.round(max - (max * i) / 4);
+      inner += `<line x1="${padL}" y1="${y}" x2="${width - padR}" y2="${y}" stroke="#eceae2" stroke-width="1" />`;
+      inner += `<text x="${padL - 6}" y="${y + 3}" font-size="9" fill="var(--muted)" text-anchor="end">${val}</text>`;
+    }
+
+    if (type === 'bar') {
+      const bw = Math.max(10, (plotW / series.length) * 0.6);
+      series.forEach((d, i) => {
+        const x = padL + (plotW * (i + 0.5)) / series.length - bw / 2;
+        const v = Number(d[valueKey]) || 0;
+        const h = (v / max) * plotH;
+        const y = padT + plotH - h;
+        inner += `<rect x="${x}" y="${y}" width="${bw}" height="${Math.max(h, 1)}" fill="${color}" rx="3"></rect>`;
+        inner += `<text x="${x + bw / 2}" y="${padT + plotH + 16}" font-size="9" fill="var(--muted)" text-anchor="middle">${escapeHtml(axisLabel(labelKey, d[labelKey]))}</text>`;
+      });
+    } else {
+      const pts = series.map((d, i) => {
+        const x = padL + (plotW * i) / Math.max(1, series.length - 1);
+        const v = Number(d[valueKey]) || 0;
+        const y = padT + plotH - (v / max) * plotH;
+        return [x, y];
+      });
+      inner += `<polyline points="${pts.map((p) => p.join(',')).join(' ')}" fill="none" stroke="${color}" stroke-width="2"></polyline>`;
+      pts.forEach((p) => {
+        inner += `<circle cx="${p[0]}" cy="${p[1]}" r="2.5" fill="${color}"></circle>`;
+      });
+      const labelEvery = Math.max(1, Math.ceil(series.length / 6));
+      series.forEach((d, i) => {
+        if (i % labelEvery === 0 || i === series.length - 1) {
+          const x = padL + (plotW * i) / Math.max(1, series.length - 1);
+          inner += `<text x="${x}" y="${padT + plotH + 16}" font-size="9" fill="var(--muted)" text-anchor="middle">${escapeHtml(axisLabel(labelKey, d[labelKey]))}</text>`;
+        }
+      });
+      if (marker) {
+        const idx = series.findIndex((d) => d[labelKey] === marker);
+        if (idx >= 0) {
+          const x = padL + (plotW * idx) / Math.max(1, series.length - 1);
+          inner += `<line x1="${x}" y1="${padT}" x2="${x}" y2="${padT + plotH}" stroke="#2fb37a" stroke-width="1.5" stroke-dasharray="4,3"></line>`;
+          inner += `<text x="${x}" y="${padT - 4}" font-size="9" fill="#2fb37a" text-anchor="middle">Goal reached</text>`;
+        }
+      }
+    }
+
+    containerEl.innerHTML = `<svg viewBox="0 0 ${width} ${height}" width="100%" height="${height}" preserveAspectRatio="xMinYMin meet">${inner}</svg>`;
+  }
+
+  function monthOptionsHtml(months, selected) {
+    if (!months || !months.length) return '<option value="">No data yet</option>';
+    return months.map((m) => `<option value="${m}" ${m === selected ? 'selected' : ''}>${m}</option>`).join('');
   }
 
   // ---- Quote requests ----
@@ -404,8 +738,27 @@
       const quotes = await res.json();
 
       const newCount = quotes.filter((q) => !q.handled).length;
+
+      const monthCounts = {};
+      quotes.forEach((q) => {
+        const d = new Date(q.createdAt);
+        if (isNaN(d)) return;
+        const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+        monthCounts[key] = (monthCounts[key] || 0) + 1;
+      });
+      const now = new Date();
+      const chartSeries = [];
+      for (let i = 11; i >= 0; i -= 1) {
+        const d = new Date(now.getFullYear(), now.getMonth() - i, 1);
+        const key = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}`;
+        chartSeries.push({ month: key, total: monthCounts[key] || 0 });
+      }
+      drawChart(document.getElementById('quotes-chart'), chartSeries, { color: '#7a5c00' });
+      const thisMonthKey = `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, '0')}`;
+
       summary.innerHTML = `
-        <div class="summary-pill"><div class="num">${quotes.length}</div><div class="lbl">Total enquiries</div></div>
+        <div class="summary-pill"><div class="num">${monthCounts[thisMonthKey] || 0}</div><div class="lbl">This month</div></div>
+        <div class="summary-pill"><div class="num">${quotes.length}</div><div class="lbl">Lifetime enquiries</div></div>
         <div class="summary-pill"><div class="num">${newCount}</div><div class="lbl">New</div></div>
         <div class="summary-pill"><div class="num">${quotes.length - newCount}</div><div class="lbl">Handled</div></div>
       `;
@@ -720,6 +1073,319 @@
       statusEl.className = 'form-status show error';
     }
   });
+
+  // ---- Report ----
+  const loadedReportSubtabs = new Set();
+
+  function loadReportSubtab(key) {
+    if (loadedReportSubtabs.has(key)) return;
+    loadedReportSubtabs.add(key);
+    REPORT_LOADERS[key]();
+  }
+
+  // -- Landing Pages --
+  let landingCache = null;
+
+  async function loadReportLanding(month) {
+    const tbody = document.getElementById('landing-tbody');
+    try {
+      const url = '/api/admin/report/landing?top=1' + (month ? `&month=${month}` : '');
+      const res = await fetch(url);
+      const data = await res.json();
+      landingCache = data;
+
+      drawChart(document.getElementById('landing-chart'), data.chart, { color: '#4a90d9' });
+      document.getElementById('landing-summary').innerHTML = `
+        <div class="summary-pill"><div class="num">${data.currentMonthTotal}</div><div class="lbl">This month</div></div>
+        <div class="summary-pill"><div class="num">${data.lifetimeTotal}</div><div class="lbl">Lifetime</div></div>
+      `;
+      document.getElementById('landing-device').innerHTML = `
+        <div class="device-pill"><div class="pct">${data.deviceSplit.desktopPct}%</div><div class="lbl">Desktop</div></div>
+        <div class="device-pill"><div class="pct">${data.deviceSplit.mobilePct}%</div><div class="lbl">Mobile + Tablet</div></div>
+      `;
+
+      const monthSelect = document.getElementById('landing-month');
+      monthSelect.innerHTML = monthOptionsHtml(data.availableMonths, data.month);
+      monthSelect.onchange = () => loadReportLanding(monthSelect.value);
+
+      renderLandingRows();
+    } catch (err) {
+      tbody.innerHTML = '<tr><td colspan="5" class="loading-row">Could not load landing page data.</td></tr>';
+    }
+  }
+
+  function renderLandingRows() {
+    const tbody = document.getElementById('landing-tbody');
+    if (!landingCache) return;
+    const uniqueOnly = document.getElementById('landing-unique-ip').checked;
+    let rows = landingCache.rows;
+    if (uniqueOnly) {
+      const seen = new Set();
+      rows = rows.filter((r) => {
+        const key = r.i || r.t;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+    if (!rows.length) {
+      tbody.innerHTML = '<tr><td colspan="5" class="loading-row">No landing pages recorded for this month yet.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = rows.slice(0, 200).map((r) => `
+      <tr>
+        <td>${new Date(r.t).toLocaleString()}</td>
+        <td>${escapeHtml(r.p)}</td>
+        <td>${escapeHtml(r.e)}</td>
+        <td>${escapeHtml(r.c)}</td>
+        <td>${escapeHtml(r.d)}</td>
+      </tr>
+    `).join('');
+  }
+
+  document.getElementById('landing-unique-ip').addEventListener('change', renderLandingRows);
+
+  // -- Website Search --
+  let searchCache = null;
+
+  async function loadReportSearch(month) {
+    const tbody = document.getElementById('search-tbody');
+    try {
+      const url = '/api/admin/report/search?top=1' + (month ? `&month=${month}` : '');
+      const res = await fetch(url);
+      const data = await res.json();
+      searchCache = data;
+
+      drawChart(document.getElementById('search-chart'), data.chart, { color: '#2fb37a' });
+      document.getElementById('search-summary').innerHTML = `
+        <div class="summary-pill"><div class="num">${data.currentMonthTotal}</div><div class="lbl">This month</div></div>
+        <div class="summary-pill"><div class="num">${data.lifetimeTotal}</div><div class="lbl">Lifetime</div></div>
+      `;
+
+      const monthSelect = document.getElementById('search-month');
+      monthSelect.innerHTML = monthOptionsHtml(data.availableMonths, data.month);
+      monthSelect.onchange = () => loadReportSearch(monthSelect.value);
+
+      renderSearchRows();
+    } catch (err) {
+      tbody.innerHTML = '<tr><td colspan="5" class="loading-row">Could not load search data.</td></tr>';
+    }
+  }
+
+  function renderSearchRows() {
+    const tbody = document.getElementById('search-tbody');
+    const thead = document.getElementById('search-thead');
+    if (!searchCache) return;
+    const top = document.getElementById('search-top').checked;
+
+    if (top) {
+      thead.innerHTML = '<tr><th>Keyword</th><th>Type</th><th>Searches</th><th>Avg Results</th><th>No-Result Count</th></tr>';
+      const top50 = searchCache.top50 || [];
+      if (!top50.length) {
+        tbody.innerHTML = '<tr><td colspan="5" class="loading-row">No searches recorded for this month yet.</td></tr>';
+        return;
+      }
+      tbody.innerHTML = top50.map((k) => `
+        <tr>
+          <td>${escapeHtml(k.keyword)}</td>
+          <td>${escapeHtml(k.type)}</td>
+          <td>${k.count}</td>
+          <td>${k.avgResults}</td>
+          <td>${k.zeroResults}</td>
+        </tr>
+      `).join('');
+      return;
+    }
+
+    thead.innerHTML = '<tr><th>When</th><th>Keyword</th><th>Type</th><th>From</th><th>Results</th></tr>';
+    const rows = searchCache.rows;
+    if (!rows.length) {
+      tbody.innerHTML = '<tr><td colspan="5" class="loading-row">No searches recorded for this month yet.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = rows.slice(0, 200).map((r) => `
+      <tr>
+        <td>${new Date(r.t).toLocaleString()}</td>
+        <td>${escapeHtml(r.k)}</td>
+        <td>${escapeHtml(r.y)}</td>
+        <td>${escapeHtml(r.f)}</td>
+        <td>${r.r == null ? '—' : r.r}</td>
+      </tr>
+    `).join('');
+  }
+
+  document.getElementById('search-top').addEventListener('change', renderSearchRows);
+
+  // -- WhatsApp Click Report --
+  let whatsappCache = null;
+
+  async function loadReportWhatsapp(month) {
+    const tbody = document.getElementById('whatsapp-tbody');
+    try {
+      const url = '/api/admin/report/whatsapp' + (month ? `?month=${month}` : '');
+      const res = await fetch(url);
+      const data = await res.json();
+      whatsappCache = data;
+
+      drawChart(document.getElementById('whatsapp-chart'), data.chart, { color: '#2fb37a' });
+      document.getElementById('whatsapp-summary').innerHTML = `
+        <div class="summary-pill"><div class="num">${data.currentMonthTotal}</div><div class="lbl">This month</div></div>
+        <div class="summary-pill"><div class="num">${data.lifetimeTotal}</div><div class="lbl">Lifetime</div></div>
+      `;
+
+      const monthSelect = document.getElementById('whatsapp-month');
+      monthSelect.innerHTML = monthOptionsHtml(data.availableMonths, data.month);
+      monthSelect.onchange = () => loadReportWhatsapp(monthSelect.value);
+
+      renderWhatsappRows();
+    } catch (err) {
+      tbody.innerHTML = '<tr><td colspan="5" class="loading-row">Could not load WhatsApp click data.</td></tr>';
+    }
+  }
+
+  function renderWhatsappRows() {
+    const tbody = document.getElementById('whatsapp-tbody');
+    if (!whatsappCache) return;
+    const uniqueOnly = document.getElementById('whatsapp-unique-ip').checked;
+    let rows = whatsappCache.rows;
+    if (uniqueOnly) {
+      const seen = new Set();
+      rows = rows.filter((r) => {
+        const key = r.i || r.t;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+    }
+    if (!rows.length) {
+      tbody.innerHTML = '<tr><td colspan="5" class="loading-row">No WhatsApp clicks recorded for this month yet.</td></tr>';
+      return;
+    }
+    tbody.innerHTML = rows.slice(0, 200).map((r) => `
+      <tr>
+        <td>${new Date(r.t).toLocaleString()}</td>
+        <td>${escapeHtml(r.p)}</td>
+        <td>${escapeHtml(r.s)}</td>
+        <td>${escapeHtml(r.e)}</td>
+        <td>${escapeHtml(r.c)}</td>
+      </tr>
+    `).join('');
+  }
+
+  document.getElementById('whatsapp-unique-ip').addEventListener('change', renderWhatsappRows);
+
+  // -- Platform Traffic --
+  async function loadReportPlatform() {
+    const gridEl = document.getElementById('platform-grid');
+    const feedEl = document.getElementById('platform-feed');
+    try {
+      const res = await fetch('/api/admin/report/platform');
+      const data = await res.json();
+
+      drawChart(document.getElementById('platform-chart'), data.chart, { type: 'line', color: '#2fb37a' });
+
+      gridEl.innerHTML = data.platforms.length
+        ? data.platforms.map((p) => `
+            <div class="platform-card">
+              <h4>${escapeHtml(p.engine)}</h4>
+              <div class="stat-row"><span>This month</span><span>${p.thisMonth}</span></div>
+              <div class="stat-row"><span>Last month</span><span>${p.lastMonth}</span></div>
+              <div class="stat-row"><span>Lifetime</span><span>${p.lifetime}</span></div>
+              <div class="stat-row"><span>Since</span><span>${p.since ? new Date(p.since).toLocaleDateString() : '—'}</span></div>
+              ${p.host ? `<div class="stat-row"><span>Host</span><span>${escapeHtml(p.host)}</span></div>` : ''}
+            </div>
+          `).join('')
+        : '<p class="empty-note">No platform-attributed visits recorded yet.</p>';
+
+      feedEl.innerHTML = data.recent.length
+        ? data.recent.map((r) => `
+            <li><strong>${escapeHtml(r.e)}</strong> visitor landed on ${escapeHtml(r.p)} — ${new Date(r.t).toLocaleString()}</li>
+          `).join('')
+        : '<li class="empty-note">No recent platform arrivals yet.</li>';
+    } catch (err) {
+      gridEl.innerHTML = '<p class="loading-row">Could not load platform traffic.</p>';
+    }
+  }
+
+  // -- Traffic Guarantee --
+  async function loadReportGoal() {
+    try {
+      const res = await fetch('/api/admin/report/goal');
+      const data = await res.json();
+      renderGoal(data);
+    } catch (err) {
+      document.getElementById('goal-sentence').textContent = 'Could not load the traffic goal.';
+    }
+  }
+
+  function renderGoal(data) {
+    document.getElementById('goal-start').value = data.goal.start;
+    document.getElementById('goal-target').value = data.goal.target;
+    document.getElementById('goal-until').value = data.goal.until;
+
+    document.getElementById('goal-defaults-note').style.display = data.goal.usingDefaults ? 'block' : 'none';
+
+    const fill = document.getElementById('goal-progress-fill');
+    fill.style.width = `${data.progressPct}%`;
+    fill.textContent = `${data.progressPct}%`;
+
+    document.getElementById('goal-sentence').textContent =
+      `The Traffic Guarantee commenced on ${data.goal.start} with a goal of ${data.goal.target.toLocaleString()} visitors before ${data.goal.until}. ` +
+      `${data.sumA.toLocaleString()} visitors so far` +
+      (data.achievedDate ? ` — goal achieved on ${data.achievedDate}.` : '.');
+
+    function cell(label, cls, s) {
+      return `
+        <div class="goal-stat-cell ${cls}">
+          <div class="lbl">${label}</div>
+          <div>Avg/day: <strong>${s.avg}</strong></div>
+          <div>High: <strong>${s.high ? s.high.value : '—'}</strong>${s.high ? ' (' + s.high.date + ')' : ''}</div>
+          <div>Low: <strong>${s.low ? s.low.value : '—'}</strong>${s.low ? ' (' + s.low.date + ')' : ''}</div>
+        </div>
+      `;
+    }
+    document.getElementById('goal-stat-grid').innerHTML =
+      cell('Website', 'website', data.stats.website) +
+      cell('Portal', 'portal', data.stats.portal) +
+      cell('Combined', 'combined', data.stats.combined);
+
+    drawChart(document.getElementById('goal-chart'), data.series, {
+      type: 'line', valueKey: 'a', labelKey: 'date', color: '#2fb37a', marker: data.achievedDate,
+    });
+  }
+
+  document.getElementById('goal-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const statusEl = document.getElementById('goal-status');
+    const payload = {
+      start: document.getElementById('goal-start').value,
+      target: Number(document.getElementById('goal-target').value),
+      until: document.getElementById('goal-until').value,
+    };
+    try {
+      const res = await fetch('/api/admin/report/goal', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Save failed');
+      statusEl.textContent = 'Saved.';
+      statusEl.className = 'form-status show success';
+      loadReportGoal();
+    } catch (err) {
+      statusEl.textContent = err.message;
+      statusEl.className = 'form-status show error';
+    }
+  });
+
+  const REPORT_LOADERS = {
+    landing: () => loadReportLanding(),
+    search: () => loadReportSearch(),
+    whatsapp: () => loadReportWhatsapp(),
+    platform: loadReportPlatform,
+    goal: loadReportGoal,
+  };
 
   loadFinishes().then(loadQuotes);
   loadProducts();

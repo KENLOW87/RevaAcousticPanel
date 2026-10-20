@@ -44,6 +44,29 @@
   });
 })();
 
+// Fire-and-forget click tracking for outbound WhatsApp links. Purely
+// observational — never blocks or alters the link's own navigation.
+(function () {
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    if (!/wa\.me|api\.whatsapp|whatsapp\.com/i.test(link.href)) return;
+
+    const page = location.pathname.replace(/^\/+/, '') || 'index.html';
+    const payload = JSON.stringify({ action: 'whatsapp', page });
+    if (navigator.sendBeacon) {
+      navigator.sendBeacon('/api/track/click', new Blob([payload], { type: 'application/json' }));
+    } else {
+      fetch('/api/track/click', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: payload,
+        keepalive: true,
+      }).catch(() => {});
+    }
+  });
+})();
+
 async function loadSiteConfig() {
   try {
     const res = await fetch('/api/config');

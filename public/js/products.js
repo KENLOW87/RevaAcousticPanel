@@ -14,6 +14,8 @@
   let allColors = [];
   let activeColor = null;
   let searchTerm = '';
+  let lastResultCount = 0;
+  let searchReportTimer = null;
 
   async function init() {
     try {
@@ -72,6 +74,7 @@
 
   function render() {
     const filtered = allProducts.filter((p) => matchesColor(p) && matchesSearch(p));
+    lastResultCount = filtered.length;
 
     if (resultCount) {
       resultCount.textContent = `${filtered.length} design${filtered.length === 1 ? '' : 's'}`;
@@ -134,10 +137,27 @@
     return card;
   }
 
+  function reportSearch(keyword) {
+    if (!keyword) return;
+    fetch('/api/track/search', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        keyword,
+        page: location.pathname.replace(/^\/+/, '') || 'index.html',
+        resultCount: lastResultCount,
+      }),
+    }).catch(() => {});
+  }
+
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchTerm = e.target.value.trim().toLowerCase();
       render();
+
+      clearTimeout(searchReportTimer);
+      const keyword = searchTerm;
+      searchReportTimer = setTimeout(() => reportSearch(keyword), 600);
     });
   }
 
