@@ -835,6 +835,7 @@ section {
 .product-category {
   grid-column: 1 / -1;
   min-width: 0;
+  padding: 0;
 }
 
 .product-category + .product-category {
