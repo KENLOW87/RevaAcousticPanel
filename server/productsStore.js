@@ -1,6 +1,6 @@
 // Merges the auto-generated product catalog (server/data/products.json,
 // rebuilt from the product images by build-products.js) with admin-editable
-// overrides (name / description / active per product, shared finish names),
+// overrides (name / category / description / active per product, shared finish names),
 // so re-running build-products.js never wipes out admin edits.
 const fs = require('fs');
 const path = require('path');
@@ -90,6 +90,7 @@ function mergeProduct(base, overrides) {
   return {
     ...base,
     name: override.name || base.name,
+    category: override.category || base.category || 'Other designs',
     description: override.description || base.description,
     active: override.active !== undefined ? override.active : true,
     colors: applyFinishNames(base.colors),

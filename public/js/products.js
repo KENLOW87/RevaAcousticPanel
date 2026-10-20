@@ -23,6 +23,15 @@
   let searchTerm = '';
   let lastResultCount = 0;
   let searchReportTimer = null;
+  const categoryOrder = [
+    'Geometric / Facet',
+    'Linear / Ribbed',
+    'Chevron / Rhythm',
+    'Curves / Arch',
+    'Grid / Tiles',
+    'Wave / Organic',
+    'Other designs',
+  ];
 
   async function init() {
     try {
@@ -136,9 +145,30 @@
     }
     if (emptyState) emptyState.style.display = 'none';
 
+    const grouped = new Map();
     filtered.forEach((product) => {
-      grid.appendChild(renderCard(product));
+      const category = product.category || 'Other designs';
+      if (!grouped.has(category)) grouped.set(category, []);
+      grouped.get(category).push(product);
     });
+
+    [...grouped.keys()]
+      .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
+      .forEach((category) => {
+        const items = grouped.get(category);
+        const categorySection = document.createElement('section');
+        categorySection.className = 'product-category';
+        categorySection.innerHTML = `
+          <div class="product-category-head">
+            <div><span class="eyebrow">Collection</span><h2>${category}</h2></div>
+            <span class="product-category-count">${items.length} design${items.length === 1 ? '' : 's'}</span>
+          </div>
+          <div class="product-grid category-grid"></div>
+        `;
+        const categoryGrid = categorySection.querySelector('.category-grid');
+        items.forEach((product) => categoryGrid.appendChild(renderCard(product)));
+        grid.appendChild(categorySection);
+      });
   }
 
   function renderCard(product) {
