@@ -841,6 +841,14 @@ section {
   margin-top: 28px;
 }
 
+.catalog-results > .product-grid {
+  row-gap: 18px;
+}
+
+.catalog-results > .product-grid > .product-category + .product-category {
+  margin-top: 0;
+}
+
 .product-category-head {
   display: flex;
   align-items: end;
