@@ -943,6 +943,74 @@ section {
   border-bottom: 1px solid #e2e2db;
 }
 
+.products-catalog-layout {
+  display: grid;
+  grid-template-columns: 210px minmax(0, 1fr);
+  gap: 34px;
+  align-items: start;
+}
+
+.catalog-sidebar {
+  position: sticky;
+  top: 100px;
+  padding: 20px 18px;
+  background: #fff;
+  border: 1px solid #e2e2db;
+  border-radius: var(--radius);
+}
+
+.catalog-sidebar-kicker {
+  display: block;
+  color: var(--green);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.catalog-sidebar h2 {
+  font-size: 1.15rem;
+  margin: 0 0 16px;
+}
+
+.catalog-sidebar nav {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.catalog-sidebar nav a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 9px 10px;
+  border-radius: 8px;
+  color: #56594e;
+  font-size: 0.78rem;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.catalog-sidebar nav a small {
+  color: #96998d;
+  font-size: 0.7rem;
+}
+
+.catalog-sidebar nav a:hover,
+.catalog-sidebar nav a:focus-visible {
+  background: var(--ink);
+  color: #fff;
+}
+
+.catalog-sidebar nav a:hover small,
+.catalog-sidebar nav a:focus-visible small {
+  color: #c8cbc0;
+}
+
+.catalog-results {
+  min-width: 0;
+}
+
 .filter-group {
   display: flex;
   align-items: center;
@@ -1006,6 +1074,35 @@ section {
   text-align: center;
   padding: 70px 20px;
   color: var(--muted);
+}
+
+@media (max-width: 860px) {
+  .products-catalog-layout {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .catalog-sidebar {
+    position: static;
+    padding: 16px;
+  }
+
+  .catalog-sidebar h2 {
+    display: none;
+  }
+
+  .catalog-sidebar nav {
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 6px;
+    padding-bottom: 2px;
+  }
+
+  .catalog-sidebar nav a {
+    flex: 0 0 auto;
+    border: 1px solid #e2e2db;
+    white-space: nowrap;
+  }
 }
 
 /* ---------- Process strip ---------- */

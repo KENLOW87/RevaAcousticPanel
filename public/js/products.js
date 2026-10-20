@@ -11,6 +11,7 @@
   const seriesLabel = document.getElementById('catalog-series-label');
   const catalogTitle = document.getElementById('catalog-title');
   const catalogDescription = document.getElementById('catalog-description');
+  const categoryNav = document.getElementById('category-nav');
 
   if (!grid) return;
 
@@ -152,12 +153,22 @@
       grouped.get(category).push(product);
     });
 
-    [...grouped.keys()]
+    const sortedCategories = [...grouped.keys()]
       .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
-      .forEach((category) => {
+    if (categoryNav) {
+      categoryNav.innerHTML = sortedCategories.map((category) => {
+        const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        return `<a href="#category-${slug}"><span>${category}</span><small>${grouped.get(category).length}</small></a>`;
+      }).join('');
+      categoryNav.parentElement.style.display = sortedCategories.length ? '' : 'none';
+    }
+
+    sortedCategories.forEach((category) => {
         const items = grouped.get(category);
+        const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const categorySection = document.createElement('section');
         categorySection.className = 'product-category';
+        categorySection.id = `category-${slug}`;
         categorySection.innerHTML = `
           <div class="product-category-head">
             <div><span class="eyebrow">Collection</span><h2>${category}</h2></div>

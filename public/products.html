@@ -56,9 +56,18 @@
       </div>
     </div>
 
-    <div class="product-grid" id="product-grid"></div>
-    <div class="empty-state" id="empty-state" style="display:none;">
-      <p>No designs match your filters. Try clearing the search or finish filter.</p>
+    <div class="products-catalog-layout">
+      <aside class="catalog-sidebar" aria-label="Product categories">
+        <span class="catalog-sidebar-kicker">Browse by</span>
+        <h2>Category</h2>
+        <nav id="category-nav"></nav>
+      </aside>
+      <div class="catalog-results">
+        <div class="product-grid" id="product-grid"></div>
+        <div class="empty-state" id="empty-state" style="display:none;">
+          <p>No designs match your filters. Try clearing the search or finish filter.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
