@@ -358,6 +358,26 @@ a {
   margin-bottom: 20px;
 }
 
+.upcoming-finish-pill,
+.upcoming-finish-note {
+  color: var(--muted);
+  font-size: 0.78rem;
+  font-style: italic;
+}
+
+.upcoming-finish-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 13px;
+  border: 1px dashed #cfcfc7;
+  border-radius: 999px;
+  white-space: nowrap;
+}
+
+.upcoming-finish-note {
+  margin: 10px 0 0;
+}
+
 .series-tab {
   display: inline-flex;
   align-items: center;

@@ -48,6 +48,7 @@
               <span id="pd-color-name">${activeColor.name}</span>
             </div>
             <div class="pd-swatch-row" id="pd-swatch-row"></div>
+            <p class="upcoming-finish-note">More colours coming soon</p>
           </div>
 
           <dl class="pd-specs">

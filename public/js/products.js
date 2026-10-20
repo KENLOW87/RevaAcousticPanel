@@ -92,6 +92,11 @@
       pill.addEventListener('click', () => setActiveColor(color.code, pill));
       filterRow.appendChild(pill);
     });
+
+    const upcoming = document.createElement('span');
+    upcoming.className = 'upcoming-finish-pill';
+    upcoming.textContent = 'More colours coming soon';
+    filterRow.appendChild(upcoming);
   }
 
   function setActiveColor(code, pillEl) {
