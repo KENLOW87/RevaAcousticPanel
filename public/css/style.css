@@ -1065,7 +1065,17 @@ section {
   font-weight: 600;
 }
 
+.catalog-sidebar nav a.is-active {
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+}
+
 .catalog-sidebar nav a.category-all small {
+  color: #c8cbc0;
+}
+
+.catalog-sidebar nav a.is-active small {
   color: #c8cbc0;
 }
 

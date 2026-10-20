@@ -18,6 +18,7 @@
   let allProducts = [];
   let allColors = [];
   let activeColor = null;
+  let activeCategory = null;
   const seriesOrder = ['A Series', 'B Series', 'C Series'];
   const requestedSeries = new URLSearchParams(location.search).get('series');
   let activeSeries = requestedSeries ? `${requestedSeries.replace(/\s+Series$/i, '')} Series` : 'A Series';
@@ -69,6 +70,7 @@
         seriesFilters.querySelectorAll('.series-tab').forEach((tab) => tab.classList.remove('active'));
         button.classList.add('active');
         activeColor = null;
+        activeCategory = null;
         renderFilters();
         render();
       });
@@ -121,9 +123,14 @@
     return product.colors.some((c) => c.code === activeColor);
   }
 
+  function matchesCategory(product) {
+    return !activeCategory || (product.category || 'Other designs') === activeCategory;
+  }
+
   function render() {
     const seriesProducts = allProducts.filter((p) => p.series === activeSeries);
-    const filtered = seriesProducts.filter((p) => matchesColor(p) && matchesSearch(p));
+    const baseFiltered = seriesProducts.filter((p) => matchesColor(p) && matchesSearch(p));
+    const filtered = baseFiltered.filter(matchesCategory);
     lastResultCount = filtered.length;
 
     const seriesName = activeSeries.replace(' Series', '');
@@ -151,6 +158,37 @@
     }
     if (emptyState) emptyState.style.display = 'none';
 
+    const navigationGrouped = new Map();
+    baseFiltered.forEach((product) => {
+      const category = product.category || 'Other designs';
+      if (!navigationGrouped.has(category)) navigationGrouped.set(category, []);
+      navigationGrouped.get(category).push(product);
+    });
+
+    const sortedCategories = [...navigationGrouped.keys()]
+      .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
+    if (categoryNav) {
+      const allLink = `<a class="category-all${activeCategory ? '' : ' is-active'}" href="#product-grid" data-category=""><span>All</span><small>${baseFiltered.length}</small></a>`;
+      categoryNav.innerHTML = allLink + sortedCategories.map((category) => {
+        const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+        const activeClass = category === activeCategory ? ' is-active' : '';
+        return `<a class="${activeClass.trim()}" href="#category-${slug}" data-category="${category}"><span>${category}</span><small>${navigationGrouped.get(category).length}</small></a>`;
+      }).join('');
+      categoryNav.parentElement.style.display = sortedCategories.length ? '' : 'none';
+      categoryNav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', (event) => {
+          event.preventDefault();
+          activeCategory = link.dataset.category || null;
+          const slug = activeCategory
+            ? activeCategory.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
+            : 'product-grid';
+          history.replaceState(null, '', `${location.pathname}${location.search}#${activeCategory ? `category-${slug}` : 'product-grid'}`);
+          render();
+          document.querySelector('.products-catalog-layout')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
+      });
+    }
+
     const grouped = new Map();
     filtered.forEach((product) => {
       const category = product.category || 'Other designs';
@@ -158,18 +196,7 @@
       grouped.get(category).push(product);
     });
 
-    const sortedCategories = [...grouped.keys()]
-      .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
-    if (categoryNav) {
-      const allLink = `<a class="category-all" href="#product-grid"><span>All</span><small>${filtered.length}</small></a>`;
-      categoryNav.innerHTML = allLink + sortedCategories.map((category) => {
-        const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-        return `<a href="#category-${slug}"><span>${category}</span><small>${grouped.get(category).length}</small></a>`;
-      }).join('');
-      categoryNav.parentElement.style.display = sortedCategories.length ? '' : 'none';
-    }
-
-    sortedCategories.forEach((category) => {
+    [...grouped.keys()].sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b)).forEach((category) => {
         const items = grouped.get(category);
         const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const categorySection = document.createElement('section');
