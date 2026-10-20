@@ -502,7 +502,9 @@ a {
     transition: max-height 0.25s ease;
   }
   .nav-links.open {
-    max-height: 760px;
+    max-height: calc(100vh - 76px);
+    overflow-y: auto;
+    overflow-x: hidden;
   }
   .nav-links a {
     width: 100%;
@@ -533,6 +535,7 @@ a {
   .nav-product-menu.open .nav-product-dropdown,
   .nav-product-menu:focus-within .nav-product-dropdown {
     display: grid;
+    transform: none;
   }
   .nav-product-intro {
     display: none;
@@ -543,12 +546,15 @@ a {
     overflow: visible;
   }
   .nav-product-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px 10px;
   }
   .nav-product-grid a {
     width: auto;
     padding: 8px 10px;
     border-bottom: 0;
+    min-width: 0;
+    line-height: 1.25;
   }
   .nav-product-code {
     min-width: 26px;
