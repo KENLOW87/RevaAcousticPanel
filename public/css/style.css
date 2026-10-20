@@ -261,6 +261,8 @@ a {
 
 .nav-product-list {
   padding: 22px 24px 24px;
+  max-height: min(560px, calc(100vh - 110px));
+  overflow-y: auto;
 }
 
 .nav-product-label {
@@ -270,6 +272,36 @@ a {
   letter-spacing: 0.14em;
   text-transform: uppercase;
   margin-bottom: 12px;
+}
+
+.nav-series-menu-block + .nav-series-menu-block {
+  margin-top: 18px;
+  padding-top: 16px;
+  border-top: 1px solid #303426;
+}
+
+.nav-series-menu-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  color: #fff;
+  font-size: 0.78rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.nav-series-menu-heading small,
+.nav-series-badge {
+  color: #a7d32f;
+  font-size: 0.68rem;
+  font-weight: 500;
+}
+
+.nav-series-menu-block.is-coming-soon p {
+  color: #858879;
+  font-size: 0.76rem;
+  margin: 0;
 }
 
 .nav-product-grid {
@@ -290,6 +322,64 @@ a {
 .nav-product-grid a:focus-visible {
   color: #111;
   background: var(--gradient);
+}
+
+.series-filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.series-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #454a3a;
+  background: transparent;
+  color: #d7d8cf;
+  border-radius: 999px;
+  padding: 9px 15px;
+  cursor: pointer;
+  text-align: left;
+}
+
+.series-tab small {
+  color: #9ea092;
+  font-size: 0.7rem;
+}
+
+.series-tab.active {
+  background: #fff;
+  border-color: #fff;
+  color: var(--ink);
+}
+
+.series-tab.active small {
+  color: #64685b;
+}
+
+.coming-soon-panel {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 54px 28px;
+  text-align: center;
+  background: #fff;
+  border: 1px solid #e2e2db;
+  border-radius: var(--radius);
+}
+
+.coming-soon-panel .eyebrow {
+  color: var(--green);
+}
+
+.coming-soon-panel h2 {
+  margin: 0 0 8px;
+}
+
+.coming-soon-panel p {
+  margin: 0;
+  color: var(--muted);
 }
 
 .nav-cta {
@@ -424,6 +514,8 @@ a {
   }
   .nav-product-list {
     padding: 14px 24px 18px;
+    max-height: none;
+    overflow: visible;
   }
   .nav-product-grid {
     grid-template-columns: repeat(4, minmax(0, 1fr));

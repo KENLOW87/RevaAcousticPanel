@@ -22,6 +22,41 @@
   });
 })();
 
+// Build the Products mega-menu from the catalog so new series appear there
+// automatically. Empty planned series stay visible as Coming Soon.
+(function () {
+  const seriesOrder = ['A Series', 'B Series', 'C Series'];
+  const menus = document.querySelectorAll('.nav-product-dropdown');
+  if (!menus.length) return;
+
+  function escapeHtml(value) {
+    return String(value).replace(/[&<>'"]/g, (char) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+  }
+
+  async function buildProductMenus() {
+    try {
+      const response = await fetch('/api/products');
+      if (!response.ok) throw new Error('products fetch failed');
+      const products = await response.json();
+      const groups = new Map(seriesOrder.map((series) => [series, products.filter((product) => product.series === series)]));
+
+      menus.forEach((menu) => {
+        menu.querySelector('.nav-product-list').innerHTML = [...groups.entries()].map(([series, items]) => {
+          if (!items.length) {
+            return `<div class="nav-series-menu-block is-coming-soon"><div class="nav-series-menu-heading"><span>${escapeHtml(series)}</span><span class="nav-series-badge">Coming soon</span></div><p>Products will be available soon.</p></div>`;
+          }
+          const links = items.map((product) => `<a href="/product.html?id=${encodeURIComponent(product.id)}" role="menuitem">${escapeHtml(product.id)}</a>`).join('');
+          return `<div class="nav-series-menu-block"><div class="nav-series-menu-heading"><span>${escapeHtml(series)}</span><small>${items.length} designs</small></div><div class="nav-product-grid">${links}</div></div>`;
+        }).join('');
+      });
+    } catch (error) {
+      console.error('Could not build product menu', error);
+    }
+  }
+
+  buildProductMenus();
+})();
+
 // First-visit callout nudging shoppers toward "Request a Quote".
 (function () {
   const callout = document.getElementById('quote-callout');

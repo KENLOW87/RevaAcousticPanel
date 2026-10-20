@@ -7,12 +7,19 @@
   const searchInput = document.getElementById('product-search');
   const resultCount = document.getElementById('result-count');
   const emptyState = document.getElementById('empty-state');
+  const seriesFilters = document.getElementById('series-filters');
+  const seriesLabel = document.getElementById('catalog-series-label');
+  const catalogTitle = document.getElementById('catalog-title');
+  const catalogDescription = document.getElementById('catalog-description');
 
   if (!grid) return;
 
   let allProducts = [];
   let allColors = [];
   let activeColor = null;
+  const seriesOrder = ['A Series', 'B Series', 'C Series'];
+  const requestedSeries = new URLSearchParams(location.search).get('series');
+  let activeSeries = requestedSeries ? `${requestedSeries.replace(/\s+Series$/i, '')} Series` : 'A Series';
   let searchTerm = '';
   let lastResultCount = 0;
   let searchReportTimer = null;
@@ -25,6 +32,8 @@
       ]);
       allProducts = await productsRes.json();
       allColors = await colorsRes.json();
+      if (!seriesOrder.includes(activeSeries)) activeSeries = 'A Series';
+      renderSeriesFilters();
       renderFilters();
       render();
     } catch (err) {
@@ -33,8 +42,33 @@
     }
   }
 
+  function renderSeriesFilters() {
+    if (!seriesFilters) return;
+    seriesFilters.innerHTML = '';
+    seriesOrder.forEach((series) => {
+      const count = allProducts.filter((product) => product.series === series).length;
+      const button = document.createElement('button');
+      button.className = `series-tab${series === activeSeries ? ' active' : ''}`;
+      button.type = 'button';
+      button.innerHTML = `<span>${series}</span><small>${count ? `${count} designs` : 'Coming soon'}</small>`;
+      button.addEventListener('click', () => {
+        activeSeries = series;
+        const url = new URL(location.href);
+        url.searchParams.set('series', series.replace(' Series', ''));
+        history.replaceState(null, '', url);
+        seriesFilters.querySelectorAll('.series-tab').forEach((tab) => tab.classList.remove('active'));
+        button.classList.add('active');
+        activeColor = null;
+        renderFilters();
+        render();
+      });
+      seriesFilters.appendChild(button);
+    });
+  }
+
   function renderFilters() {
     if (!filterRow) return;
+    filterRow.innerHTML = '';
     const allPill = document.createElement('button');
     allPill.className = 'pill active';
     allPill.textContent = 'All finishes';
@@ -73,8 +107,19 @@
   }
 
   function render() {
-    const filtered = allProducts.filter((p) => matchesColor(p) && matchesSearch(p));
+    const seriesProducts = allProducts.filter((p) => p.series === activeSeries);
+    const filtered = seriesProducts.filter((p) => matchesColor(p) && matchesSearch(p));
     lastResultCount = filtered.length;
+
+    const seriesName = activeSeries.replace(' Series', '');
+    const hasProducts = seriesProducts.length > 0;
+    if (seriesLabel) seriesLabel.textContent = activeSeries;
+    if (catalogTitle) catalogTitle.textContent = hasProducts ? `${activeSeries} Acoustic Panel Catalog` : `${activeSeries} Coming Soon`;
+    if (catalogDescription) {
+      catalogDescription.textContent = hasProducts
+        ? `${seriesProducts.length} designs, each available in 5 finishes. Filter by finish or search a design code to find the right panel.`
+        : `We are preparing the ${seriesName} product collection. Check back soon for the latest REVA Acoustic designs.`;
+    }
 
     if (resultCount) {
       resultCount.textContent = `${filtered.length} design${filtered.length === 1 ? '' : 's'}`;
@@ -84,6 +129,9 @@
 
     if (filtered.length === 0) {
       if (emptyState) emptyState.style.display = 'block';
+      if (emptyState) emptyState.innerHTML = hasProducts
+        ? '<p>No designs match your filters. Try clearing the search or finish filter.</p>'
+        : '<div class="coming-soon-panel"><span class="eyebrow">REVA Acoustic</span><h2>Coming soon</h2><p>This series is being prepared and will be available here once the products are uploaded.</p></div>';
       return;
     }
     if (emptyState) emptyState.style.display = 'none';
