@@ -843,6 +843,8 @@ section {
 
 .catalog-results > .product-grid {
   row-gap: 18px;
+  align-items: start;
+  grid-auto-rows: max-content;
 }
 
 .catalog-results > .product-grid > .product-category + .product-category {
@@ -878,6 +880,8 @@ section {
 .category-grid {
   grid-template-columns: repeat(4, 1fr);
   min-width: 0;
+  align-content: start;
+  grid-auto-rows: max-content;
 }
 
 @media (max-width: 1080px) {
