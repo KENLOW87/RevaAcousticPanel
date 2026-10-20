@@ -63,6 +63,7 @@
 
           <div class="pd-actions">
             <button class="btn btn-primary" id="pd-quote-btn">Request a Quote</button>
+            <a class="btn btn-whatsapp" data-whatsapp-product data-product-id="${product.id}" data-product-code="${product.sku || product.id}" href="#" target="_blank" rel="noopener">WhatsApp</a>
             <a class="btn btn-outline" href="/products.html">&larr; Back to catalog</a>
           </div>
         </div>
@@ -73,6 +74,7 @@
     const colorNameEl = document.getElementById('pd-color-name');
     const swatchRow = document.getElementById('pd-swatch-row');
     const quoteBtn = document.getElementById('pd-quote-btn');
+    window.applyProductWhatsappLinks?.();
 
     product.colors.forEach((color) => {
       const btn = document.createElement('button');

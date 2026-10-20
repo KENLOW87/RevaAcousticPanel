@@ -168,6 +168,7 @@
       return;
     }
     if (emptyState) emptyState.style.display = 'none';
+    window.applyProductWhatsappLinks?.();
 
     const navigationGrouped = new Map();
     baseFiltered.forEach((product) => {
@@ -251,9 +252,12 @@
         <div class="sku">${product.sku}</div>
         <h3>${product.name}</h3>
         <div class="swatches"></div>
-        <a class="card-link" href="/product.html?id=${product.id}">
-          View design <span class="arrow">&rarr;</span>
-        </a>
+        <div class="card-actions">
+          <a class="card-link" href="/product.html?id=${product.id}">
+            View design <span class="arrow">&rarr;</span>
+          </a>
+          <a class="product-whatsapp-link" data-whatsapp-product data-product-id="${product.id}" data-product-code="${product.sku || product.id}" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        </div>
       </div>
     `;
 

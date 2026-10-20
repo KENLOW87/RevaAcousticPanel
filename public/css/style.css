@@ -1039,6 +1039,50 @@ section {
   font-weight: 600;
 }
 
+.card-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 6px;
+}
+
+.card-actions .card-link {
+  margin-top: 0;
+}
+
+.product-whatsapp-link,
+.btn-whatsapp {
+  color: #168a45;
+  font-size: 0.78rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.product-whatsapp-link:hover,
+.product-whatsapp-link:focus-visible,
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  color: #0d6d35;
+}
+
+.btn-whatsapp {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: #25d366;
+  color: #fff;
+}
+
+.btn-whatsapp:hover,
+.btn-whatsapp:focus-visible {
+  color: #fff;
+  background: #1fb957;
+}
+
 .card-link .arrow {
   transition: transform 0.15s ease;
   display: inline-block;

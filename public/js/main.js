@@ -25,7 +25,20 @@ function updateFloatingWhatsappButton() {
   }
 }
 
+function applyProductWhatsappLinks() {
+  if (!floatingWhatsappConfig) return;
+  const digits = (floatingWhatsappConfig.contact.whatsapp || '').replace(/[^\d]/g, '');
+  if (!digits) return;
+  document.querySelectorAll('[data-whatsapp-product]').forEach((link) => {
+    const code = link.dataset.productCode || link.dataset.productId;
+    const productUrl = `${location.origin}/product.html?id=${encodeURIComponent(link.dataset.productId)}`;
+    const message = `Hi, I'm interested in ${code}. Please share more information about this product. Product link: ${productUrl}`;
+    link.href = `https://wa.me/${digits}?text=${encodeURIComponent(message)}`;
+  });
+}
+
 window.setWhatsAppProduct = setFloatingWhatsappProduct;
+window.applyProductWhatsappLinks = applyProductWhatsappLinks;
 
 // Shared behaviour across every page: mobile nav toggle + injecting live
 // business/contact details (pulled from /api/config) into footer & header.
@@ -220,6 +233,7 @@ function applySiteConfig(config) {
       document.body.appendChild(button);
     }
     updateFloatingWhatsappButton();
+    applyProductWhatsappLinks();
   }
 }
 
