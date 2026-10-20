@@ -127,6 +127,17 @@
     return !activeCategory || (product.category || 'Other designs') === activeCategory;
   }
 
+  function compareProductCode(a, b) {
+    const codeA = String(a.sku || a.id || '').toUpperCase();
+    const codeB = String(b.sku || b.id || '').toUpperCase();
+    const prefixA = codeA.replace(/\d+/g, '');
+    const prefixB = codeB.replace(/\d+/g, '');
+    if (prefixA !== prefixB) return prefixA.localeCompare(prefixB);
+    const numberA = Number(codeA.match(/\d+/)?.[0] || 0);
+    const numberB = Number(codeB.match(/\d+/)?.[0] || 0);
+    return numberA - numberB || codeA.localeCompare(codeB);
+  }
+
   function render() {
     const seriesProducts = allProducts.filter((p) => p.series === activeSeries);
     const baseFiltered = seriesProducts.filter((p) => matchesColor(p) && matchesSearch(p));
@@ -190,13 +201,21 @@
     }
 
     const grouped = new Map();
-    filtered.forEach((product) => {
-      const category = product.category || 'Other designs';
-      if (!grouped.has(category)) grouped.set(category, []);
-      grouped.get(category).push(product);
-    });
+    if (!activeCategory) {
+      grouped.set('All designs', [...filtered].sort(compareProductCode));
+    } else {
+      filtered.forEach((product) => {
+        const category = product.category || 'Other designs';
+        if (!grouped.has(category)) grouped.set(category, []);
+        grouped.get(category).push(product);
+      });
+      grouped.forEach((items) => items.sort(compareProductCode));
+    }
 
-    [...grouped.keys()].sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b)).forEach((category) => {
+    [...grouped.keys()].sort((a, b) => {
+      if (!activeCategory) return 0;
+      return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
+    }).forEach((category) => {
         const items = grouped.get(category);
         const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const categorySection = document.createElement('section');
