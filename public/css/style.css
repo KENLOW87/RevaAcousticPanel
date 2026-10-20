@@ -362,6 +362,7 @@ a {
   gap: 10px;
   flex-wrap: wrap;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .upcoming-finish-pill,
@@ -395,6 +396,8 @@ a {
   padding: 9px 15px;
   cursor: pointer;
   text-align: left;
+  min-width: 148px;
+  justify-content: center;
 }
 
 .series-tab small {
