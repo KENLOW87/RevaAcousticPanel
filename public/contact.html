@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact &amp; Request a Quote — REVA Acoustic</title>
+<meta name="description" content="Request a quote for REVA Acoustic wall panels — tell us the design, finish and coverage you need." />
+<link rel="icon" href="/images/brand/logo.png" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand">
+      <img src="/images/brand/wordmark.png" alt="REVA Acoustic logo" />
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/products.html">Products</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html" class="active">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="/contact.html" class="btn btn-primary btn-sm"><span class="btn-text-full">Request a Quote</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="bg-dark" style="padding: 56px 0 40px;">
+  <div class="container">
+    <span class="eyebrow">Get in touch</span>
+    <h1 style="font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin: 10px 0 0;">Request a Quote</h1>
+    <p style="color:#a9ab9e; max-width: 560px; margin-top: 14px;">
+      Tell us which design and finish you're interested in, and roughly how much wall
+      you're covering — we'll follow up with pricing and lead time.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top: 48px;">
+  <div class="container contact-layout">
+    <div>
+      <div id="product-ref-banner" class="pill" style="display:none; background:#eef5e8; border-color:#c7e6b4; gap:10px; margin-bottom:22px; padding:10px 16px;">
+        <span class="dot" style="background:#7bc143;"></span>
+        <span class="ref-text"></span>
+      </div>
+
+      <form id="quote-form">
+        <div class="form-grid">
+          <div class="field full">
+            <label for="name">Full name</label>
+            <input type="text" id="name" name="name" required maxlength="120" placeholder="Your name" />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required maxlength="180" placeholder="you@example.com" />
+          </div>
+          <div class="field">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" maxlength="40" placeholder="+1 555 000 0000" />
+          </div>
+          <div class="field">
+            <label for="productId">Design code (optional)</label>
+            <input type="text" id="productId" name="productId" maxlength="20" placeholder="e.g. A12" />
+          </div>
+          <div class="field">
+            <label for="colorCode">Finish (optional)</label>
+            <select id="colorCode" name="colorCode">
+              <option value="">Not sure yet</option>
+              <option value="DC">Dark Camel</option>
+              <option value="LC">Light Camel</option>
+              <option value="MG">Dark Grey</option>
+              <option value="OY">Orange Yellow</option>
+              <option value="WG">Water Grey</option>
+            </select>
+          </div>
+          <div class="field full">
+            <label for="message">Project details</label>
+            <textarea id="message" name="message" maxlength="2000" placeholder="Room size, wall coverage, timeline, anything else we should know."></textarea>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" style="margin-top:20px;">Send Enquiry</button>
+        <p class="form-note">We typically reply within 1-2 business days.</p>
+        <div id="form-status" class="form-status"></div>
+      </form>
+    </div>
+
+    <div class="contact-info-card">
+      <h3>Other ways to reach us</h3>
+      <div class="contact-row">
+        <div class="ic">&#9993;</div>
+        <div>
+          <div class="label">Email</div>
+          <a class="value" data-contact="email" href="#"></a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">&#9742;</div>
+        <div>
+          <div class="label">Phone</div>
+          <a class="value" data-contact="phone" href="#"></a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">&#128172;</div>
+        <div>
+          <div class="label">WhatsApp</div>
+          <a class="value" data-contact="whatsapp-link" href="#" target="_blank" rel="noopener">Message us</a>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">&#128205;</div>
+        <div>
+          <div class="label">Address</div>
+          <div class="value" data-contact="address"></div>
+        </div>
+      </div>
+      <div class="contact-row">
+        <div class="ic">&#128337;</div>
+        <div>
+          <div class="label">Hours</div>
+          <div class="value" data-contact="hours"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/images/brand/logo.png" alt="REVA Acoustic" />
+        <p>Decorative acoustic PET fibre wall panels for homes, studios and offices — designed to look sharp and sound better.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a data-contact="email" href="#"></a></li>
+          <li><a data-contact="phone" href="#"></a></li>
+          <li><span data-contact="address"></span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li><span data-contact="hours"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-contact="year"></span> REVA Acoustic. All rights reserved.</span>
+      <span>Acoustic Wall Panels by EZLIFE</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script src="/js/contact.js"></script>
+</body>
+</html>

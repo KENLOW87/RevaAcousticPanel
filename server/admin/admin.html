@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Admin — REVA Acoustic</title>
+<link rel="icon" href="/images/brand/logo.png" />
+<link rel="stylesheet" href="/css/style.css" />
+<style>
+  body { background: var(--paper-dim); }
+  .admin-header {
+    background: var(--ink);
+    color: #fff;
+  }
+  .admin-header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 76px;
+  }
+  .admin-header img { height: 28px; }
+  .admin-wrap { padding: 40px 0 80px; }
+  .admin-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+  .admin-tab {
+    border: 1px solid #d7d7cf;
+    background: #fff;
+    padding: 10px 20px;
+    border-radius: 999px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .admin-tab.active {
+    background: var(--ink);
+    color: #fff;
+    border-color: var(--ink);
+  }
+  .admin-panel { display: none; }
+  .admin-panel.active { display: block; }
+  .admin-card {
+    background: #fff;
+    border: 1px solid #e7e7e2;
+    border-radius: var(--radius);
+    padding: 26px;
+  }
+  .summary-row {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+  }
+  .summary-pill {
+    background: #fff;
+    border: 1px solid #e7e7e2;
+    border-radius: 12px;
+    padding: 14px 20px;
+    min-width: 140px;
+  }
+  .summary-pill .num { font-size: 1.5rem; font-weight: 700; }
+  .summary-pill .lbl { font-size: 0.76rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  table.quotes-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.88rem;
+  }
+  .quotes-table th {
+    text-align: left;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+    padding: 10px 12px;
+    border-bottom: 1px solid #e2e2db;
+    white-space: nowrap;
+  }
+  .quotes-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #eceae2;
+    vertical-align: top;
+  }
+  .quotes-table tr:last-child td { border-bottom: none; }
+  .badge {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 600;
+  }
+  .badge.new { background: #fff3cd; color: #7a5c00; }
+  .badge.handled { background: #e9f6e3; color: #2f5d1c; }
+  .row-actions { display: flex; gap: 8px; flex-wrap: wrap; }
+  .row-actions button {
+    border: 1px solid #d7d7cf;
+    background: #fff;
+    border-radius: 8px;
+    padding: 6px 10px;
+    font-size: 0.78rem;
+    cursor: pointer;
+  }
+  .row-actions button.danger { color: #a3271a; border-color: #f0c4bc; }
+  .msg-cell { max-width: 220px; white-space: pre-wrap; }
+  .settings-form .field { margin-bottom: 18px; }
+  .settings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 20px; }
+  @media (max-width: 700px) { .settings-grid { grid-template-columns: 1fr; } }
+
+  .series-group {
+    background: #fff;
+    border: 1px solid #e7e7e2;
+    border-radius: var(--radius);
+    margin-bottom: 18px;
+    overflow: hidden;
+  }
+  .series-group > summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 22px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    font-weight: 700;
+    font-size: 1.02rem;
+  }
+  .series-group > summary::-webkit-details-marker { display: none; }
+  .series-group .series-counts {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: var(--muted);
+  }
+  .series-group .series-counts .hidden-count { color: #a3271a; }
+  .series-group .chevron {
+    display: inline-block;
+    transition: transform 0.15s ease;
+  }
+  .series-group[open] .chevron { transform: rotate(90deg); }
+  .series-group .product-admin-grid {
+    padding: 4px 22px 22px;
+    border-top: 1px solid #eceae2;
+    padding-top: 20px;
+  }
+  .product-admin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+  }
+  .product-admin-card {
+    background: #fff;
+    border: 1px solid #e7e7e2;
+    border-radius: var(--radius);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+  }
+  .product-admin-card.inactive { opacity: 0.55; }
+  .product-admin-card .thumb-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px 0;
+  }
+  .product-admin-card .thumb-row img {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  .product-admin-card .thumb-row .sku {
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--muted);
+  }
+  .product-admin-card .body { padding: 14px 16px 16px; display: flex; flex-direction: column; gap: 10px; }
+  .product-admin-card .body label {
+    font-size: 0.74rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    margin-bottom: 4px;
+    display: block;
+  }
+  .product-admin-card input[type="text"],
+  .product-admin-card textarea {
+    width: 100%;
+    padding: 8px 10px;
+    border: 1px solid #d7d7cf;
+    border-radius: 8px;
+    font-size: 0.86rem;
+    font-family: inherit;
+  }
+  .product-admin-card textarea { min-height: 70px; resize: vertical; }
+  .product-admin-card .active-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.84rem;
+  }
+  .product-admin-card .card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+  }
+  .product-admin-card .card-status { font-size: 0.78rem; color: var(--muted); }
+
+  .finish-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-bottom: 22px;
+  }
+  .finish-card {
+    border: 1px solid #e7e7e2;
+    border-radius: 12px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .finish-card .code-row { display: flex; align-items: center; gap: 10px; }
+  .finish-card .swatch-preview {
+    width: 28px;
+    height: 28px;
+    border-radius: 8px;
+    border: 1px solid rgba(0,0,0,0.1);
+    flex-shrink: 0;
+  }
+  .finish-card .code-label { font-size: 0.72rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
+  .finish-card input[type="text"] {
+    width: 100%;
+    padding: 7px 10px;
+    border: 1px solid #d7d7cf;
+    border-radius: 8px;
+    font-size: 0.85rem;
+  }
+  .finish-card .hex-row { display: flex; align-items: center; gap: 8px; }
+  .finish-card input[type="color"] {
+    width: 34px;
+    height: 34px;
+    border: 1px solid #d7d7cf;
+    border-radius: 6px;
+    padding: 2px;
+    background: #fff;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<header class="admin-header">
+  <div class="container">
+    <div style="display:flex; align-items:center; gap:12px;">
+      <img src="/images/brand/logo.png" alt="REVA Acoustic" />
+      <span style="font-weight:600;">Admin</span>
+    </div>
+    <a href="/" class="btn btn-outline btn-sm" style="border-color:#fff;color:#fff;">View Site</a>
+  </div>
+</header>
+
+<section class="admin-wrap">
+  <div class="container">
+    <div class="admin-tabs">
+      <button class="admin-tab active" data-tab="quotes">Quote Requests</button>
+      <button class="admin-tab" data-tab="products">Products</button>
+      <button class="admin-tab" data-tab="finishes">Finishes</button>
+      <button class="admin-tab" data-tab="settings">Site Settings</button>
+    </div>
+
+    <div class="admin-panel active" id="panel-quotes">
+      <div class="summary-row" id="quotes-summary"></div>
+      <div class="admin-card" style="overflow-x:auto;">
+        <table class="quotes-table" id="quotes-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Name</th>
+              <th>Contact</th>
+              <th>Design</th>
+              <th>Message</th>
+              <th>Status</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody id="quotes-tbody">
+            <tr><td colspan="7" class="loading-row">Loading quote requests...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="admin-panel" id="panel-products">
+      <p style="color:var(--muted); font-size:0.9rem; margin-top:-4px; margin-bottom:20px;">
+        Grouped by series. Rename a design, rewrite its description, or hide it from the public catalog. Images and finishes can't be changed here.
+      </p>
+      <div id="series-groups">
+        <p class="loading-row">Loading products...</p>
+      </div>
+    </div>
+
+    <div class="admin-panel" id="panel-finishes">
+      <div class="admin-card">
+        <h3 style="margin-top:0;">Finish Names</h3>
+        <p style="color:var(--muted); font-size:0.9rem; margin-top:-8px;">
+          These 5-6 finishes are shared by every design in the catalog — renaming one here updates it everywhere.
+        </p>
+        <div class="finish-grid" id="finish-grid"></div>
+        <button type="button" class="btn btn-primary" id="save-finishes-btn">Save All Finishes</button>
+        <div id="finishes-status" class="form-status"></div>
+      </div>
+    </div>
+
+    <div class="admin-panel" id="panel-settings">
+      <div class="admin-card" style="max-width: 720px;">
+        <h3 style="margin-top:0;">Site Settings</h3>
+        <p style="color:var(--muted); font-size:0.9rem; margin-top:-8px;">
+          Changes here update the live site immediately — footer, Contact page and the public /api/config all read from this.
+        </p>
+        <form id="settings-form" class="settings-form">
+          <div class="field">
+            <label for="siteName">Site name</label>
+            <input type="text" id="siteName" name="siteName" maxlength="120" />
+          </div>
+          <div class="field">
+            <label for="tagline">Tagline</label>
+            <input type="text" id="tagline" name="tagline" maxlength="160" />
+          </div>
+          <div class="settings-grid">
+            <div class="field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" maxlength="180" />
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input type="text" id="phone" name="phone" maxlength="40" />
+            </div>
+            <div class="field">
+              <label for="whatsapp">WhatsApp (digits + country code)</label>
+              <input type="text" id="whatsapp" name="whatsapp" maxlength="40" />
+            </div>
+            <div class="field">
+              <label for="hours">Hours</label>
+              <input type="text" id="hours" name="hours" maxlength="120" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="address">Address</label>
+            <input type="text" id="address" name="address" maxlength="200" />
+          </div>
+          <div class="settings-grid">
+            <div class="field">
+              <label for="instagram">Instagram URL</label>
+              <input type="text" id="instagram" name="instagram" maxlength="300" />
+            </div>
+            <div class="field">
+              <label for="facebook">Facebook URL</label>
+              <input type="text" id="facebook" name="facebook" maxlength="300" />
+            </div>
+            <div class="field">
+              <label for="pinterest">Pinterest URL</label>
+              <input type="text" id="pinterest" name="pinterest" maxlength="300" />
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Save Settings</button>
+          <div id="settings-status" class="form-status"></div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // ---- Tabs ----
+  document.querySelectorAll('.admin-tab').forEach((tab) => {
+    tab.addEventListener('click', () => {
+      document.querySelectorAll('.admin-tab').forEach((t) => t.classList.remove('active'));
+      document.querySelectorAll('.admin-panel').forEach((p) => p.classList.remove('active'));
+      tab.classList.add('active');
+      document.getElementById(`panel-${tab.dataset.tab}`).classList.add('active');
+    });
+  });
+
+  // Fallback only — overwritten by whatever /api/admin/finishes returns.
+  let FINISH_NAMES = { DC: 'Dark Camel', LC: 'Light Camel', MG: 'Dark Grey', OY: 'Orange Yellow', WG: 'Water Grey' };
+
+  function escapeHtml(str) {
+    return String(str || '').replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+  }
+
+  // ---- Quote requests ----
+  async function loadQuotes() {
+    const tbody = document.getElementById('quotes-tbody');
+    const summary = document.getElementById('quotes-summary');
+    try {
+      const res = await fetch('/api/admin/quotes');
+      if (!res.ok) throw new Error('Failed to load');
+      const quotes = await res.json();
+
+      const newCount = quotes.filter((q) => !q.handled).length;
+      summary.innerHTML = `
+        <div class="summary-pill"><div class="num">${quotes.length}</div><div class="lbl">Total enquiries</div></div>
+        <div class="summary-pill"><div class="num">${newCount}</div><div class="lbl">New</div></div>
+        <div class="summary-pill"><div class="num">${quotes.length - newCount}</div><div class="lbl">Handled</div></div>
+      `;
+
+      if (quotes.length === 0) {
+        tbody.innerHTML = '<tr><td colspan="7" class="loading-row">No quote requests yet.</td></tr>';
+        return;
+      }
+
+      tbody.innerHTML = quotes.map((q) => {
+        const date = new Date(q.createdAt);
+        const dateStr = isNaN(date) ? '' : date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+        const design = q.productId
+          ? `${escapeHtml(q.productId)}${q.colorCode ? ' — ' + escapeHtml(FINISH_NAMES[q.colorCode] || q.colorCode) : ''}`
+          : '—';
+        return `
+          <tr data-id="${q.id}">
+            <td>${dateStr}</td>
+            <td>${escapeHtml(q.name)}</td>
+            <td>
+              <div>${escapeHtml(q.email)}</div>
+              ${q.phone ? `<div style="color:var(--muted);">${escapeHtml(q.phone)}</div>` : ''}
+            </td>
+            <td>${design}</td>
+            <td class="msg-cell">${escapeHtml(q.message) || '—'}</td>
+            <td><span class="badge ${q.handled ? 'handled' : 'new'}">${q.handled ? 'Handled' : 'New'}</span></td>
+            <td>
+              <div class="row-actions">
+                <button class="toggle-btn">${q.handled ? 'Mark new' : 'Mark handled'}</button>
+                <button class="danger delete-btn">Delete</button>
+              </div>
+            </td>
+          </tr>
+        `;
+      }).join('');
+
+      tbody.querySelectorAll('tr').forEach((row) => {
+        const id = row.dataset.id;
+        row.querySelector('.toggle-btn').addEventListener('click', () => toggleHandled(row, id));
+        row.querySelector('.delete-btn').addEventListener('click', () => deleteQuote(row, id));
+      });
+    } catch (err) {
+      tbody.innerHTML = '<tr><td colspan="7" class="loading-row">Could not load quote requests.</td></tr>';
+    }
+  }
+
+  async function toggleHandled(row, id) {
+    const badge = row.querySelector('.badge');
+    const nowHandled = !badge.classList.contains('handled');
+    try {
+      const res = await fetch(`/api/admin/quotes/${encodeURIComponent(id)}`, {
+        method: 'PATCH',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ handled: nowHandled }),
+      });
+      if (!res.ok) throw new Error('failed');
+      loadQuotes();
+    } catch (err) {
+      alert('Could not update this enquiry. Please try again.');
+    }
+  }
+
+  async function deleteQuote(row, id) {
+    if (!confirm('Delete this quote request? This cannot be undone.')) return;
+    try {
+      const res = await fetch(`/api/admin/quotes/${encodeURIComponent(id)}`, { method: 'DELETE' });
+      if (!res.ok) throw new Error('failed');
+      loadQuotes();
+    } catch (err) {
+      alert('Could not delete this enquiry. Please try again.');
+    }
+  }
+
+  // ---- Products (grouped by series) ----
+  function productCardHtml(p) {
+    return `
+      <div class="product-admin-card ${p.active ? '' : 'inactive'}" data-id="${p.id}">
+        <div class="thumb-row">
+          <img src="${p.defaultImage}" alt="${escapeHtml(p.name)}" />
+          <div>
+            <div class="sku">${p.sku}</div>
+          </div>
+        </div>
+        <div class="body">
+          <div>
+            <label for="name-${p.id}">Name</label>
+            <input type="text" id="name-${p.id}" class="p-name" value="${escapeHtml(p.name)}" maxlength="150" />
+          </div>
+          <div>
+            <label for="desc-${p.id}">Description</label>
+            <textarea id="desc-${p.id}" class="p-desc" maxlength="2000">${escapeHtml(p.description)}</textarea>
+          </div>
+          <label class="active-row">
+            <input type="checkbox" class="p-active" ${p.active ? 'checked' : ''} />
+            Show in public catalog
+          </label>
+          <div class="card-foot">
+            <button type="button" class="btn btn-dark btn-sm save-product-btn">Save</button>
+            <span class="card-status"></span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  async function loadProducts() {
+    const container = document.getElementById('series-groups');
+    try {
+      const res = await fetch('/api/admin/products');
+      const products = await res.json();
+
+      if (products.length === 0) {
+        container.innerHTML = '<p class="loading-row">No products found.</p>';
+        return;
+      }
+
+      // Group by series, keeping first-seen series order.
+      const groups = new Map();
+      products.forEach((p) => {
+        const key = p.series || 'Other';
+        if (!groups.has(key)) groups.set(key, []);
+        groups.get(key).push(p);
+      });
+
+      container.innerHTML = Array.from(groups.entries()).map(([series, items]) => {
+        const hiddenCount = items.filter((p) => !p.active).length;
+        return `
+          <details class="series-group" open>
+            <summary>
+              <span>${escapeHtml(series)}</span>
+              <span class="series-counts">
+                <span>${items.length} design${items.length === 1 ? '' : 's'}</span>
+                ${hiddenCount ? `<span class="hidden-count">${hiddenCount} hidden</span>` : ''}
+                <span class="chevron">&#9656;</span>
+              </span>
+            </summary>
+            <div class="product-admin-grid">
+              ${items.map(productCardHtml).join('')}
+            </div>
+          </details>
+        `;
+      }).join('');
+
+      container.querySelectorAll('.product-admin-card').forEach((card) => {
+        card.querySelector('.save-product-btn').addEventListener('click', () => saveProduct(card));
+      });
+    } catch (err) {
+      container.innerHTML = '<p class="loading-row">Could not load products.</p>';
+    }
+  }
+
+  async function saveProduct(card) {
+    const id = card.dataset.id;
+    const statusEl = card.querySelector('.card-status');
+    const payload = {
+      name: card.querySelector('.p-name').value,
+      description: card.querySelector('.p-desc').value,
+      active: card.querySelector('.p-active').checked,
+    };
+
+    statusEl.textContent = 'Saving...';
+    try {
+      const res = await fetch(`/api/admin/products/${encodeURIComponent(id)}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Save failed');
+      statusEl.textContent = 'Saved';
+      card.classList.toggle('inactive', !payload.active);
+      setTimeout(() => { statusEl.textContent = ''; }, 2000);
+    } catch (err) {
+      statusEl.textContent = err.message;
+    }
+  }
+
+  // ---- Finishes ----
+  async function loadFinishes() {
+    const grid = document.getElementById('finish-grid');
+    try {
+      const res = await fetch('/api/admin/finishes');
+      const finishes = await res.json();
+
+      FINISH_NAMES = {};
+      finishes.forEach((f) => { FINISH_NAMES[f.code] = f.name; });
+
+      grid.innerHTML = finishes.map((f) => `
+        <div class="finish-card" data-code="${f.code}">
+          <div class="code-row">
+            <div class="swatch-preview" style="background:${f.hex};"></div>
+            <span class="code-label">${f.code}</span>
+          </div>
+          <input type="text" class="f-name" value="${escapeHtml(f.name)}" maxlength="60" placeholder="Finish name" />
+          <div class="hex-row">
+            <input type="color" class="f-color" value="${f.hex}" />
+            <input type="text" class="f-hex" value="${f.hex}" maxlength="7" />
+          </div>
+        </div>
+      `).join('');
+
+      grid.querySelectorAll('.finish-card').forEach((card) => {
+        const colorInput = card.querySelector('.f-color');
+        const hexInput = card.querySelector('.f-hex');
+        const preview = card.querySelector('.swatch-preview');
+        colorInput.addEventListener('input', () => {
+          hexInput.value = colorInput.value;
+          preview.style.background = colorInput.value;
+        });
+        hexInput.addEventListener('input', () => {
+          if (/^#([0-9a-fA-F]{3}){1,2}$/.test(hexInput.value)) {
+            colorInput.value = hexInput.value;
+            preview.style.background = hexInput.value;
+          }
+        });
+      });
+    } catch (err) {
+      grid.innerHTML = '<p class="loading-row">Could not load finishes.</p>';
+    }
+  }
+
+  document.getElementById('save-finishes-btn').addEventListener('click', async () => {
+    const statusEl = document.getElementById('finishes-status');
+    const payload = {};
+    let valid = true;
+
+    document.querySelectorAll('.finish-card').forEach((card) => {
+      const code = card.dataset.code;
+      const name = card.querySelector('.f-name').value.trim();
+      const hex = card.querySelector('.f-hex').value.trim();
+      if (!name || !/^#([0-9a-fA-F]{3}){1,2}$/.test(hex)) valid = false;
+      payload[code] = { name, hex };
+    });
+
+    if (!valid) {
+      statusEl.textContent = 'Each finish needs a name and a valid hex color (e.g. #8B7765).';
+      statusEl.className = 'form-status show error';
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/admin/finishes', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Save failed');
+      statusEl.textContent = 'Saved.';
+      statusEl.className = 'form-status show success';
+      loadFinishes();
+      loadQuotes();
+    } catch (err) {
+      statusEl.textContent = err.message;
+      statusEl.className = 'form-status show error';
+    }
+  });
+
+  // ---- Site settings ----
+  async function loadSettings() {
+    try {
+      const res = await fetch('/api/admin/config');
+      const cfg = await res.json();
+      document.getElementById('siteName').value = cfg.siteName || '';
+      document.getElementById('tagline').value = cfg.tagline || '';
+      document.getElementById('email').value = cfg.contact?.email || '';
+      document.getElementById('phone').value = cfg.contact?.phone || '';
+      document.getElementById('whatsapp').value = cfg.contact?.whatsapp || '';
+      document.getElementById('hours').value = cfg.contact?.hours || '';
+      document.getElementById('address').value = cfg.contact?.address || '';
+      document.getElementById('instagram').value = cfg.social?.instagram || '';
+      document.getElementById('facebook').value = cfg.social?.facebook || '';
+      document.getElementById('pinterest').value = cfg.social?.pinterest || '';
+    } catch (err) {
+      console.error('Could not load settings', err);
+    }
+  }
+
+  const settingsForm = document.getElementById('settings-form');
+  settingsForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const statusEl = document.getElementById('settings-status');
+    const payload = {
+      siteName: document.getElementById('siteName').value.trim(),
+      tagline: document.getElementById('tagline').value.trim(),
+      contact: {
+        email: document.getElementById('email').value.trim(),
+        phone: document.getElementById('phone').value.trim(),
+        whatsapp: document.getElementById('whatsapp').value.trim(),
+        hours: document.getElementById('hours').value.trim(),
+        address: document.getElementById('address').value.trim(),
+      },
+      social: {
+        instagram: document.getElementById('instagram').value.trim(),
+        facebook: document.getElementById('facebook').value.trim(),
+        pinterest: document.getElementById('pinterest').value.trim(),
+      },
+    };
+
+    try {
+      const res = await fetch('/api/admin/config', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Save failed');
+      statusEl.textContent = 'Saved.';
+      statusEl.className = 'form-status show success';
+    } catch (err) {
+      statusEl.textContent = err.message;
+      statusEl.className = 'form-status show error';
+    }
+  });
+
+  loadFinishes().then(loadQuotes);
+  loadProducts();
+  loadSettings();
+</script>
+</body>
+</html>

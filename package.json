@@ -1,0 +1,14 @@
+{
+  "name": "reva-acoustic-website",
+  "version": "1.0.0",
+  "description": "REVA Acoustic Wall Panel - product catalog website",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "build:products": "node server/scripts/build-products.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

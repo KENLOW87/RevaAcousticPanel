@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Product Catalog — REVA Acoustic</title>
+<meta name="description" content="Browse all 23 REVA Acoustic wall panel designs across 5 finishes." />
+<link rel="icon" href="/images/brand/logo.png" />
+<link rel="stylesheet" href="/css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div class="container">
+    <a href="/" class="brand">
+      <img src="/images/brand/wordmark.png" alt="REVA Acoustic logo" />
+    </a>
+    <nav class="nav-links">
+      <a href="/">Home</a>
+      <a href="/products.html" class="active">Products</a>
+      <a href="/about.html">About</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <a href="/contact.html" class="btn btn-primary btn-sm"><span class="btn-text-full">Request a Quote</span></a>
+      <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
+    </div>
+  </div>
+</header>
+
+<section class="bg-dark" style="padding: 56px 0 40px;">
+  <div class="container">
+    <span class="eyebrow">A Series</span>
+    <h1 style="font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin: 10px 0 0;">Acoustic Panel Catalog</h1>
+    <p style="color:#a9ab9e; max-width: 560px; margin-top: 14px;">23 designs, each available in 5 finishes. Filter by finish or search a design code to find the right panel.</p>
+  </div>
+</section>
+
+<section style="padding-top: 44px;">
+  <div class="container">
+    <div class="catalog-toolbar">
+      <div class="filter-group">
+        <span class="filter-label">Finish</span>
+        <div id="color-filters" class="filter-group"></div>
+      </div>
+      <div style="display:flex; align-items:center; gap:16px;">
+        <span class="result-count" id="result-count"></span>
+        <input type="search" id="product-search" class="search-input" placeholder="Search design code, e.g. A12" />
+      </div>
+    </div>
+
+    <div class="product-grid" id="product-grid"></div>
+    <div class="empty-state" id="empty-state" style="display:none;">
+      <p>No designs match your filters. Try clearing the search or finish filter.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Not sure which finish fits your room?</h2>
+        <p>Send us a photo of the wall and we'll help you pick a design and finish.</p>
+      </div>
+      <a href="/contact.html" class="btn btn-primary">Ask Us</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/images/brand/logo.png" alt="REVA Acoustic" />
+        <p>Decorative acoustic PET fibre wall panels for homes, studios and offices — designed to look sharp and sound better.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/products.html">Products</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a data-contact="email" href="#"></a></li>
+          <li><a data-contact="phone" href="#"></a></li>
+          <li><span data-contact="address"></span></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Hours</h4>
+        <ul>
+          <li><span data-contact="hours"></span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span data-contact="year"></span> REVA Acoustic. All rights reserved.</span>
+      <span>Acoustic Wall Panels by EZLIFE</span>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/main.js"></script>
+<script src="/js/products.js"></script>
+</body>
+</html>
