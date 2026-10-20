@@ -173,6 +173,26 @@ function applySiteConfig(config) {
   document.querySelectorAll('[data-contact="year"]').forEach((el) => {
     el.textContent = new Date().getFullYear();
   });
+
+  const whatsappDigits = (config.contact.whatsapp || '').replace(/[^\d]/g, '');
+  if (whatsappDigits) {
+    let button = document.querySelector('.floating-whatsapp');
+    if (!button) {
+      button = document.createElement('a');
+      button.className = 'floating-whatsapp';
+      button.target = '_blank';
+      button.rel = 'noopener';
+      button.setAttribute('aria-label', 'Chat with REVA Acoustic on WhatsApp');
+      button.innerHTML = `
+        <svg viewBox="0 0 32 32" aria-hidden="true" focusable="false">
+          <path d="M16 3.2a12.7 12.7 0 0 0-10.9 19l-1.5 5.5 5.7-1.5A12.8 12.8 0 1 0 16 3.2Zm0 23.3a10.5 10.5 0 0 1-5.3-1.4l-.4-.2-3.4.9.9-3.3-.2-.4A10.4 10.4 0 1 1 16 26.5Zm5.8-7.8c-.3-.2-1.7-.9-2-.9-.3-.1-.5-.2-.7.2-.2.3-.7.9-.8 1.1-.2.2-.3.2-.6.1-1.5-.7-2.5-1.2-3.5-2.8-.3-.5.3-.5.8-1.6.1-.2 0-.4 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4s1 2.8 1.1 3c.1.2 2 3.1 4.9 4.3 1.8.8 2.5.8 3.4.7.5-.1 1.7-.7 1.9-1.4.2-.7.2-1.3.1-1.4-.1-.2-.3-.2-.6-.4Z"/>
+        </svg>
+        <span>Chat with us</span>`;
+      document.body.appendChild(button);
+    }
+    const message = encodeURIComponent('Hi REVA Acoustic, I would like to enquire about your acoustic wall panels.');
+    button.href = `https://wa.me/${whatsappDigits}?text=${message}`;
+  }
 }
 
 document.addEventListener('DOMContentLoaded', loadSiteConfig);
