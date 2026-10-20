@@ -15,8 +15,10 @@
     if (!trigger) return;
     trigger.addEventListener('click', (event) => {
       if (window.matchMedia('(max-width: 860px)').matches) {
+        // First tap opens the mobile menu; tapping Products again follows the catalog link.
+        if (menu.classList.contains('open')) return;
         event.preventDefault();
-        menu.classList.toggle('open');
+        menu.classList.add('open');
       }
     });
   });
