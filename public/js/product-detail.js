@@ -26,6 +26,7 @@
 
   function render(product) {
     document.title = `${product.name} — REVA Acoustic`;
+    window.setWhatsAppProduct?.(product);
 
     let activeColor = product.colors[0];
 
