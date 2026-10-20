@@ -5,7 +5,7 @@
 module.exports = {
   DC: { name: 'Dark Camel', hex: '#8B7765' },
   LC: { name: 'Light Camel', hex: '#E8E1D6' },
-  MG: { name: 'Dark Grey', hex: '#5C6570' },
+  MG: { name: 'Moonlight Grey', hex: '#5C6570' },
   OY: { name: 'Orange Yellow', hex: '#E8A91C' },
   WG: { name: 'Water Grey', hex: '#C9CDD3' },
 };
