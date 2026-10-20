@@ -9,6 +9,17 @@
       navLinks.classList.toggle('open');
     });
   }
+
+  document.querySelectorAll('.nav-product-menu').forEach((menu) => {
+    const trigger = menu.querySelector('.nav-product-trigger');
+    if (!trigger) return;
+    trigger.addEventListener('click', (event) => {
+      if (window.matchMedia('(max-width: 860px)').matches) {
+        event.preventDefault();
+        menu.classList.toggle('open');
+      }
+    });
+  });
 })();
 
 // First-visit callout nudging shoppers toward "Request a Quote".
