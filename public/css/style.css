@@ -1050,6 +1050,16 @@ section {
   color: #fff;
 }
 
+.catalog-sidebar nav a.category-all {
+  background: var(--ink);
+  color: #fff;
+  font-weight: 600;
+}
+
+.catalog-sidebar nav a.category-all small {
+  color: #c8cbc0;
+}
+
 .catalog-sidebar nav a:hover small,
 .catalog-sidebar nav a:focus-visible small {
   color: #c8cbc0;

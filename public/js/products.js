@@ -161,7 +161,8 @@
     const sortedCategories = [...grouped.keys()]
       .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
     if (categoryNav) {
-      categoryNav.innerHTML = sortedCategories.map((category) => {
+      const allLink = `<a class="category-all" href="#product-grid"><span>All</span><small>${filtered.length}</small></a>`;
+      categoryNav.innerHTML = allLink + sortedCategories.map((category) => {
         const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         return `<a href="#category-${slug}"><span>${category}</span><small>${grouped.get(category).length}</small></a>`;
       }).join('');
