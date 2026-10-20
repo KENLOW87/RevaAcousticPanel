@@ -1,6 +1,6 @@
 const express = require('express');
 const { loadQuotes, saveQuotes } = require('../quotesStore');
-const { readConfig, writeConfig } = require('../config');
+const { getConfig, saveConfig } = require('../config');
 const {
   getAllProducts,
   getProduct,
@@ -53,14 +53,19 @@ function isShortString(value, maxLength) {
 }
 
 // GET /api/admin/config - full editable site config
-router.get('/config', (req, res) => {
-  res.json(readConfig());
+router.get('/config', async (req, res) => {
+  try {
+    res.json(await getConfig());
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Unable to load site configuration.' });
+  }
 });
 
 // PUT /api/admin/config - update contact info / social links
-router.put('/config', (req, res) => {
+router.put('/config', async (req, res) => {
   const body = req.body || {};
-  const current = readConfig();
+  const current = await getConfig();
 
   const contact = { ...current.contact, ...(body.contact || {}) };
   const social = { ...current.social, ...(body.social || {}) };
@@ -89,8 +94,13 @@ router.put('/config', (req, res) => {
     social,
   };
 
-  writeConfig(next);
-  res.json(next);
+  try {
+    await saveConfig(next);
+    res.json(next);
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Unable to save site configuration.' });
+  }
 });
 
 // ---- Products ----

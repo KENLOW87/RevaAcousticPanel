@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 
-const { readConfig } = require('./config');
+const { getConfig } = require('./config');
 const adminAuth = require('./middleware/adminAuth');
 const trackPageView = require('./middleware/trackPageView');
 const productsRouter = require('./routes/products');
@@ -19,9 +19,14 @@ app.use(trackPageView);
 app.use(express.json());
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
-app.get('/api/config', (req, res) => {
-  const { siteName, tagline, contact, social } = readConfig();
-  res.json({ siteName, tagline, contact, social });
+app.get('/api/config', async (req, res) => {
+  try {
+    const { siteName, tagline, contact, social } = await getConfig();
+    res.json({ siteName, tagline, contact, social });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ error: 'Unable to load site configuration.' });
+  }
 });
 
 app.use('/api/products', productsRouter);
