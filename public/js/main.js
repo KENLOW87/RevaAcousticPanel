@@ -26,6 +26,15 @@
 // automatically. Empty planned series stay visible as Coming Soon.
 (function () {
   const seriesOrder = ['A Series', 'B Series', 'C Series'];
+  const categoryOrder = [
+    'Geometric / Facet',
+    'Linear / Ribbed',
+    'Chevron / Rhythm',
+    'Curves / Arch',
+    'Grid / Tiles',
+    'Wave / Organic',
+    'Other designs',
+  ];
   const menus = document.querySelectorAll('.nav-product-dropdown');
   if (!menus.length) return;
 
@@ -45,8 +54,22 @@
           if (!items.length) {
             return `<div class="nav-series-menu-block is-coming-soon"><div class="nav-series-menu-heading"><span>${escapeHtml(series)}</span><span class="nav-series-badge">Coming soon</span></div><p>Products will be available soon.</p></div>`;
           }
-          const links = items.map((product) => `<a href="/product.html?id=${encodeURIComponent(product.id)}" role="menuitem">${escapeHtml(product.id)}</a>`).join('');
-          return `<div class="nav-series-menu-block"><div class="nav-series-menu-heading"><span>${escapeHtml(series)}</span><small>${items.length} designs</small></div><div class="nav-product-grid">${links}</div></div>`;
+          const categories = new Map();
+          items.forEach((product) => {
+            const category = product.category || 'Other designs';
+            if (!categories.has(category)) categories.set(category, []);
+            categories.get(category).push(product);
+          });
+          const categoryMarkup = [...categories.keys()]
+            .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
+            .map((category) => {
+              const links = categories.get(category).map((product) => {
+                const shortName = String(product.name || '').replace(/^REVA\s+/, '');
+                return `<a href="/product.html?id=${encodeURIComponent(product.id)}" role="menuitem"><span class="nav-product-code">${escapeHtml(product.id)}</span><span class="nav-product-name">${escapeHtml(shortName)}</span></a>`;
+              }).join('');
+              return `<div class="nav-series-category"><span class="nav-series-category-label">${escapeHtml(category)}</span><div class="nav-product-grid">${links}</div></div>`;
+            }).join('');
+          return `<div class="nav-series-menu-block"><div class="nav-series-menu-heading"><span>${escapeHtml(series)}</span><small>${items.length} designs</small></div>${categoryMarkup}</div>`;
         }).join('');
       });
     } catch (error) {
