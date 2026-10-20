@@ -43,7 +43,7 @@ body {
 .floating-whatsapp {
   position: fixed;
   right: 24px;
-  bottom: 24px;
+  bottom: 88px;
   z-index: 1000;
   display: inline-flex;
   align-items: center;
@@ -76,7 +76,7 @@ body {
 @media (max-width: 600px) {
   .floating-whatsapp {
     right: 16px;
-    bottom: 16px;
+    bottom: 78px;
     width: 52px;
     height: 52px;
     min-height: 52px;
