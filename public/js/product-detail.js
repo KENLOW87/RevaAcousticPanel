@@ -25,7 +25,20 @@
   }
 
   function render(product) {
-    document.title = `${product.name} — REVA Acoustic`;
+    const pageUrl = `${window.location.origin}/product.html?id=${encodeURIComponent(product.id)}`;
+    const description = `${product.name} acoustic wall panel by REVA Acoustic. Explore available finishes, specifications and request a quote.`;
+    document.title = `${product.name} Acoustic Wall Panel — REVA Acoustic`;
+    setMeta('description', description);
+    setMeta('og:title', `${product.name} Acoustic Wall Panel — REVA Acoustic`, true);
+    setMeta('og:description', description, true);
+    setMeta('og:url', pageUrl, true);
+    setMeta('og:image', new URL(product.colors[0].image, window.location.origin).href, true);
+    setMeta('twitter:title', `${product.name} Acoustic Wall Panel — REVA Acoustic`, true);
+    setMeta('twitter:description', description, true);
+    setMeta('twitter:image', new URL(product.colors[0].image, window.location.origin).href, true);
+    const canonical = document.querySelector('link[rel="canonical"]');
+    if (canonical) canonical.href = pageUrl;
+    addProductStructuredData(product, pageUrl, description);
     window.setWhatsAppProduct?.(product);
 
     let activeColor = product.colors[0];
@@ -97,6 +110,40 @@
       const url = `/contact.html?product=${encodeURIComponent(product.id)}&color=${encodeURIComponent(activeColor.code)}&name=${encodeURIComponent(product.name)}`;
       window.location.href = url;
     });
+  }
+
+  function setMeta(name, content, isProperty = false) {
+    const selector = isProperty ? `meta[property="${name}"]` : `meta[name="${name}"]`;
+    let meta = document.head.querySelector(selector);
+    if (!meta) {
+      meta = document.createElement('meta');
+      meta.setAttribute(isProperty ? 'property' : 'name', name);
+      document.head.appendChild(meta);
+    }
+    meta.content = content;
+  }
+
+  function addProductStructuredData(product, pageUrl, description) {
+    const existing = document.getElementById('product-structured-data');
+    existing?.remove();
+    const data = {
+      '@context': 'https://schema.org',
+      '@type': 'Product',
+      name: product.name,
+      description,
+      sku: product.sku || product.id,
+      image: product.colors.map((color) => new URL(color.image, window.location.origin).href),
+      brand: { '@type': 'Brand', name: 'REVA Acoustic' },
+      category: 'Acoustic wall panels',
+      url: pageUrl,
+      material: product.material,
+      color: product.colors.map((color) => color.name).join(', ')
+    };
+    const script = document.createElement('script');
+    script.id = 'product-structured-data';
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(data);
+    document.head.appendChild(script);
   }
 
   init();
