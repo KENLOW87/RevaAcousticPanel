@@ -12,6 +12,7 @@
   const catalogTitle = document.getElementById('catalog-title');
   const catalogDescription = document.getElementById('catalog-description');
   const categoryNav = document.getElementById('category-nav');
+  const catalogPager = document.getElementById('catalog-pager');
 
   if (!grid) return;
 
@@ -25,6 +26,8 @@
   let searchTerm = '';
   let lastResultCount = 0;
   let searchReportTimer = null;
+  let currentPage = 1;
+  const pageSize = 6;
   const categoryOrder = [
     'Geometric / Facet',
     'Linear / Ribbed',
@@ -71,6 +74,7 @@
         button.classList.add('active');
         activeColor = null;
         activeCategory = null;
+        currentPage = 1;
         renderFilters();
         render();
       });
@@ -103,6 +107,7 @@
 
   function setActiveColor(code, pillEl) {
     activeColor = code;
+    currentPage = 1;
     filterRow.querySelectorAll('.pill').forEach((p) => p.classList.remove('active'));
     if (pillEl) {
       pillEl.classList.add('active');
@@ -161,6 +166,10 @@
     grid.innerHTML = '';
 
     if (filtered.length === 0) {
+      if (catalogPager) {
+        catalogPager.innerHTML = '';
+        catalogPager.hidden = true;
+      }
       if (emptyState) emptyState.style.display = 'block';
       if (emptyState) emptyState.innerHTML = hasProducts
         ? '<p>No designs match your filters. Try clearing the search or finish filter.</p>'
@@ -191,6 +200,7 @@
         link.addEventListener('click', (event) => {
           event.preventDefault();
           activeCategory = link.dataset.category || null;
+          currentPage = 1;
           const slug = activeCategory
             ? activeCategory.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
             : 'product-grid';
@@ -201,38 +211,49 @@
       });
     }
 
-    const grouped = new Map();
-    if (!activeCategory) {
-      grouped.set('All designs', [...filtered].sort(compareProductCode));
-    } else {
-      filtered.forEach((product) => {
-        const category = product.category || 'Other designs';
-        if (!grouped.has(category)) grouped.set(category, []);
-        grouped.get(category).push(product);
-      });
-      grouped.forEach((items) => items.sort(compareProductCode));
-    }
+    const sortedProducts = [...filtered].sort(compareProductCode);
+    const totalPages = Math.max(1, Math.ceil(sortedProducts.length / pageSize));
+    if (currentPage > totalPages) currentPage = totalPages;
+    const pageStart = (currentPage - 1) * pageSize;
+    const pageProducts = sortedProducts.slice(pageStart, pageStart + pageSize);
+    const pageCategory = activeCategory || 'All designs';
+    const categorySection = document.createElement('section');
+    categorySection.className = 'product-category catalog-page';
+    categorySection.innerHTML = `
+      <div class="product-category-head">
+        <div><span class="eyebrow">Collection</span><h2>${pageCategory}</h2></div>
+        <span class="product-category-count">Showing ${pageStart + 1}-${Math.min(pageStart + pageSize, sortedProducts.length)} of ${sortedProducts.length}</span>
+      </div>
+      <div class="product-grid category-grid"></div>
+    `;
+    const categoryGrid = categorySection.querySelector('.category-grid');
+    pageProducts.forEach((product) => categoryGrid.appendChild(renderCard(product)));
+    grid.appendChild(categorySection);
+    renderPager(totalPages);
+  }
 
-    [...grouped.keys()].sort((a, b) => {
-      if (!activeCategory) return 0;
-      return categoryOrder.indexOf(a) - categoryOrder.indexOf(b);
-    }).forEach((category) => {
-        const items = grouped.get(category);
-        const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-        const categorySection = document.createElement('section');
-        categorySection.className = 'product-category';
-        categorySection.id = `category-${slug}`;
-        categorySection.innerHTML = `
-          <div class="product-category-head">
-            <div><span class="eyebrow">Collection</span><h2>${category}</h2></div>
-            <span class="product-category-count">${items.length} design${items.length === 1 ? '' : 's'}</span>
-          </div>
-          <div class="product-grid category-grid"></div>
-        `;
-        const categoryGrid = categorySection.querySelector('.category-grid');
-        items.forEach((product) => categoryGrid.appendChild(renderCard(product)));
-        grid.appendChild(categorySection);
+  function renderPager(totalPages) {
+    if (!catalogPager) return;
+    if (totalPages <= 1) {
+      catalogPager.innerHTML = '';
+      catalogPager.hidden = true;
+      return;
+    }
+    catalogPager.hidden = false;
+    const buttons = [];
+    buttons.push(`<button type="button" class="pager-button" data-page="${currentPage - 1}" ${currentPage === 1 ? 'disabled' : ''}>← Previous</button>`);
+    for (let page = 1; page <= totalPages; page += 1) {
+      buttons.push(`<button type="button" class="pager-number${page === currentPage ? ' active' : ''}" data-page="${page}" aria-label="Page ${page}" ${page === currentPage ? 'aria-current="page"' : ''}>${page}</button>`);
+    }
+    buttons.push(`<button type="button" class="pager-button" data-page="${currentPage + 1}" ${currentPage === totalPages ? 'disabled' : ''}>Next →</button>`);
+    catalogPager.innerHTML = buttons.join('');
+    catalogPager.querySelectorAll('button:not([disabled])').forEach((button) => {
+      button.addEventListener('click', () => {
+        currentPage = Number(button.dataset.page);
+        render();
+        document.querySelector('.catalog-results')?.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
+    });
   }
 
   function renderCard(product) {
@@ -298,6 +319,7 @@
   if (searchInput) {
     searchInput.addEventListener('input', (e) => {
       searchTerm = e.target.value.trim().toLowerCase();
+      currentPage = 1;
       render();
 
       clearTimeout(searchReportTimer);

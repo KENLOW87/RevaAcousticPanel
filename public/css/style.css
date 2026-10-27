@@ -1188,6 +1188,52 @@ section {
   min-width: 0;
 }
 
+.catalog-page {
+  margin-bottom: 0;
+}
+
+.catalog-pager {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin: 28px 0 8px;
+}
+
+.catalog-pager[hidden] {
+  display: none;
+}
+
+.pager-button,
+.pager-number {
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  border: 1px solid var(--line, #dedfd7);
+  border-radius: 999px;
+  background: #fff;
+  color: var(--ink, #25261f);
+  font: inherit;
+  cursor: pointer;
+}
+
+.pager-button:hover:not(:disabled),
+.pager-number:hover:not(.active) {
+  border-color: var(--accent, #7a8d51);
+  color: var(--accent, #7a8d51);
+}
+
+.pager-number.active {
+  border-color: var(--accent, #7a8d51);
+  background: var(--accent, #7a8d51);
+  color: #fff;
+}
+
+.pager-button:disabled {
+  cursor: not-allowed;
+  opacity: .4;
+}
+
 .filter-group {
   display: flex;
   align-items: center;
