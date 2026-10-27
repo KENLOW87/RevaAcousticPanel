@@ -1079,5 +1079,1039 @@
       }
     ],
     "defaultImage": "/images/products/A%20Series/A23/DC.jpg"
+  },
+  {
+    "id": "B1",
+    "sku": "APF-B1",
+    "name": "REVA Acoustic Panel B1",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B1/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B1/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B1/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B1/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B1/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B1/DC.png"
+  },
+  {
+    "id": "B2",
+    "sku": "APF-B2",
+    "name": "REVA Acoustic Panel B2",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B2/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B2/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B2/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B2/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B2/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B2/DC.png"
+  },
+  {
+    "id": "B3",
+    "sku": "APF-B3",
+    "name": "REVA Acoustic Panel B3",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B3/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B3/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B3/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B3/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B3/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B3/DC.png"
+  },
+  {
+    "id": "B4",
+    "sku": "APF-B4",
+    "name": "REVA Acoustic Panel B4",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B4/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B4/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B4/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B4/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B4/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B4/DC.png"
+  },
+  {
+    "id": "B5",
+    "sku": "APF-B5",
+    "name": "REVA Acoustic Panel B5",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B5/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B5/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B5/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B5/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B5/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B5/DC.png"
+  },
+  {
+    "id": "B6",
+    "sku": "APF-B6",
+    "name": "REVA Acoustic Panel B6",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B6/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B6/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B6/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B6/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B6/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B6/DC.png"
+  },
+  {
+    "id": "B7",
+    "sku": "APF-B7",
+    "name": "REVA Acoustic Panel B7",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B7/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B7/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B7/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B7/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B7/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B7/DC.png"
+  },
+  {
+    "id": "B8",
+    "sku": "APF-B8",
+    "name": "REVA Acoustic Panel B8",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B8/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B8/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B8/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B8/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B8/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B8/DC.png"
+  },
+  {
+    "id": "B9",
+    "sku": "APF-B9",
+    "name": "REVA Acoustic Panel B9",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B9/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B9/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B9/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B9/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B9/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B9/DC.png"
+  },
+  {
+    "id": "B10",
+    "sku": "APF-B10",
+    "name": "REVA Acoustic Panel B10",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B10/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B10/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B10/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B10/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B10/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B10/DC.png"
+  },
+  {
+    "id": "B11",
+    "sku": "APF-B11",
+    "name": "REVA Acoustic Panel B11",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B11/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B11/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B11/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B11/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B11/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B11/DC.png"
+  },
+  {
+    "id": "B12",
+    "sku": "APF-B12",
+    "name": "REVA Acoustic Panel B12",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B12/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B12/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B12/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B12/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B12/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B12/DC.png"
+  },
+  {
+    "id": "B13",
+    "sku": "APF-B13",
+    "name": "REVA Acoustic Panel B13",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B13/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B13/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B13/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B13/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B13/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B13/DC.png"
+  },
+  {
+    "id": "B14",
+    "sku": "APF-B14",
+    "name": "REVA Acoustic Panel B14",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B14/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B14/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B14/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B14/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B14/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B14/DC.png"
+  },
+  {
+    "id": "B16",
+    "sku": "APF-B16",
+    "name": "REVA Acoustic Panel B16",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B16/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B16/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B16/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B16/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B16/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B16/DC.png"
+  },
+  {
+    "id": "B17",
+    "sku": "APF-B17",
+    "name": "REVA Acoustic Panel B17",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B17/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B17/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B17/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B17/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B17/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B17/DC.png"
+  },
+  {
+    "id": "B18",
+    "sku": "APF-B18",
+    "name": "REVA Acoustic Panel B18",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B18/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B18/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B18/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B18/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B18/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B18/DC.png"
+  },
+  {
+    "id": "B19",
+    "sku": "APF-B19",
+    "name": "REVA Acoustic Panel B19",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B19/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B19/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B19/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B19/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B19/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B19/DC.png"
+  },
+  {
+    "id": "B20",
+    "sku": "APF-B20",
+    "name": "REVA Acoustic Panel B20",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B20/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B20/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B20/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B20/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B20/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B20/DC.png"
+  },
+  {
+    "id": "B21",
+    "sku": "APF-B21",
+    "name": "REVA Acoustic Panel B21",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B21/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B21/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B21/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B21/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B21/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B21/DC.png"
+  },
+  {
+    "id": "B22",
+    "sku": "APF-B22",
+    "name": "REVA Acoustic Panel B22",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B22/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B22/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B22/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B22/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B22/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B22/DC.png"
+  },
+  {
+    "id": "B23",
+    "sku": "APF-B23",
+    "name": "REVA Acoustic Panel B23",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B23/DC.png"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B23/LC.png"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B23/MG.png"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B23/OY.png"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B23/WG.png"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B23/DC.png"
   }
 ]
