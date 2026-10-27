@@ -233,6 +233,107 @@ function listAvailableMonths(kind) {
   return Array.from(months).sort().reverse();
 }
 
+function writeLogRows(kind, monthKey, rows) {
+  const p = logPath(kind, monthKey);
+  if (!rows.length) {
+    if (fs.existsSync(p)) fs.unlinkSync(p);
+    return;
+  }
+  ensureStatsDir();
+  fs.writeFileSync(p, `${rows.map((r) => JSON.stringify(r)).join('\n')}\n`);
+}
+
+function allStatsMonths() {
+  let files = [];
+  try {
+    files = fs.readdirSync(STATS_DIR);
+  } catch (e) {
+    return [];
+  }
+  const months = new Set();
+  files.forEach((f) => {
+    const m = f.match(/^(?:monthly|landings|searches|clicks)-(\d{4}-\d{2})\.(?:json|jsonl)$/);
+    if (m) months.add(m[1]);
+  });
+  return Array.from(months).sort();
+}
+
+// Permanently removes everything recorded before `beforeDateStr` (YYYY-MM-DD).
+// Months entirely before the cutoff are deleted outright; the cutoff's own
+// month is filtered row-by-row. Irreversible — callers should confirm first.
+function purgeBefore(beforeDateStr, { dryRun = false } = {}) {
+  const cutoff = new Date(`${beforeDateStr}T00:00:00`);
+  const cutoffMs = cutoff.getTime();
+  const cutoffMonthKey = toMonthKey(cutoff);
+  const cutoffDateKey = toDateKey(cutoff);
+
+  const summary = {
+    before: beforeDateStr,
+    monthsDeleted: [],
+    daysRemoved: 0,
+    rowsRemoved: { landings: 0, searches: 0, clicks: 0 },
+  };
+
+  allStatsMonths().forEach((monthKey) => {
+    if (monthKey < cutoffMonthKey) {
+      const agg = getMonthlyAggregate(monthKey);
+      summary.daysRemoved += Object.keys(agg.days || {}).length;
+      ['landings', 'searches', 'clicks'].forEach((kind) => {
+        summary.rowsRemoved[kind] += readLog(kind, monthKey).length;
+      });
+      summary.monthsDeleted.push(monthKey);
+      if (!dryRun) {
+        ['landings', 'searches', 'clicks'].forEach((kind) => {
+          const p = logPath(kind, monthKey);
+          if (fs.existsSync(p)) fs.unlinkSync(p);
+        });
+        const aggPath = aggregatePath(monthKey);
+        if (fs.existsSync(aggPath)) fs.unlinkSync(aggPath);
+      }
+      return;
+    }
+
+    if (monthKey === cutoffMonthKey) {
+      const landingsKept = readLog('landings', monthKey).filter((r) => r.t >= cutoffMs);
+      const searchesAll = readLog('searches', monthKey);
+      const searchesKept = searchesAll.filter((r) => r.t >= cutoffMs);
+      const clicksAll = readLog('clicks', monthKey);
+      const clicksKept = clicksAll.filter((r) => r.t >= cutoffMs);
+      const landingsAll = readLog('landings', monthKey);
+
+      summary.rowsRemoved.landings += landingsAll.length - landingsKept.length;
+      summary.rowsRemoved.searches += searchesAll.length - searchesKept.length;
+      summary.rowsRemoved.clicks += clicksAll.length - clicksKept.length;
+
+      const agg = getMonthlyAggregate(monthKey);
+      const keptDays = {};
+      Object.entries(agg.days || {}).forEach(([d, v]) => {
+        if (d >= cutoffDateKey) keptDays[d] = v;
+        else summary.daysRemoved += 1;
+      });
+
+      if (!dryRun) {
+        writeLogRows('landings', monthKey, landingsKept);
+        writeLogRows('searches', monthKey, searchesKept);
+        writeLogRows('clicks', monthKey, clicksKept);
+
+        const newLanding = {};
+        landingsKept.forEach((r) => {
+          newLanding[r.p] = (newLanding[r.p] || 0) + 1;
+        });
+        const newActions = {};
+        clicksKept.forEach((r) => {
+          newActions[r.a] = (newActions[r.a] || 0) + 1;
+        });
+
+        saveAggregate(monthKey, { days: keptDays, pages: {}, landing: newLanding, actions: newActions });
+      }
+    }
+  });
+
+  return summary;
+}
+
 function uniqueByIp(rows) {
   const seen = new Set();
   const out = [];
@@ -365,4 +466,5 @@ module.exports = {
   recordPageView,
   recordClick,
   recordSearch,
+  purgeBefore,
 };

@@ -387,6 +387,7 @@
             <button class="side-nav-child" data-subtab="whatsapp">WhatsApp Clicks</button>
             <button class="side-nav-child" data-subtab="platform">Platform Traffic</button>
             <button class="side-nav-child" data-subtab="goal">Traffic Goal</button>
+            <button class="side-nav-child" data-subtab="cleanup">Clean Up Data</button>
           </div>
         </div>
       </aside>
@@ -596,6 +597,25 @@
             <button type="submit" class="btn btn-primary">Save Goal</button>
             <div id="goal-status" class="form-status"></div>
           </form>
+        </div>
+      </div>
+
+      <div class="report-subpanel" id="report-panel-cleanup">
+        <div class="admin-card" style="max-width:720px;">
+          <h3 style="margin-top:0;">Clean Up Test Data</h3>
+          <p style="color:var(--muted); font-size:0.9rem; margin-top:-8px;">
+            Permanently deletes every recorded visit, search and WhatsApp click dated before the date you choose below —
+            use this once, right after launch, to wipe out testing traffic and start the real numbers from a clean slate.
+            <strong>This cannot be undone.</strong>
+          </p>
+          <div class="field" style="max-width:240px;">
+            <label for="cleanup-before">Delete everything recorded before</label>
+            <input type="date" id="cleanup-before" name="before" />
+          </div>
+          <button type="button" class="btn btn-outline" id="cleanup-preview-btn">Preview</button>
+          <button type="button" class="btn btn-primary" id="cleanup-delete-btn" disabled>Delete Permanently</button>
+          <div id="cleanup-preview" style="margin-top:14px;"></div>
+          <div id="cleanup-status" class="form-status"></div>
         </div>
       </div>
     </div>
@@ -1379,12 +1399,95 @@
     }
   });
 
+  // -- Clean Up Test Data --
+  let cleanupPreviewData = null;
+
+  function summarizePurge(data) {
+    const totalRows = data.rowsRemoved.landings + data.rowsRemoved.searches + data.rowsRemoved.clicks;
+    if (!data.monthsDeleted.length && !data.daysRemoved && !totalRows) {
+      return 'Nothing to delete — no data recorded before this date.';
+    }
+    const parts = [];
+    if (data.monthsDeleted.length) parts.push(`${data.monthsDeleted.length} whole month(s) (${data.monthsDeleted.join(', ')})`);
+    if (data.daysRemoved) parts.push(`${data.daysRemoved} day(s) of visit counts`);
+    if (totalRows) {
+      parts.push(
+        `${totalRows} log rows (${data.rowsRemoved.landings} landings, ${data.rowsRemoved.searches} searches, ${data.rowsRemoved.clicks} WhatsApp clicks)`
+      );
+    }
+    return `This will permanently delete: ${parts.join(', ')}.`;
+  }
+
+  function loadReportCleanup() {
+    const beforeInput = document.getElementById('cleanup-before');
+    if (!beforeInput.value) {
+      beforeInput.value = new Date().toISOString().slice(0, 10);
+    }
+  }
+
+  document.getElementById('cleanup-preview-btn').addEventListener('click', async () => {
+    const statusEl = document.getElementById('cleanup-status');
+    const previewEl = document.getElementById('cleanup-preview');
+    const deleteBtn = document.getElementById('cleanup-delete-btn');
+    const before = document.getElementById('cleanup-before').value;
+    statusEl.className = 'form-status';
+    statusEl.textContent = '';
+    deleteBtn.disabled = true;
+    cleanupPreviewData = null;
+    if (!before) {
+      statusEl.textContent = 'Pick a date first.';
+      statusEl.className = 'form-status show error';
+      return;
+    }
+    try {
+      const res = await fetch(`/api/admin/report/purge-preview?before=${before}`);
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Preview failed');
+      cleanupPreviewData = data;
+      previewEl.innerHTML = `<p class="empty-note" style="margin:0;">${summarizePurge(data)}</p>`;
+      deleteBtn.disabled = false;
+    } catch (err) {
+      statusEl.textContent = err.message;
+      statusEl.className = 'form-status show error';
+    }
+  });
+
+  document.getElementById('cleanup-delete-btn').addEventListener('click', async () => {
+    const statusEl = document.getElementById('cleanup-status');
+    const previewEl = document.getElementById('cleanup-preview');
+    const deleteBtn = document.getElementById('cleanup-delete-btn');
+    const before = document.getElementById('cleanup-before').value;
+    if (!before || !cleanupPreviewData) return;
+
+    if (!confirm(`${summarizePurge(cleanupPreviewData)}\n\nThis cannot be undone. Delete now?`)) return;
+
+    deleteBtn.disabled = true;
+    try {
+      const res = await fetch('/api/admin/report/purge', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ before }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Delete failed');
+      statusEl.textContent = 'Deleted. Reload the dashboard to see the clean numbers.';
+      statusEl.className = 'form-status show success';
+      previewEl.innerHTML = '';
+      cleanupPreviewData = null;
+    } catch (err) {
+      statusEl.textContent = err.message;
+      statusEl.className = 'form-status show error';
+      deleteBtn.disabled = false;
+    }
+  });
+
   const REPORT_LOADERS = {
     landing: () => loadReportLanding(),
     search: () => loadReportSearch(),
     whatsapp: () => loadReportWhatsapp(),
     platform: loadReportPlatform,
     goal: loadReportGoal,
+    cleanup: loadReportCleanup,
   };
 
   loadFinishes().then(loadQuotes);

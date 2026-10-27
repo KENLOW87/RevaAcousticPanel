@@ -323,6 +323,24 @@ router.get('/goal', (req, res) => {
   });
 });
 
+// ---- Purge test/dummy data ----
+router.get('/purge-preview', (req, res) => {
+  const before = typeof req.query.before === 'string' ? req.query.before : '';
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(before)) {
+    return res.status(400).json({ error: 'Enter a valid cutoff date (YYYY-MM-DD).' });
+  }
+  res.json(tracking.purgeBefore(before, { dryRun: true }));
+});
+
+router.post('/purge', (req, res) => {
+  const { before } = req.body || {};
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(before)) {
+    return res.status(400).json({ error: 'Enter a valid cutoff date (YYYY-MM-DD).' });
+  }
+  const summary = tracking.purgeBefore(before, { dryRun: false });
+  res.json({ success: true, ...summary });
+});
+
 router.put('/goal', (req, res) => {
   const { start, target, until } = req.body || {};
   if (!/^\d{4}-\d{2}-\d{2}$/.test(start) || !/^\d{4}-\d{2}-\d{2}$/.test(until)) {
