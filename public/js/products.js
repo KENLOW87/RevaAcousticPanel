@@ -147,10 +147,10 @@
     const seriesName = activeSeries.replace(' Series', '');
     const hasProducts = seriesProducts.length > 0;
     if (seriesLabel) seriesLabel.textContent = activeSeries;
-    if (catalogTitle) catalogTitle.textContent = hasProducts ? `${activeSeries} Acoustic Panel Catalog` : `${activeSeries} Coming Soon`;
+    if (catalogTitle) catalogTitle.textContent = hasProducts ? `${activeSeries} PET Acoustic Wall Panel Designs` : `${activeSeries} Coming Soon`;
     if (catalogDescription) {
       catalogDescription.textContent = hasProducts
-        ? `${seriesProducts.length} designs, each available in 5 finishes. Filter by finish or search a design code to find the right panel.`
+        ? `Explore ${seriesProducts.length} decorative PET acoustic wall panel designs in 5 finishes for homes, offices and studios in Malaysia. Filter by finish or search a design code to find the right panel.`
         : `We are preparing the ${seriesName} product collection. Check back soon for the latest REVA Acoustic designs.`;
     }
 
