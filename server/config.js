@@ -19,10 +19,10 @@ const DEFAULTS = {
   siteName: 'REVA Acoustic',
   tagline: 'Acoustic Wall Panels by EZLIFE',
   contact: {
-    email: 'info@revaacoustic.com',
-    phone: '+1 (555) 010-2024',
-    whatsapp: '+15550102024',
-    address: '123 Design District, Your City, Your Country',
+    email: 'revaacousticpanel@gmail.com',
+    phone: '+60 16-387 6888',
+    whatsapp: '+60163876888',
+    address: 'No. 6, Jalan Perindustrian PP7, Taman Perindustrian Putra Permai, 43300 Seri Kembangan, Selangor, Malaysia',
     hours: 'Mon - Sat, 9:00 AM - 6:00 PM',
   },
   social: {
