@@ -1,47 +1,227 @@
 {
-  "A1": { "name": "REVA Vertex", "category": "Geometric / Facet" },
-  "A2": { "name": "REVA Linear", "category": "Linear / Ribbed" },
-  "A3": { "name": "REVA Diagonal Line", "category": "Linear / Ribbed" },
-  "A4": { "name": "REVA Gridstone", "category": "Grid / Tiles" },
-  "A5": { "name": "REVA Chevron", "category": "Chevron / Rhythm" },
-  "A6": { "name": "REVA Flowline", "category": "Curves / Arch" },
-  "A7": { "name": "REVA Prism", "category": "Geometric / Facet" },
-  "A8": { "name": "REVA Diamond Weave", "category": "Geometric / Facet" },
-  "A9": { "name": "REVA Triad", "category": "Geometric / Facet" },
-  "A10": { "name": "REVA Lattice", "category": "Geometric / Facet" },
-  "A11": { "name": "REVA Ripple", "category": "Wave / Organic" },
-  "A12": { "name": "REVA Contour", "category": "Wave / Organic" },
-  "A13": { "name": "REVA Blockline", "category": "Linear / Ribbed" },
-  "A14": { "name": "REVA Hexa", "category": "Geometric / Facet" },
-  "A15": { "name": "REVA Frame", "category": "Grid / Tiles" },
-  "A16": { "name": "REVA Orbit", "category": "Curves / Arch" },
-  "A17": { "name": "REVA Archline", "category": "Curves / Arch" },
-  "A18": { "name": "REVA Mosaic", "category": "Grid / Tiles" },
-  "A19": { "name": "REVA Apex", "category": "Geometric / Facet" },
-  "A20": { "name": "REVA Diamond Grid", "category": "Geometric / Facet" },
-  "A21": { "name": "REVA Herringbone", "category": "Chevron / Rhythm" },
-  "A22": { "name": "REVA Portal", "category": "Curves / Arch" },
-  "A23": { "name": "REVA Softline", "category": "Wave / Organic" },
-  "B1": { "name": "REVA Diamond Loom", "category": "Geometric / Facet" },
-  "B2": { "name": "REVA Axis Grid", "category": "Grid / Tiles" },
-  "B3": { "name": "REVA Parallel Ridge", "category": "Linear / Ribbed" },
-  "B4": { "name": "REVA Foldline", "category": "Chevron / Rhythm" },
-  "B5": { "name": "REVA Arcwave", "category": "Curves / Arch" },
-  "B6": { "name": "REVA Hexa Link", "category": "Geometric / Facet" },
-  "B7": { "name": "REVA Vantage", "category": "Geometric / Facet" },
-  "B8": { "name": "REVA Ladderline", "category": "Linear / Ribbed" },
-  "B9": { "name": "REVA Petal Loop", "category": "Curves / Arch" },
-  "B10": { "name": "REVA Offset Weave", "category": "Grid / Tiles" },
-  "B11": { "name": "REVA Rippleform", "category": "Wave / Organic" },
-  "B12": { "name": "REVA Horizon Rib", "category": "Linear / Ribbed" },
-  "B13": { "name": "REVA Chevron Crest", "category": "Chevron / Rhythm" },
-  "B14": { "name": "REVA Facet Bloom", "category": "Geometric / Facet" },
-  "B16": { "name": "REVA Archway", "category": "Curves / Arch" },
-  "B17": { "name": "REVA Prism Mesh", "category": "Geometric / Facet" },
-  "B18": { "name": "REVA Tile Rhythm", "category": "Grid / Tiles" },
-  "B19": { "name": "REVA Flow Arc", "category": "Wave / Organic" },
-  "B20": { "name": "REVA Linear Weave", "category": "Linear / Ribbed" },
-  "B21": { "name": "REVA Herringbone Grid", "category": "Chevron / Rhythm" },
-  "B22": { "name": "REVA Soft Curve", "category": "Wave / Organic" },
-  "B23": { "name": "REVA Geo Lattice", "category": "Geometric / Facet" }
+  "A1": {
+    "name": "REVA Vertex",
+    "category": "Geometric / Facet",
+    "description": "REVA Vertex brings an angular, faceted texture to the wall, diffusing sound reflections across crisp, angled planes. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A2": {
+    "name": "REVA Linear",
+    "category": "Linear / Ribbed",
+    "description": "REVA Linear brings a fine ribbed texture to the wall, breaking up sound reflections along continuous linear grooves. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A3": {
+    "name": "REVA Diagonal Line",
+    "category": "Linear / Ribbed",
+    "description": "A clean linear finish defines REVA Diagonal Line — breaking up sound reflections along continuous linear grooves while adding a tailored, design-forward surface to any room."
+  },
+  "A4": {
+    "name": "REVA Gridstone",
+    "category": "Grid / Tiles",
+    "description": "REVA Gridstone brings a modular grid texture to the wall, scattering sound evenly across a structured, repeatable grid. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A5": {
+    "name": "REVA Chevron",
+    "category": "Chevron / Rhythm",
+    "description": "REVA Chevron brings a zig-zag chevron texture to the wall, breaking up flat sound reflections with rhythmic angles. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A6": {
+    "name": "REVA Flowline",
+    "category": "Curves / Arch",
+    "description": "REVA Flowline brings a sweeping arched texture to the wall, softening and diffusing reflected sound across rounded surfaces. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A7": {
+    "name": "REVA Prism",
+    "category": "Geometric / Facet",
+    "description": "A sharp-edged geometric finish defines REVA Prism — diffusing sound reflections across crisp, angled planes while adding a tailored, design-forward surface to any room."
+  },
+  "A8": {
+    "name": "REVA Diamond Weave",
+    "category": "Geometric / Facet",
+    "description": "REVA Diamond Weave pairs a multi-faceted pattern with REVA Acoustic's PET fibre construction, diffusing sound reflections across crisp, angled planes for homes, offices and studios."
+  },
+  "A9": {
+    "name": "REVA Triad",
+    "category": "Geometric / Facet",
+    "description": "REVA Triad brings an angular, faceted texture to the wall, diffusing sound reflections across crisp, angled planes. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A10": {
+    "name": "REVA Lattice",
+    "category": "Geometric / Facet",
+    "description": "A sharp-edged geometric finish defines REVA Lattice — diffusing sound reflections across crisp, angled planes while adding a tailored, design-forward surface to any room."
+  },
+  "A11": {
+    "name": "REVA Ripple",
+    "category": "Wave / Organic",
+    "description": "REVA Ripple brings a flowing wave texture to the wall, absorbing sound naturally across an undulating surface. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A12": {
+    "name": "REVA Contour",
+    "category": "Wave / Organic",
+    "description": "An organic wave finish defines REVA Contour — absorbing sound naturally across an undulating surface while adding a tailored, design-forward surface to any room."
+  },
+  "A13": {
+    "name": "REVA Blockline",
+    "category": "Linear / Ribbed",
+    "description": "REVA Blockline pairs a slim, ribbed pattern with REVA Acoustic's PET fibre construction, breaking up sound reflections along continuous linear grooves for homes, offices and studios."
+  },
+  "A14": {
+    "name": "REVA Hexa",
+    "category": "Geometric / Facet",
+    "description": "REVA Hexa pairs a multi-faceted pattern with REVA Acoustic's PET fibre construction, diffusing sound reflections across crisp, angled planes for homes, offices and studios."
+  },
+  "A15": {
+    "name": "REVA Frame",
+    "category": "Grid / Tiles",
+    "description": "A tile-set finish defines REVA Frame — scattering sound evenly across a structured, repeatable grid while adding a tailored, design-forward surface to any room."
+  },
+  "A16": {
+    "name": "REVA Orbit",
+    "category": "Curves / Arch",
+    "description": "A soft, arched finish defines REVA Orbit — softening and diffusing reflected sound across rounded surfaces while adding a tailored, design-forward surface to any room."
+  },
+  "A17": {
+    "name": "REVA Archline",
+    "category": "Curves / Arch",
+    "description": "REVA Archline pairs a rounded arch pattern with REVA Acoustic's PET fibre construction, softening and diffusing reflected sound across rounded surfaces for homes, offices and studios."
+  },
+  "A18": {
+    "name": "REVA Mosaic",
+    "category": "Grid / Tiles",
+    "description": "REVA Mosaic pairs an evenly tiled pattern with REVA Acoustic's PET fibre construction, scattering sound evenly across a structured, repeatable grid for homes, offices and studios."
+  },
+  "A19": {
+    "name": "REVA Apex",
+    "category": "Geometric / Facet",
+    "description": "REVA Apex brings an angular, faceted texture to the wall, diffusing sound reflections across crisp, angled planes. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A20": {
+    "name": "REVA Diamond Grid",
+    "category": "Geometric / Facet",
+    "description": "A sharp-edged geometric finish defines REVA Diamond Grid — diffusing sound reflections across crisp, angled planes while adding a tailored, design-forward surface to any room."
+  },
+  "A21": {
+    "name": "REVA Herringbone",
+    "category": "Chevron / Rhythm",
+    "description": "An angled chevron finish defines REVA Herringbone — breaking up flat sound reflections with rhythmic angles while adding a tailored, design-forward surface to any room."
+  },
+  "A22": {
+    "name": "REVA Portal",
+    "category": "Curves / Arch",
+    "description": "REVA Portal brings a sweeping arched texture to the wall, softening and diffusing reflected sound across rounded surfaces. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "A23": {
+    "name": "REVA Softline",
+    "category": "Wave / Organic",
+    "description": "REVA Softline pairs an undulating organic pattern with REVA Acoustic's PET fibre construction, absorbing sound naturally across an undulating surface for homes, offices and studios."
+  },
+  "B1": {
+    "name": "REVA Diamond Loom",
+    "category": "Geometric / Facet",
+    "description": "REVA Diamond Loom pairs a multi-faceted pattern with REVA Acoustic's PET fibre construction, diffusing sound reflections across crisp, angled planes for homes, offices and studios."
+  },
+  "B2": {
+    "name": "REVA Axis Grid",
+    "category": "Grid / Tiles",
+    "description": "REVA Axis Grid brings a modular grid texture to the wall, scattering sound evenly across a structured, repeatable grid. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "B3": {
+    "name": "REVA Parallel Ridge",
+    "category": "Linear / Ribbed",
+    "description": "REVA Parallel Ridge brings a fine ribbed texture to the wall, breaking up sound reflections along continuous linear grooves. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "B4": {
+    "name": "REVA Foldline",
+    "category": "Chevron / Rhythm",
+    "description": "REVA Foldline pairs a pointed chevron pattern with REVA Acoustic's PET fibre construction, breaking up flat sound reflections with rhythmic angles for homes, offices and studios."
+  },
+  "B5": {
+    "name": "REVA Arcwave",
+    "category": "Curves / Arch",
+    "description": "A soft, arched finish defines REVA Arcwave — softening and diffusing reflected sound across rounded surfaces while adding a tailored, design-forward surface to any room."
+  },
+  "B6": {
+    "name": "REVA Hexa Link",
+    "category": "Geometric / Facet",
+    "description": "REVA Hexa Link brings an angular, faceted texture to the wall, diffusing sound reflections across crisp, angled planes. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "B7": {
+    "name": "REVA Vantage",
+    "category": "Geometric / Facet",
+    "description": "A sharp-edged geometric finish defines REVA Vantage — diffusing sound reflections across crisp, angled planes while adding a tailored, design-forward surface to any room."
+  },
+  "B8": {
+    "name": "REVA Ladderline",
+    "category": "Linear / Ribbed",
+    "description": "A clean linear finish defines REVA Ladderline — breaking up sound reflections along continuous linear grooves while adding a tailored, design-forward surface to any room."
+  },
+  "B9": {
+    "name": "REVA Petal Loop",
+    "category": "Curves / Arch",
+    "description": "REVA Petal Loop pairs a rounded arch pattern with REVA Acoustic's PET fibre construction, softening and diffusing reflected sound across rounded surfaces for homes, offices and studios."
+  },
+  "B10": {
+    "name": "REVA Offset Weave",
+    "category": "Grid / Tiles",
+    "description": "A tile-set finish defines REVA Offset Weave — scattering sound evenly across a structured, repeatable grid while adding a tailored, design-forward surface to any room."
+  },
+  "B11": {
+    "name": "REVA Rippleform",
+    "category": "Wave / Organic",
+    "description": "REVA Rippleform brings a flowing wave texture to the wall, absorbing sound naturally across an undulating surface. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "B12": {
+    "name": "REVA Horizon Rib",
+    "category": "Linear / Ribbed",
+    "description": "REVA Horizon Rib pairs a slim, ribbed pattern with REVA Acoustic's PET fibre construction, breaking up sound reflections along continuous linear grooves for homes, offices and studios."
+  },
+  "B13": {
+    "name": "REVA Chevron Crest",
+    "category": "Chevron / Rhythm",
+    "description": "REVA Chevron Crest brings a zig-zag chevron texture to the wall, breaking up flat sound reflections with rhythmic angles. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "B14": {
+    "name": "REVA Facet Bloom",
+    "category": "Geometric / Facet",
+    "description": "REVA Facet Bloom pairs a multi-faceted pattern with REVA Acoustic's PET fibre construction, diffusing sound reflections across crisp, angled planes for homes, offices and studios."
+  },
+  "B16": {
+    "name": "REVA Archway",
+    "category": "Curves / Arch",
+    "description": "REVA Archway brings a sweeping arched texture to the wall, softening and diffusing reflected sound across rounded surfaces. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "B17": {
+    "name": "REVA Prism Mesh",
+    "category": "Geometric / Facet",
+    "description": "REVA Prism Mesh brings an angular, faceted texture to the wall, diffusing sound reflections across crisp, angled planes. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "B18": {
+    "name": "REVA Tile Rhythm",
+    "category": "Grid / Tiles",
+    "description": "REVA Tile Rhythm pairs an evenly tiled pattern with REVA Acoustic's PET fibre construction, scattering sound evenly across a structured, repeatable grid for homes, offices and studios."
+  },
+  "B19": {
+    "name": "REVA Flow Arc",
+    "category": "Wave / Organic",
+    "description": "An organic wave finish defines REVA Flow Arc — absorbing sound naturally across an undulating surface while adding a tailored, design-forward surface to any room."
+  },
+  "B20": {
+    "name": "REVA Linear Weave",
+    "category": "Linear / Ribbed",
+    "description": "REVA Linear Weave brings a fine ribbed texture to the wall, breaking up sound reflections along continuous linear grooves. Crafted from acoustic PET fibre and available in 5 finishes."
+  },
+  "B21": {
+    "name": "REVA Herringbone Grid",
+    "category": "Chevron / Rhythm",
+    "description": "An angled chevron finish defines REVA Herringbone Grid — breaking up flat sound reflections with rhythmic angles while adding a tailored, design-forward surface to any room."
+  },
+  "B22": {
+    "name": "REVA Soft Curve",
+    "category": "Wave / Organic",
+    "description": "REVA Soft Curve pairs an undulating organic pattern with REVA Acoustic's PET fibre construction, absorbing sound naturally across an undulating surface for homes, offices and studios."
+  },
+  "B23": {
+    "name": "REVA Geo Lattice",
+    "category": "Geometric / Facet",
+    "description": "A sharp-edged geometric finish defines REVA Geo Lattice — diffusing sound reflections across crisp, angled planes while adding a tailored, design-forward surface to any room."
+  }
 }

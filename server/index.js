@@ -9,6 +9,8 @@ const quotesRouter = require('./routes/quotes');
 const trackRouter = require('./routes/track');
 const adminRouter = require('./routes/admin');
 const reportRouter = require('./routes/report');
+const { getProduct } = require('./productsStore');
+const { renderProductPage, renderNotFound } = require('./renderProductPage');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -17,6 +19,18 @@ const PORT = process.env.PORT || 3000;
 // (including '/') without ever reaching later middleware.
 app.use(trackPageView);
 app.use(express.json());
+
+// Server-render /product.html so each design ships a unique title/meta/
+// canonical/structured-data in the raw HTML — must run before express.static,
+// which would otherwise serve the generic static file straight through.
+app.get('/product.html', (req, res) => {
+  const product = req.query.id ? getProduct(req.query.id) : null;
+  if (!product) {
+    return res.status(404).send(renderNotFound());
+  }
+  res.send(renderProductPage(product));
+});
+
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.get('/api/config', async (req, res) => {

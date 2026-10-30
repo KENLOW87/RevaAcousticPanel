@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server/index.js",
     "dev": "node --watch server/index.js",
-    "build:products": "node server/scripts/build-products.js"
+    "build:products": "node server/scripts/build-products.js",
+    "build:sitemap": "node server/scripts/build-sitemap.js"
   },
   "dependencies": {
     "express": "^4.19.2"
