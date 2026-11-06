@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const BASE_URL = 'https://revaacousticpanel.onrender.com';
+const BASE_URL = 'https://revaacousticwallpanel.com';
 const TEMPLATE_PATH = path.join(__dirname, '..', 'public', 'product.html');
 const template = fs.readFileSync(TEMPLATE_PATH, 'utf-8');
 

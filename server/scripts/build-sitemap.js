@@ -5,7 +5,7 @@ const path = require('path');
 
 const { getAllProducts } = require('../productsStore');
 
-const BASE_URL = 'https://revaacousticpanel.onrender.com';
+const BASE_URL = 'https://revaacousticwallpanel.com';
 const OUT_PATH = path.join(__dirname, '..', '..', 'public', 'sitemap.xml');
 
 const staticPaths = ['/', '/products.html', '/about.html', '/contact.html'];
