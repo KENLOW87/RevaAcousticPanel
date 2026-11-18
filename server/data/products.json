@@ -17,34 +17,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A1/DC.png"
+        "image": "/images/products/A%20Series/A1/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A1/LC.png"
+        "image": "/images/products/A%20Series/A1/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A1/MG.png"
+        "image": "/images/products/A%20Series/A1/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A1/OY.png"
+        "image": "/images/products/A%20Series/A1/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A1/WG.png"
+        "image": "/images/products/A%20Series/A1/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A1/DC.png"
+    "defaultImage": "/images/products/A%20Series/A1/DC.jpg"
   },
   {
     "id": "A2",
@@ -64,34 +64,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A2/DC.png"
+        "image": "/images/products/A%20Series/A2/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A2/LC.png"
+        "image": "/images/products/A%20Series/A2/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A2/MG.png"
+        "image": "/images/products/A%20Series/A2/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A2/OY.png"
+        "image": "/images/products/A%20Series/A2/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A2/WG.png"
+        "image": "/images/products/A%20Series/A2/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A2/DC.png"
+    "defaultImage": "/images/products/A%20Series/A2/DC.jpg"
   },
   {
     "id": "A3",
@@ -111,34 +111,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A3/DC.png"
+        "image": "/images/products/A%20Series/A3/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A3/LC.png"
+        "image": "/images/products/A%20Series/A3/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A3/MG.png"
+        "image": "/images/products/A%20Series/A3/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A3/OY.png"
+        "image": "/images/products/A%20Series/A3/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A3/WG.png"
+        "image": "/images/products/A%20Series/A3/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A3/DC.png"
+    "defaultImage": "/images/products/A%20Series/A3/DC.jpg"
   },
   {
     "id": "A4",
@@ -158,34 +158,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A4/DC.png"
+        "image": "/images/products/A%20Series/A4/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A4/LC.png"
+        "image": "/images/products/A%20Series/A4/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A4/MG.png"
+        "image": "/images/products/A%20Series/A4/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A4/OY.png"
+        "image": "/images/products/A%20Series/A4/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A4/WG.png"
+        "image": "/images/products/A%20Series/A4/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A4/DC.png"
+    "defaultImage": "/images/products/A%20Series/A4/DC.jpg"
   },
   {
     "id": "A5",
@@ -205,34 +205,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A5/DC.png"
+        "image": "/images/products/A%20Series/A5/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A5/LC.png"
+        "image": "/images/products/A%20Series/A5/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A5/MG.png"
+        "image": "/images/products/A%20Series/A5/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A5/OY.png"
+        "image": "/images/products/A%20Series/A5/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A5/WG.png"
+        "image": "/images/products/A%20Series/A5/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A5/DC.png"
+    "defaultImage": "/images/products/A%20Series/A5/DC.jpg"
   },
   {
     "id": "A6",
@@ -252,34 +252,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A6/DC.png"
+        "image": "/images/products/A%20Series/A6/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A6/LC.png"
+        "image": "/images/products/A%20Series/A6/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A6/MG.png"
+        "image": "/images/products/A%20Series/A6/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A6/OY.png"
+        "image": "/images/products/A%20Series/A6/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A6/WG.png"
+        "image": "/images/products/A%20Series/A6/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A6/DC.png"
+    "defaultImage": "/images/products/A%20Series/A6/DC.jpg"
   },
   {
     "id": "A7",
@@ -299,34 +299,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A7/DC.png"
+        "image": "/images/products/A%20Series/A7/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A7/LC.png"
+        "image": "/images/products/A%20Series/A7/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A7/MG.png"
+        "image": "/images/products/A%20Series/A7/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A7/OY.png"
+        "image": "/images/products/A%20Series/A7/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A7/WG.png"
+        "image": "/images/products/A%20Series/A7/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A7/DC.png"
+    "defaultImage": "/images/products/A%20Series/A7/DC.jpg"
   },
   {
     "id": "A8",
@@ -346,34 +346,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A8/DC.png"
+        "image": "/images/products/A%20Series/A8/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A8/LC.png"
+        "image": "/images/products/A%20Series/A8/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A8/MG.png"
+        "image": "/images/products/A%20Series/A8/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A8/OY.png"
+        "image": "/images/products/A%20Series/A8/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A8/WG.png"
+        "image": "/images/products/A%20Series/A8/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A8/DC.png"
+    "defaultImage": "/images/products/A%20Series/A8/DC.jpg"
   },
   {
     "id": "A9",
@@ -393,34 +393,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/A%20Series/A9/DC.png"
+        "image": "/images/products/A%20Series/A9/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A9/LC.png"
+        "image": "/images/products/A%20Series/A9/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/A%20Series/A9/MG.png"
+        "image": "/images/products/A%20Series/A9/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/A%20Series/A9/OY.png"
+        "image": "/images/products/A%20Series/A9/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/A%20Series/A9/WG.png"
+        "image": "/images/products/A%20Series/A9/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/A%20Series/A9/DC.png"
+    "defaultImage": "/images/products/A%20Series/A9/DC.jpg"
   },
   {
     "id": "A10",
@@ -869,7 +869,7 @@
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/A%20Series/A19/LC.png"
+        "image": "/images/products/A%20Series/A19/LC.jpg"
       },
       {
         "code": "MG",
@@ -1098,34 +1098,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B1/DC.png"
+        "image": "/images/products/B%20Series/B1/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B1/LC.png"
+        "image": "/images/products/B%20Series/B1/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B1/MG.png"
+        "image": "/images/products/B%20Series/B1/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B1/OY.png"
+        "image": "/images/products/B%20Series/B1/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B1/WG.png"
+        "image": "/images/products/B%20Series/B1/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B1/DC.png"
+    "defaultImage": "/images/products/B%20Series/B1/DC.jpg"
   },
   {
     "id": "B2",
@@ -1145,34 +1145,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B2/DC.png"
+        "image": "/images/products/B%20Series/B2/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B2/LC.png"
+        "image": "/images/products/B%20Series/B2/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B2/MG.png"
+        "image": "/images/products/B%20Series/B2/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B2/OY.png"
+        "image": "/images/products/B%20Series/B2/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B2/WG.png"
+        "image": "/images/products/B%20Series/B2/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B2/DC.png"
+    "defaultImage": "/images/products/B%20Series/B2/DC.jpg"
   },
   {
     "id": "B3",
@@ -1192,34 +1192,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B3/DC.png"
+        "image": "/images/products/B%20Series/B3/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B3/LC.png"
+        "image": "/images/products/B%20Series/B3/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B3/MG.png"
+        "image": "/images/products/B%20Series/B3/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B3/OY.png"
+        "image": "/images/products/B%20Series/B3/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B3/WG.png"
+        "image": "/images/products/B%20Series/B3/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B3/DC.png"
+    "defaultImage": "/images/products/B%20Series/B3/DC.jpg"
   },
   {
     "id": "B4",
@@ -1239,34 +1239,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B4/DC.png"
+        "image": "/images/products/B%20Series/B4/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B4/LC.png"
+        "image": "/images/products/B%20Series/B4/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B4/MG.png"
+        "image": "/images/products/B%20Series/B4/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B4/OY.png"
+        "image": "/images/products/B%20Series/B4/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B4/WG.png"
+        "image": "/images/products/B%20Series/B4/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B4/DC.png"
+    "defaultImage": "/images/products/B%20Series/B4/DC.jpg"
   },
   {
     "id": "B5",
@@ -1286,34 +1286,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B5/DC.png"
+        "image": "/images/products/B%20Series/B5/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B5/LC.png"
+        "image": "/images/products/B%20Series/B5/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B5/MG.png"
+        "image": "/images/products/B%20Series/B5/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B5/OY.png"
+        "image": "/images/products/B%20Series/B5/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B5/WG.png"
+        "image": "/images/products/B%20Series/B5/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B5/DC.png"
+    "defaultImage": "/images/products/B%20Series/B5/DC.jpg"
   },
   {
     "id": "B6",
@@ -1333,34 +1333,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B6/DC.png"
+        "image": "/images/products/B%20Series/B6/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B6/LC.png"
+        "image": "/images/products/B%20Series/B6/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B6/MG.png"
+        "image": "/images/products/B%20Series/B6/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B6/OY.png"
+        "image": "/images/products/B%20Series/B6/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B6/WG.png"
+        "image": "/images/products/B%20Series/B6/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B6/DC.png"
+    "defaultImage": "/images/products/B%20Series/B6/DC.jpg"
   },
   {
     "id": "B7",
@@ -1380,34 +1380,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B7/DC.png"
+        "image": "/images/products/B%20Series/B7/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B7/LC.png"
+        "image": "/images/products/B%20Series/B7/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B7/MG.png"
+        "image": "/images/products/B%20Series/B7/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B7/OY.png"
+        "image": "/images/products/B%20Series/B7/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B7/WG.png"
+        "image": "/images/products/B%20Series/B7/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B7/DC.png"
+    "defaultImage": "/images/products/B%20Series/B7/DC.jpg"
   },
   {
     "id": "B8",
@@ -1427,34 +1427,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B8/DC.png"
+        "image": "/images/products/B%20Series/B8/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B8/LC.png"
+        "image": "/images/products/B%20Series/B8/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B8/MG.png"
+        "image": "/images/products/B%20Series/B8/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B8/OY.png"
+        "image": "/images/products/B%20Series/B8/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B8/WG.png"
+        "image": "/images/products/B%20Series/B8/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B8/DC.png"
+    "defaultImage": "/images/products/B%20Series/B8/DC.jpg"
   },
   {
     "id": "B9",
@@ -1474,34 +1474,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B9/DC.png"
+        "image": "/images/products/B%20Series/B9/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B9/LC.png"
+        "image": "/images/products/B%20Series/B9/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B9/MG.png"
+        "image": "/images/products/B%20Series/B9/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B9/OY.png"
+        "image": "/images/products/B%20Series/B9/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B9/WG.png"
+        "image": "/images/products/B%20Series/B9/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B9/DC.png"
+    "defaultImage": "/images/products/B%20Series/B9/DC.jpg"
   },
   {
     "id": "B10",
@@ -1521,34 +1521,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B10/DC.png"
+        "image": "/images/products/B%20Series/B10/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B10/LC.png"
+        "image": "/images/products/B%20Series/B10/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B10/MG.png"
+        "image": "/images/products/B%20Series/B10/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B10/OY.png"
+        "image": "/images/products/B%20Series/B10/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B10/WG.png"
+        "image": "/images/products/B%20Series/B10/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B10/DC.png"
+    "defaultImage": "/images/products/B%20Series/B10/DC.jpg"
   },
   {
     "id": "B11",
@@ -1568,34 +1568,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B11/DC.png"
+        "image": "/images/products/B%20Series/B11/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B11/LC.png"
+        "image": "/images/products/B%20Series/B11/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B11/MG.png"
+        "image": "/images/products/B%20Series/B11/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B11/OY.png"
+        "image": "/images/products/B%20Series/B11/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B11/WG.png"
+        "image": "/images/products/B%20Series/B11/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B11/DC.png"
+    "defaultImage": "/images/products/B%20Series/B11/DC.jpg"
   },
   {
     "id": "B12",
@@ -1615,34 +1615,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B12/DC.png"
+        "image": "/images/products/B%20Series/B12/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B12/LC.png"
+        "image": "/images/products/B%20Series/B12/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B12/MG.png"
+        "image": "/images/products/B%20Series/B12/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B12/OY.png"
+        "image": "/images/products/B%20Series/B12/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B12/WG.png"
+        "image": "/images/products/B%20Series/B12/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B12/DC.png"
+    "defaultImage": "/images/products/B%20Series/B12/DC.jpg"
   },
   {
     "id": "B13",
@@ -1662,34 +1662,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B13/DC.png"
+        "image": "/images/products/B%20Series/B13/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B13/LC.png"
+        "image": "/images/products/B%20Series/B13/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B13/MG.png"
+        "image": "/images/products/B%20Series/B13/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B13/OY.png"
+        "image": "/images/products/B%20Series/B13/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B13/WG.png"
+        "image": "/images/products/B%20Series/B13/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B13/DC.png"
+    "defaultImage": "/images/products/B%20Series/B13/DC.jpg"
   },
   {
     "id": "B14",
@@ -1709,34 +1709,81 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B14/DC.png"
+        "image": "/images/products/B%20Series/B14/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B14/LC.png"
+        "image": "/images/products/B%20Series/B14/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B14/MG.png"
+        "image": "/images/products/B%20Series/B14/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B14/OY.png"
+        "image": "/images/products/B%20Series/B14/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B14/WG.png"
+        "image": "/images/products/B%20Series/B14/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B14/DC.png"
+    "defaultImage": "/images/products/B%20Series/B14/DC.jpg"
+  },
+  {
+    "id": "B15",
+    "sku": "APF-B15",
+    "name": "REVA Acoustic Panel B15",
+    "series": "B Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2400,
+      "thickness_mm": 9
+    },
+    "colors": [
+      {
+        "code": "DC",
+        "name": "Dark Camel",
+        "hex": "#8B7765",
+        "image": "/images/products/B%20Series/B15/DC.jpg"
+      },
+      {
+        "code": "LC",
+        "name": "Light Camel",
+        "hex": "#E8E1D6",
+        "image": "/images/products/B%20Series/B15/LC.jpg"
+      },
+      {
+        "code": "MG",
+        "name": "Moonlight Grey",
+        "hex": "#5C6570",
+        "image": "/images/products/B%20Series/B15/MG.jpg"
+      },
+      {
+        "code": "OY",
+        "name": "Orange Yellow",
+        "hex": "#E8A91C",
+        "image": "/images/products/B%20Series/B15/OY.jpg"
+      },
+      {
+        "code": "WG",
+        "name": "Water Grey",
+        "hex": "#C9CDD3",
+        "image": "/images/products/B%20Series/B15/WG.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/B%20Series/B15/DC.jpg"
   },
   {
     "id": "B16",
@@ -1756,34 +1803,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B16/DC.png"
+        "image": "/images/products/B%20Series/B16/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B16/LC.png"
+        "image": "/images/products/B%20Series/B16/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B16/MG.png"
+        "image": "/images/products/B%20Series/B16/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B16/OY.png"
+        "image": "/images/products/B%20Series/B16/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B16/WG.png"
+        "image": "/images/products/B%20Series/B16/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B16/DC.png"
+    "defaultImage": "/images/products/B%20Series/B16/DC.jpg"
   },
   {
     "id": "B17",
@@ -1803,34 +1850,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B17/DC.png"
+        "image": "/images/products/B%20Series/B17/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B17/LC.png"
+        "image": "/images/products/B%20Series/B17/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B17/MG.png"
+        "image": "/images/products/B%20Series/B17/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B17/OY.png"
+        "image": "/images/products/B%20Series/B17/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B17/WG.png"
+        "image": "/images/products/B%20Series/B17/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B17/DC.png"
+    "defaultImage": "/images/products/B%20Series/B17/DC.jpg"
   },
   {
     "id": "B18",
@@ -1850,34 +1897,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B18/DC.png"
+        "image": "/images/products/B%20Series/B18/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B18/LC.png"
+        "image": "/images/products/B%20Series/B18/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B18/MG.png"
+        "image": "/images/products/B%20Series/B18/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B18/OY.png"
+        "image": "/images/products/B%20Series/B18/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B18/WG.png"
+        "image": "/images/products/B%20Series/B18/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B18/DC.png"
+    "defaultImage": "/images/products/B%20Series/B18/DC.jpg"
   },
   {
     "id": "B19",
@@ -1897,34 +1944,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B19/DC.png"
+        "image": "/images/products/B%20Series/B19/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B19/LC.png"
+        "image": "/images/products/B%20Series/B19/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B19/MG.png"
+        "image": "/images/products/B%20Series/B19/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B19/OY.png"
+        "image": "/images/products/B%20Series/B19/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B19/WG.png"
+        "image": "/images/products/B%20Series/B19/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B19/DC.png"
+    "defaultImage": "/images/products/B%20Series/B19/DC.jpg"
   },
   {
     "id": "B20",
@@ -1944,34 +1991,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B20/DC.png"
+        "image": "/images/products/B%20Series/B20/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B20/LC.png"
+        "image": "/images/products/B%20Series/B20/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B20/MG.png"
+        "image": "/images/products/B%20Series/B20/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B20/OY.png"
+        "image": "/images/products/B%20Series/B20/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B20/WG.png"
+        "image": "/images/products/B%20Series/B20/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B20/DC.png"
+    "defaultImage": "/images/products/B%20Series/B20/DC.jpg"
   },
   {
     "id": "B21",
@@ -1991,34 +2038,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B21/DC.png"
+        "image": "/images/products/B%20Series/B21/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B21/LC.png"
+        "image": "/images/products/B%20Series/B21/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B21/MG.png"
+        "image": "/images/products/B%20Series/B21/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B21/OY.png"
+        "image": "/images/products/B%20Series/B21/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B21/WG.png"
+        "image": "/images/products/B%20Series/B21/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B21/DC.png"
+    "defaultImage": "/images/products/B%20Series/B21/DC.jpg"
   },
   {
     "id": "B22",
@@ -2038,34 +2085,34 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B22/DC.png"
+        "image": "/images/products/B%20Series/B22/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B22/LC.png"
+        "image": "/images/products/B%20Series/B22/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B22/MG.png"
+        "image": "/images/products/B%20Series/B22/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B22/OY.png"
+        "image": "/images/products/B%20Series/B22/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B22/WG.png"
+        "image": "/images/products/B%20Series/B22/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B22/DC.png"
+    "defaultImage": "/images/products/B%20Series/B22/DC.jpg"
   },
   {
     "id": "B23",
@@ -2085,33 +2132,33 @@
         "code": "DC",
         "name": "Dark Camel",
         "hex": "#8B7765",
-        "image": "/images/products/B%20Series/B23/DC.png"
+        "image": "/images/products/B%20Series/B23/DC.jpg"
       },
       {
         "code": "LC",
         "name": "Light Camel",
         "hex": "#E8E1D6",
-        "image": "/images/products/B%20Series/B23/LC.png"
+        "image": "/images/products/B%20Series/B23/LC.jpg"
       },
       {
         "code": "MG",
         "name": "Moonlight Grey",
         "hex": "#5C6570",
-        "image": "/images/products/B%20Series/B23/MG.png"
+        "image": "/images/products/B%20Series/B23/MG.jpg"
       },
       {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
-        "image": "/images/products/B%20Series/B23/OY.png"
+        "image": "/images/products/B%20Series/B23/OY.jpg"
       },
       {
         "code": "WG",
         "name": "Water Grey",
         "hex": "#C9CDD3",
-        "image": "/images/products/B%20Series/B23/WG.png"
+        "image": "/images/products/B%20Series/B23/WG.jpg"
       }
     ],
-    "defaultImage": "/images/products/B%20Series/B23/DC.png"
+    "defaultImage": "/images/products/B%20Series/B23/DC.jpg"
   }
 ]
