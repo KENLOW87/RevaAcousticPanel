@@ -70,7 +70,7 @@ function build() {
         description:
           'Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.',
         material: 'PET fibre (polyester acoustic fibre)',
-        size: { width_mm: 1200, length_mm: 2400, thickness_mm: 9 },
+        size: { width_mm: 1200, length_mm: 2800, thickness_mm: 9 },
         colors,
         defaultImage: colors[0] ? colors[0].image : null,
       });
