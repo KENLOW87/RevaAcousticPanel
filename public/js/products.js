@@ -73,11 +73,11 @@
     seriesOrder.forEach((series) => {
       const products = productsForSeries(series);
       const count = products.length;
-      const comingSoon = series !== allProductsTab && products.some((product) => product.comingSoon);
+      const comingSoon = !count || (series !== allProductsTab && products.some((product) => product.comingSoon));
       const button = document.createElement('button');
       button.className = `series-tab${series === activeSeries ? ' active' : ''}`;
       button.type = 'button';
-      button.innerHTML = `<span>${series}</span><small>${count && !comingSoon ? `${count} designs` : 'Coming soon'}</small>`;
+      button.innerHTML = `<span>${series}</span><small${comingSoon ? ' class="series-tab-status"' : ''}>${comingSoon ? 'Coming soon' : `${count} designs`}</small>`;
       button.addEventListener('click', () => {
         activeSeries = series;
         const url = new URL(location.href);
