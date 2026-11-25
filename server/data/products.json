@@ -32,6 +32,12 @@
         "image": "/images/products/A%20Series/A1/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A1/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -77,6 +83,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A2/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A2/OM.jpg"
       },
       {
         "code": "OY",
@@ -126,6 +138,12 @@
         "image": "/images/products/A%20Series/A3/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A3/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -171,6 +189,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A4/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A4/OM.jpg"
       },
       {
         "code": "OY",
@@ -220,6 +244,12 @@
         "image": "/images/products/A%20Series/A5/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A5/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -265,6 +295,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A6/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A6/OM.jpg"
       },
       {
         "code": "OY",
@@ -314,6 +350,12 @@
         "image": "/images/products/A%20Series/A7/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A7/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -359,6 +401,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A8/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A8/OM.jpg"
       },
       {
         "code": "OY",
@@ -408,6 +456,12 @@
         "image": "/images/products/A%20Series/A9/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A9/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -453,6 +507,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A10/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A10/OM.jpg"
       },
       {
         "code": "OY",
@@ -502,6 +562,12 @@
         "image": "/images/products/A%20Series/A11/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A11/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -547,6 +613,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A12/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A12/OM.jpg"
       },
       {
         "code": "OY",
@@ -596,6 +668,12 @@
         "image": "/images/products/A%20Series/A13/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A13/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -641,6 +719,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A14/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A14/OM.jpg"
       },
       {
         "code": "OY",
@@ -690,6 +774,12 @@
         "image": "/images/products/A%20Series/A15/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A15/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -735,6 +825,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A16/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A16/OM.jpg"
       },
       {
         "code": "OY",
@@ -784,6 +880,12 @@
         "image": "/images/products/A%20Series/A17/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A17/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -829,6 +931,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A18/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A18/OM.jpg"
       },
       {
         "code": "OY",
@@ -878,6 +986,12 @@
         "image": "/images/products/A%20Series/A19/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A19/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -923,6 +1037,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A20/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A20/OM.jpg"
       },
       {
         "code": "OY",
@@ -972,6 +1092,12 @@
         "image": "/images/products/A%20Series/A21/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A21/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1017,6 +1143,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/A%20Series/A22/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A22/OM.jpg"
       },
       {
         "code": "OY",
@@ -1066,6 +1198,12 @@
         "image": "/images/products/A%20Series/A23/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/A%20Series/A23/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1079,6 +1217,673 @@
       }
     ],
     "defaultImage": "/images/products/A%20Series/A23/DC.jpg"
+  },
+  {
+    "id": "AMF-01",
+    "sku": "AMF-01",
+    "name": "REVA Acoustic Panel AMF-01",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-01/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-01/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-01/BW.jpg"
+  },
+  {
+    "id": "AMF-02",
+    "sku": "AMF-02",
+    "name": "REVA Acoustic Panel AMF-02",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-02/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-02/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-02/BW.jpg"
+  },
+  {
+    "id": "AMF-03",
+    "sku": "AMF-03",
+    "name": "REVA Acoustic Panel AMF-03",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-03/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-03/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-03/BW.jpg"
+  },
+  {
+    "id": "AMF-04",
+    "sku": "AMF-04",
+    "name": "REVA Acoustic Panel AMF-04",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-04/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-04/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-04/BW.jpg"
+  },
+  {
+    "id": "AMF-05",
+    "sku": "AMF-05",
+    "name": "REVA Acoustic Panel AMF-05",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-05/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-05/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-05/BW.jpg"
+  },
+  {
+    "id": "AMF-06",
+    "sku": "AMF-06",
+    "name": "REVA Acoustic Panel AMF-06",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-06/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-06/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-06/BW.jpg"
+  },
+  {
+    "id": "AMF-07",
+    "sku": "AMF-07",
+    "name": "REVA Acoustic Panel AMF-07",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-07/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-07/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-07/BW.jpg"
+  },
+  {
+    "id": "AMF-08",
+    "sku": "AMF-08",
+    "name": "REVA Acoustic Panel AMF-08",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-08/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-08/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-08/BW.jpg"
+  },
+  {
+    "id": "AMF-09",
+    "sku": "AMF-09",
+    "name": "REVA Acoustic Panel AMF-09",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-09/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-09/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-09/BW.jpg"
+  },
+  {
+    "id": "AMF-10",
+    "sku": "AMF-10",
+    "name": "REVA Acoustic Panel AMF-10",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-10/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-10/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-10/BW.jpg"
+  },
+  {
+    "id": "AMF-11",
+    "sku": "AMF-11",
+    "name": "REVA Acoustic Panel AMF-11",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-11/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-11/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-11/BW.jpg"
+  },
+  {
+    "id": "AMF-12",
+    "sku": "AMF-12",
+    "name": "REVA Acoustic Panel AMF-12",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-12/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-12/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-12/BW.jpg"
+  },
+  {
+    "id": "AMF-13",
+    "sku": "AMF-13",
+    "name": "REVA Acoustic Panel AMF-13",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-13/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-13/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-13/BW.jpg"
+  },
+  {
+    "id": "AMF-14",
+    "sku": "AMF-14",
+    "name": "REVA Acoustic Panel AMF-14",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-14/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-14/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-14/BW.jpg"
+  },
+  {
+    "id": "AMF-15",
+    "sku": "AMF-15",
+    "name": "REVA Acoustic Panel AMF-15",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-15/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-15/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-15/BW.jpg"
+  },
+  {
+    "id": "AMF-16",
+    "sku": "AMF-16",
+    "name": "REVA Acoustic Panel AMF-16",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-16/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-16/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-16/BW.jpg"
+  },
+  {
+    "id": "AMF-17",
+    "sku": "AMF-17",
+    "name": "REVA Acoustic Panel AMF-17",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-17/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-17/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-17/BW.jpg"
+  },
+  {
+    "id": "AMF-18",
+    "sku": "AMF-18",
+    "name": "REVA Acoustic Panel AMF-18",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-18/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-18/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-18/BW.jpg"
+  },
+  {
+    "id": "AMF-19",
+    "sku": "AMF-19",
+    "name": "REVA Acoustic Panel AMF-19",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-19/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-19/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-19/BW.jpg"
+  },
+  {
+    "id": "AMF-20",
+    "sku": "AMF-20",
+    "name": "REVA Acoustic Panel AMF-20",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-20/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-20/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-20/BW.jpg"
+  },
+  {
+    "id": "AMF-21",
+    "sku": "AMF-21",
+    "name": "REVA Acoustic Panel AMF-21",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-21/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-21/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-21/BW.jpg"
+  },
+  {
+    "id": "AMF-22",
+    "sku": "AMF-22",
+    "name": "REVA Acoustic Panel AMF-22",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-22/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-22/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-22/BW.jpg"
+  },
+  {
+    "id": "AMF-23",
+    "sku": "AMF-23",
+    "name": "REVA Acoustic Panel AMF-23",
+    "series": "AMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/AMF%20Series/AMF-23/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/AMF%20Series/AMF-23/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/AMF%20Series/AMF-23/BW.jpg"
   },
   {
     "id": "B1",
@@ -1111,6 +1916,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B1/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B1/OM.jpg"
       },
       {
         "code": "OY",
@@ -1160,6 +1971,12 @@
         "image": "/images/products/B%20Series/B2/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B2/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1205,6 +2022,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B3/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B3/OM.jpg"
       },
       {
         "code": "OY",
@@ -1254,6 +2077,12 @@
         "image": "/images/products/B%20Series/B4/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B4/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1299,6 +2128,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B5/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B5/OM.jpg"
       },
       {
         "code": "OY",
@@ -1348,6 +2183,12 @@
         "image": "/images/products/B%20Series/B6/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B6/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1393,6 +2234,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B7/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B7/OM.jpg"
       },
       {
         "code": "OY",
@@ -1442,6 +2289,12 @@
         "image": "/images/products/B%20Series/B8/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B8/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1487,6 +2340,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B9/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B9/OM.jpg"
       },
       {
         "code": "OY",
@@ -1536,6 +2395,12 @@
         "image": "/images/products/B%20Series/B10/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B10/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1581,6 +2446,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B11/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B11/OM.jpg"
       },
       {
         "code": "OY",
@@ -1630,6 +2501,12 @@
         "image": "/images/products/B%20Series/B12/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B12/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1677,6 +2554,12 @@
         "image": "/images/products/B%20Series/B13/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B13/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1722,6 +2605,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B14/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B14/OM.jpg"
       },
       {
         "code": "OY",
@@ -1818,6 +2707,12 @@
         "image": "/images/products/B%20Series/B16/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B16/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1863,6 +2758,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B17/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B17/OM.jpg"
       },
       {
         "code": "OY",
@@ -1912,6 +2813,12 @@
         "image": "/images/products/B%20Series/B18/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B18/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -1957,6 +2864,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B19/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B19/OM.jpg"
       },
       {
         "code": "OY",
@@ -2006,6 +2919,12 @@
         "image": "/images/products/B%20Series/B20/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B20/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -2051,6 +2970,12 @@
         "name": "Moonlight Grey",
         "hex": "#5C6570",
         "image": "/images/products/B%20Series/B21/MG.jpg"
+      },
+      {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B21/OM.jpg"
       },
       {
         "code": "OY",
@@ -2100,6 +3025,12 @@
         "image": "/images/products/B%20Series/B22/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B22/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -2147,6 +3078,12 @@
         "image": "/images/products/B%20Series/B23/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B23/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
@@ -2160,5 +3097,672 @@
       }
     ],
     "defaultImage": "/images/products/B%20Series/B23/DC.jpg"
+  },
+  {
+    "id": "BMF-01",
+    "sku": "BMF-01",
+    "name": "REVA Acoustic Panel BMF-01",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-01/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-01/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-01/BW.jpg"
+  },
+  {
+    "id": "BMF-02",
+    "sku": "BMF-02",
+    "name": "REVA Acoustic Panel BMF-02",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-02/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-02/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-02/BW.jpg"
+  },
+  {
+    "id": "BMF-03",
+    "sku": "BMF-03",
+    "name": "REVA Acoustic Panel BMF-03",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-03/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-03/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-03/BW.jpg"
+  },
+  {
+    "id": "BMF-04",
+    "sku": "BMF-04",
+    "name": "REVA Acoustic Panel BMF-04",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-04/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-04/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-04/BW.jpg"
+  },
+  {
+    "id": "BMF-05",
+    "sku": "BMF-05",
+    "name": "REVA Acoustic Panel BMF-05",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-05/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-05/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-05/BW.jpg"
+  },
+  {
+    "id": "BMF-06",
+    "sku": "BMF-06",
+    "name": "REVA Acoustic Panel BMF-06",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-06/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-06/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-06/BW.jpg"
+  },
+  {
+    "id": "BMF-07",
+    "sku": "BMF-07",
+    "name": "REVA Acoustic Panel BMF-07",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-07/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-07/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-07/BW.jpg"
+  },
+  {
+    "id": "BMF-08",
+    "sku": "BMF-08",
+    "name": "REVA Acoustic Panel BMF-08",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-08/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-08/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-08/BW.jpg"
+  },
+  {
+    "id": "BMF-09",
+    "sku": "BMF-09",
+    "name": "REVA Acoustic Panel BMF-09",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-09/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-09/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-09/BW.jpg"
+  },
+  {
+    "id": "BMF-10",
+    "sku": "BMF-10",
+    "name": "REVA Acoustic Panel BMF-10",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-10/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-10/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-10/BW.jpg"
+  },
+  {
+    "id": "BMF-11",
+    "sku": "BMF-11",
+    "name": "REVA Acoustic Panel BMF-11",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-11/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-11/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-11/BW.jpg"
+  },
+  {
+    "id": "BMF-12",
+    "sku": "BMF-12",
+    "name": "REVA Acoustic Panel BMF-12",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-12/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-12/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-12/BW.jpg"
+  },
+  {
+    "id": "BMF-13",
+    "sku": "BMF-13",
+    "name": "REVA Acoustic Panel BMF-13",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-13/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-13/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-13/BW.jpg"
+  },
+  {
+    "id": "BMF-14",
+    "sku": "BMF-14",
+    "name": "REVA Acoustic Panel BMF-14",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-14/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-14/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-14/BW.jpg"
+  },
+  {
+    "id": "BMF-15",
+    "sku": "BMF-15",
+    "name": "REVA Acoustic Panel BMF-15",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-15/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-15/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-15/BW.jpg"
+  },
+  {
+    "id": "BMF-16",
+    "sku": "BMF-16",
+    "name": "REVA Acoustic Panel BMF-16",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-16/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-16/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-16/BW.jpg"
+  },
+  {
+    "id": "BMF-17",
+    "sku": "BMF-17",
+    "name": "REVA Acoustic Panel BMF-17",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-17/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-17/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-17/BW.jpg"
+  },
+  {
+    "id": "BMF-18",
+    "sku": "BMF-18",
+    "name": "REVA Acoustic Panel BMF-18",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-18/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-18/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-18/BW.jpg"
+  },
+  {
+    "id": "BMF-19",
+    "sku": "BMF-19",
+    "name": "REVA Acoustic Panel BMF-19",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-19/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-19/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-19/BW.jpg"
+  },
+  {
+    "id": "BMF-20",
+    "sku": "BMF-20",
+    "name": "REVA Acoustic Panel BMF-20",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-20/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-20/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-20/BW.jpg"
+  },
+  {
+    "id": "BMF-21",
+    "sku": "BMF-21",
+    "name": "REVA Acoustic Panel BMF-21",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-21/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-21/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-21/BW.jpg"
+  },
+  {
+    "id": "BMF-22",
+    "sku": "BMF-22",
+    "name": "REVA Acoustic Panel BMF-22",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-22/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-22/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-22/BW.jpg"
+  },
+  {
+    "id": "BMF-23",
+    "sku": "BMF-23",
+    "name": "REVA Acoustic Panel BMF-23",
+    "series": "BMF Series",
+    "collection": "Acoustic PET Fibre Wall Panel",
+    "description": "Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.",
+    "material": "PET fibre (polyester acoustic fibre)",
+    "size": {
+      "width_mm": 1200,
+      "length_mm": 2800,
+      "thickness_mm": 12
+    },
+    "colors": [
+      {
+        "code": "BW",
+        "name": "Blue White",
+        "hex": "#718CA5",
+        "image": "/images/products/BMF%20Series/BMF-23/BW.jpg"
+      },
+      {
+        "code": "GB",
+        "name": "Green Black",
+        "hex": "#475347",
+        "image": "/images/products/BMF%20Series/BMF-23/GB.jpg"
+      }
+    ],
+    "defaultImage": "/images/products/BMF%20Series/BMF-23/BW.jpg"
   }
 ]

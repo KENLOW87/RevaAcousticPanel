@@ -20,7 +20,7 @@
   let allColors = [];
   let activeColor = null;
   let activeCategory = null;
-  const seriesOrder = ['A Series', 'B Series', 'C Series'];
+  const seriesOrder = ['A Series', 'B Series', 'C Series', 'AMF Series', 'BMF Series'];
   const requestedSeries = new URLSearchParams(location.search).get('series');
   let activeSeries = requestedSeries ? `${requestedSeries.replace(/\s+Series$/i, '')} Series` : 'A Series';
   let searchTerm = '';
@@ -91,7 +91,10 @@
     allPill.addEventListener('click', () => setActiveColor(null));
     filterRow.appendChild(allPill);
 
-    allColors.forEach((color) => {
+    const seriesColors = new Set(allProducts
+      .filter((product) => product.series === activeSeries)
+      .flatMap((product) => product.colors.map((color) => color.code)));
+    allColors.filter((color) => seriesColors.has(color.code)).forEach((color) => {
       const pill = document.createElement('button');
       pill.className = 'pill';
       pill.innerHTML = `<span class="dot" style="background:${color.hex}"></span>${color.name}`;
@@ -151,11 +154,12 @@
 
     const seriesName = activeSeries.replace(' Series', '');
     const hasProducts = seriesProducts.length > 0;
+    const finishCount = new Set(seriesProducts.flatMap((product) => product.colors.map((color) => color.code))).size;
     if (seriesLabel) seriesLabel.textContent = activeSeries;
     if (catalogTitle) catalogTitle.textContent = hasProducts ? `${activeSeries} PET Acoustic Wall Panel Designs` : `${activeSeries} Coming Soon`;
     if (catalogDescription) {
       catalogDescription.textContent = hasProducts
-        ? `Explore ${seriesProducts.length} decorative PET acoustic wall panel designs in 5 finishes for homes, offices and studios in Malaysia. Filter by finish or search a design code to find the right panel.`
+        ? `Explore ${seriesProducts.length} decorative PET acoustic wall panel designs in ${finishCount} finishes for homes, offices and studios in Malaysia. Filter by finish or search a design code to find the right panel.`
         : `We are preparing the ${seriesName} product collection. Check back soon for the latest REVA Acoustic designs.`;
     }
 

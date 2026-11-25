@@ -69,7 +69,7 @@ window.applyProductWhatsappLinks = applyProductWhatsappLinks;
 // Build the Products mega-menu from the catalog so new series appear there
 // automatically. Empty planned series stay visible as Coming Soon.
 (function () {
-  const seriesOrder = ['A Series', 'B Series', 'C Series'];
+  const seriesOrder = ['A Series', 'B Series', 'C Series', 'AMF Series', 'BMF Series'];
   const categoryOrder = [
     'Geometric / Facet',
     'Linear / Ribbed',
