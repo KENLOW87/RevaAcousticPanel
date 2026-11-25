@@ -23,7 +23,7 @@
   const allProductsTab = 'All Products';
   const seriesOrder = [allProductsTab, 'A Series', 'B Series', 'C Series', 'AMF Series', 'BMF Series'];
   const requestedSeries = new URLSearchParams(location.search).get('series');
-  let activeSeries = seriesOrder.find((series) => seriesQuery(series) === requestedSeries?.replace(/\s+Series$/i, '')) || 'A Series';
+  let activeSeries = seriesOrder.find((series) => seriesQuery(series) === requestedSeries?.replace(/\s+Series$/i, '')) || allProductsTab;
 
   function seriesQuery(series) {
     return series === allProductsTab ? 'All' : series.replace(' Series', '');

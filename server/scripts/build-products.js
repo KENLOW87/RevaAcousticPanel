@@ -69,9 +69,9 @@ function build() {
         sku: isDualLayer ? designId : `APF-${designId}`,
         name: `REVA Acoustic Panel ${designId}`,
         series: seriesId,
-        collection: 'Acoustic PET Fibre Wall Panel',
+        collection: isDualLayer ? 'Dual-Layer Acoustic PET Fibre Wall Panel' : 'Acoustic PET Fibre Wall Panel',
         description: isDualLayer
-          ? 'Dual-layer acoustic PET fibre wall panel with a two-tone cut pattern.'
+          ? 'A 12 mm dual-layer acoustic PET fibre panel. The cut pattern reveals the contrasting colour beneath the surface.'
           : 'Decorative acoustic PET fibre wall panel engineered to soften sound reflections while adding a tailored, geometric texture to the wall.',
         material: 'PET fibre (polyester acoustic fibre)',
         size: { width_mm: 1200, length_mm: 2800, thickness_mm: isDualLayer ? 12 : 9 },
