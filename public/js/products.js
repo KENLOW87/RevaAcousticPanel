@@ -117,7 +117,9 @@
 
     const seriesColors = new Set(productsForSeries(activeSeries)
       .flatMap((product) => product.colors.map((color) => color.code)));
-    allColors.filter((color) => seriesColors.has(color.code)).forEach((color) => {
+    const visibleColors = allColors.filter((color) => seriesColors.has(color.code));
+    visibleColors.sort((a, b) => Number(Boolean(a.comingSoon)) - Number(Boolean(b.comingSoon)));
+    visibleColors.forEach((color) => {
       const pill = document.createElement('button');
       pill.className = 'pill';
       pill.innerHTML = `<span class="dot" data-finish="${color.code}" style="background-color:${color.hex}"></span>${color.name}${color.comingSoon ? ' · Coming soon' : ''}`;
