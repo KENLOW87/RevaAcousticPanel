@@ -69,6 +69,7 @@ function getFinishes() {
       const fallback = catalogDefaults.get(code) || colorDefaults[code];
       return {
         code,
+        comingSoon: code === 'OM',
         name: overrides[code]?.name || fallback?.name || code,
         hex: overrides[code]?.hex || fallback?.hex || '#CCCCCC',
       };
@@ -80,6 +81,7 @@ function applyFinishNames(colors) {
   const byCode = new Map(finishes.map((f) => [f.code, f]));
   return colors.map((c) => ({
     ...c,
+    comingSoon: byCode.get(c.code)?.comingSoon ?? false,
     name: byCode.get(c.code)?.name || c.name,
     hex: byCode.get(c.code)?.hex || c.hex,
   }));
@@ -89,6 +91,7 @@ function mergeProduct(base, overrides) {
   const override = overrides[base.id] || {};
   return {
     ...base,
+    comingSoon: ['AMF Series', 'BMF Series'].includes(base.series),
     name: override.name || base.name,
     category: override.category || base.category || 'Other designs',
     description: override.description || base.description,

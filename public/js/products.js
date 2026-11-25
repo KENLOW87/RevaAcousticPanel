@@ -68,11 +68,13 @@
     if (!seriesFilters) return;
     seriesFilters.innerHTML = '';
     seriesOrder.forEach((series) => {
-      const count = productsForSeries(series).length;
+      const products = productsForSeries(series);
+      const count = products.length;
+      const comingSoon = series !== allProductsTab && products.some((product) => product.comingSoon);
       const button = document.createElement('button');
       button.className = `series-tab${series === activeSeries ? ' active' : ''}`;
       button.type = 'button';
-      button.innerHTML = `<span>${series}</span><small>${count ? `${count} designs` : 'Coming soon'}</small>`;
+      button.innerHTML = `<span>${series}</span><small>${count && !comingSoon ? `${count} designs` : 'Coming soon'}</small>`;
       button.addEventListener('click', () => {
         activeSeries = series;
         const url = new URL(location.href);
@@ -104,7 +106,7 @@
     allColors.filter((color) => seriesColors.has(color.code)).forEach((color) => {
       const pill = document.createElement('button');
       pill.className = 'pill';
-      pill.innerHTML = `<span class="dot" style="background:${color.hex}"></span>${color.name}`;
+      pill.innerHTML = `<span class="dot" style="background:${color.hex}"></span>${color.name}${color.comingSoon ? ' · Coming soon' : ''}`;
       pill.addEventListener('click', () => setActiveColor(color.code, pill));
       filterRow.appendChild(pill);
     });
@@ -285,7 +287,7 @@
         <img src="${initialColor.image}" alt="${product.name} - ${initialColor.name}" loading="lazy" />
       </a>
       <div class="body">
-        <div class="sku">${product.sku}</div>
+        <div class="sku">${product.sku}${product.comingSoon ? ' · Coming soon' : ''}</div>
         <h3>${product.name}</h3>
         <div class="swatches"></div>
         <div class="card-actions">
@@ -304,8 +306,8 @@
       const btn = document.createElement('button');
       btn.className = 'swatch' + (color.code === initialColor.code ? ' active' : '');
       btn.style.background = color.hex;
-      btn.title = color.name;
-      btn.setAttribute('aria-label', color.name);
+      btn.title = color.comingSoon ? `${color.name} · Coming soon` : color.name;
+      btn.setAttribute('aria-label', btn.title);
       btn.addEventListener('mouseenter', () => {
         img.src = color.image;
         img.alt = `${product.name} - ${color.name}`;

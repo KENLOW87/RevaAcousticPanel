@@ -52,14 +52,14 @@
           <img id="pd-img" src="${activeColor.image}" alt="${product.name} - ${activeColor.name}" />
         </div>
         <div class="pd-info">
-          <div class="pd-sku">${product.sku} &middot; ${product.series}</div>
+          <div class="pd-sku">${product.sku} &middot; ${product.series}${product.comingSoon ? ' · Coming soon' : ''}</div>
           <h1 class="pd-title">${product.name}</h1>
           <p class="pd-desc">${product.description}</p>
 
           <div class="pd-colors">
             <div class="label-row">
               <span>Finish</span>
-              <span id="pd-color-name">${activeColor.name}</span>
+              <span id="pd-color-name">${activeColor.name}${activeColor.comingSoon ? ' · Coming soon' : ''}</span>
             </div>
             <div class="pd-swatch-row" id="pd-swatch-row"></div>
             <p class="upcoming-finish-note">More colours coming soon</p>
@@ -93,13 +93,13 @@
       const btn = document.createElement('button');
       btn.className = 'pd-swatch' + (color.code === activeColor.code ? ' active' : '');
       btn.style.background = color.hex;
-      btn.title = color.name;
-      btn.setAttribute('aria-label', color.name);
+      btn.title = color.comingSoon ? `${color.name} · Coming soon` : color.name;
+      btn.setAttribute('aria-label', btn.title);
       btn.addEventListener('click', () => {
         activeColor = color;
         imgEl.src = color.image;
         imgEl.alt = `${product.name} - ${color.name}`;
-        colorNameEl.textContent = color.name;
+        colorNameEl.textContent = btn.title;
         swatchRow.querySelectorAll('.pd-swatch').forEach((s) => s.classList.remove('active'));
         btn.classList.add('active');
       });

@@ -113,7 +113,7 @@ window.applyProductWhatsappLinks = applyProductWhatsappLinks;
               }).join('');
               return `<div class="nav-series-category"><span class="nav-series-category-label">${escapeHtml(category)}</span><div class="nav-product-grid">${links}</div></div>`;
             }).join('');
-          return `<div class="nav-series-menu-block"><div class="nav-series-menu-heading"><span>${escapeHtml(series)}</span><small>${items.length} designs</small></div>${categoryMarkup}</div>`;
+          return `<div class="nav-series-menu-block"><div class="nav-series-menu-heading"><span>${escapeHtml(series)}</span>${items.some((item) => item.comingSoon) ? '<span class="nav-series-badge">Coming soon</span>' : `<small>${items.length} designs</small>`}</div>${categoryMarkup}</div>`;
         }).join('');
       });
     } catch (error) {

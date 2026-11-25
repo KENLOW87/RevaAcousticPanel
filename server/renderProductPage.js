@@ -88,7 +88,7 @@ function renderProductDetail(product) {
   const swatches = product.colors
     .map(
       (c) =>
-        `<button class="pd-swatch${c.code === activeColor.code ? ' active' : ''}" style="background:${escapeAttr(c.hex)}" title="${escapeAttr(c.name)}" aria-label="${escapeAttr(c.name)}"></button>`
+        `<button class="pd-swatch${c.code === activeColor.code ? ' active' : ''}" style="background:${escapeAttr(c.hex)}" title="${escapeAttr(c.name)}${c.comingSoon ? ' · Coming soon' : ''}" aria-label="${escapeAttr(c.name)}${c.comingSoon ? ' · Coming soon' : ''}"></button>`
     )
     .join('');
 
@@ -101,14 +101,14 @@ function renderProductDetail(product) {
           <img id="pd-img" src="${escapeAttr(activeColor.image)}" alt="${escapeAttr(product.name)} - ${escapeAttr(activeColor.name)}" />
         </div>
         <div class="pd-info">
-          <div class="pd-sku">${escapeHtml(product.sku)} &middot; ${escapeHtml(product.series)}</div>
+          <div class="pd-sku">${escapeHtml(product.sku)} &middot; ${escapeHtml(product.series)}${product.comingSoon ? ' · Coming soon' : ''}</div>
           <h1 class="pd-title">${escapeHtml(product.name)}</h1>
           <p class="pd-desc">${escapeHtml(product.description)}</p>
 
           <div class="pd-colors">
             <div class="label-row">
               <span>Finish</span>
-              <span id="pd-color-name">${escapeHtml(activeColor.name)}</span>
+              <span id="pd-color-name">${escapeHtml(activeColor.name)}${activeColor.comingSoon ? ' · Coming soon' : ''}</span>
             </div>
             <div class="pd-swatch-row" id="pd-swatch-row">${swatches}</div>
             <p class="upcoming-finish-note">More colours coming soon</p>
