@@ -170,41 +170,44 @@
   }
 
   function renderSeriesOverview() {
-    if (catalogDescription) catalogDescription.textContent = 'Choose a series to explore its acoustic PET wall panel designs.';
+    if (catalogDescription) catalogDescription.textContent = 'Scroll through all designs or choose a series to browse its categories and finishes.';
     if (emptyState) emptyState.style.display = 'none';
     renderPager(1);
 
-    const seriesList = seriesOrder.filter((series) => series !== allProductsTab).map((series) => {
-      const products = productsForSeries(series);
-      const href = `?series=${encodeURIComponent(seriesQuery(series))}`;
+    const seriesList = seriesOrder.filter((series) => series !== allProductsTab);
+    if (categoryNav) {
+      categoryNav.innerHTML = `<a class="category-all is-active" href="#product-grid" aria-current="true"><span>All Products</span><small>${allProducts.length}</small></a>`
+        + seriesList.map((series) => {
+          const href = `?series=${encodeURIComponent(seriesQuery(series))}`;
+          const products = productsForSeries(series);
+          const status = !products.length || products.some((product) => product.comingSoon)
+            ? 'Coming soon'
+            : `${products.length} designs`;
+          return `<a href="${href}"><span>${series}</span><small>${status}</small></a>`;
+        }).join('');
+    }
+
+    grid.replaceChildren();
+    seriesList.flatMap((series) => series === dualLayerTab ? dualLayerSeries : [series]).forEach((series) => {
+      const products = productsForSeries(series).sort(compareProductCode);
+      const isDualLayer = dualLayerSeries.includes(series);
       const status = !products.length || products.some((product) => product.comingSoon)
         ? 'Coming soon'
         : `${products.length} designs`;
-      return { series, href, status, image: products[0]?.defaultImage };
-    });
-
-    if (categoryNav) {
-      categoryNav.innerHTML = seriesList.map(({series, href, status}) =>
-        `<a href="${href}"><span>${series}</span><small>${status}</small></a>`
-      ).join('');
-    }
-
-    grid.innerHTML = `
-      <section class="product-category catalog-page">
-        <div class="product-category-head"><h2>Browse by series</h2></div>
-        <div class="product-grid category-grid">
-          ${seriesList.map(({series, href, status, image}) => `
-            <article class="product-card">
-              ${image ? `<a class="thumb" href="${href}" aria-label="Browse ${series}"><img src="${image}" alt="" loading="lazy" /></a>` : ''}
-              <div class="body">
-                <div class="sku">${status}</div>
-                <h3><a href="${href}">${series}</a></h3>
-              </div>
-            </article>
-          `).join('')}
+      const section = document.createElement('section');
+      section.className = 'product-category catalog-page';
+      section.innerHTML = `
+        <div class="product-category-head">
+          <div>${isDualLayer ? `<span class="eyebrow">${dualLayerTab}</span>` : ''}<h2>${series}</h2></div>
+          <span class="product-category-count">${status}</span>
         </div>
-      </section>
-    `;
+        <div class="product-grid category-grid"></div>
+      `;
+      const seriesGrid = section.querySelector('.category-grid');
+      products.forEach((product) => seriesGrid.appendChild(renderCard(product)));
+      grid.appendChild(section);
+    });
+    window.applyProductWhatsappLinks?.();
   }
 
   function render() {
@@ -272,13 +275,14 @@
       .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
     if (categoryNav) {
       const allLink = `<a class="category-all${activeCategory ? '' : ' is-active'}" href="#product-grid" data-category=""><span>All</span><small>${baseFiltered.length}</small></a>`;
-      categoryNav.innerHTML = allLink + sortedCategories.map((category) => {
+      const catalogLink = `<a href="?series=All"><span>All Products</span><small>${allProducts.length}</small></a>`;
+      categoryNav.innerHTML = catalogLink + allLink + sortedCategories.map((category) => {
         const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const activeClass = category === activeCategory ? ' is-active' : '';
         return `<a class="${activeClass.trim()}" href="#category-${slug}" data-category="${category}"><span>${category}</span><small>${navigationGrouped.get(category).length}</small></a>`;
       }).join('');
       categoryNav.parentElement.style.display = sortedCategories.length ? '' : 'none';
-      categoryNav.querySelectorAll('a').forEach((link) => {
+      categoryNav.querySelectorAll('a[data-category]').forEach((link) => {
         link.addEventListener('click', (event) => {
           event.preventDefault();
           activeCategory = link.dataset.category || null;
