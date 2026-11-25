@@ -154,8 +154,12 @@
     return product.colors.some((c) => c.code === activeColor);
   }
 
+  function browseCategory(product) {
+    return activeSeries === dualLayerTab ? seriesQuery(product.series) : (product.category || 'Other designs');
+  }
+
   function matchesCategory(product) {
-    return !activeCategory || (product.category || 'Other designs') === activeCategory;
+    return !activeCategory || browseCategory(product) === activeCategory;
   }
 
   function compareProductCode(a, b) {
@@ -212,12 +216,13 @@
 
   function render() {
     const isOverview = activeSeries === allProductsTab;
+    const isDualLayer = activeSeries === dualLayerTab;
     if (toolbar) toolbar.style.display = isOverview ? 'none' : '';
     if (sidebar) {
       sidebar.style.display = '';
-      sidebar.setAttribute('aria-label', isOverview ? 'Product series' : 'Product categories');
+      sidebar.setAttribute('aria-label', isOverview || isDualLayer ? 'Product series' : 'Product categories');
     }
-    if (sidebarTitle) sidebarTitle.textContent = isOverview ? 'Series' : 'Category';
+    if (sidebarTitle) sidebarTitle.textContent = isOverview || isDualLayer ? 'Series' : 'Category';
 
     const seriesProducts = productsForSeries(activeSeries);
     const baseFiltered = seriesProducts.filter((p) => matchesColor(p) && matchesSearch(p));
@@ -249,37 +254,23 @@
 
     grid.innerHTML = '';
 
-    if (filtered.length === 0) {
-      if (sidebar) sidebar.style.display = 'none';
-      if (catalogPager) {
-        catalogPager.innerHTML = '';
-        catalogPager.hidden = true;
-      }
-      if (emptyState) emptyState.style.display = 'block';
-      if (emptyState) emptyState.innerHTML = hasProducts
-        ? '<p>No designs match your filters. Try clearing the search or finish filter.</p>'
-        : '<div class="coming-soon-panel"><span class="eyebrow">REVA Acoustic</span><h2>Coming soon</h2><p>This series is being prepared and will be available here once the products are uploaded.</p></div>';
-      return;
-    }
-    if (emptyState) emptyState.style.display = 'none';
-    window.applyProductWhatsappLinks?.();
-
     const navigationGrouped = new Map();
     baseFiltered.forEach((product) => {
-      const category = product.category || 'Other designs';
+      const category = browseCategory(product);
       if (!navigationGrouped.has(category)) navigationGrouped.set(category, []);
       navigationGrouped.get(category).push(product);
     });
 
-    const sortedCategories = [...navigationGrouped.keys()]
-      .sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b))
+    const sortedCategories = isDualLayer
+      ? dualLayerSeries.map(seriesQuery)
+      : [...navigationGrouped.keys()].sort((a, b) => categoryOrder.indexOf(a) - categoryOrder.indexOf(b));
     if (categoryNav) {
-      const allLink = `<a class="category-all${activeCategory ? '' : ' is-active'}" href="#product-grid" data-category=""><span>All</span><small>${baseFiltered.length}</small></a>`;
+      const allLink = `<a class="category-all${activeCategory ? '' : ' is-active'}" href="#product-grid" data-category=""><span>${isDualLayer ? 'All Products' : 'All'}</span><small>${baseFiltered.length}</small></a>`;
       const catalogLink = `<a href="?series=All"><span>All Products</span><small>${allProducts.length}</small></a>`;
-      categoryNav.innerHTML = catalogLink + allLink + sortedCategories.map((category) => {
+      categoryNav.innerHTML = (isDualLayer ? '' : catalogLink) + allLink + sortedCategories.map((category) => {
         const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
         const activeClass = category === activeCategory ? ' is-active' : '';
-        return `<a class="${activeClass.trim()}" href="#category-${slug}" data-category="${category}"><span>${category}</span><small>${navigationGrouped.get(category).length}</small></a>`;
+        return `<a class="${activeClass.trim()}" href="#category-${slug}" data-category="${category}"><span>${category}</span><small>${navigationGrouped.get(category)?.length ?? 0}</small></a>`;
       }).join('');
       categoryNav.parentElement.style.display = sortedCategories.length ? '' : 'none';
       categoryNav.querySelectorAll('a[data-category]').forEach((link) => {
@@ -297,12 +288,27 @@
       });
     }
 
+    if (filtered.length === 0) {
+      if (sidebar && !isDualLayer) sidebar.style.display = 'none';
+      if (catalogPager) {
+        catalogPager.innerHTML = '';
+        catalogPager.hidden = true;
+      }
+      if (emptyState) emptyState.style.display = 'block';
+      if (emptyState) emptyState.innerHTML = hasProducts
+        ? '<p>No designs match your filters. Try clearing the search or finish filter.</p>'
+        : '<div class="coming-soon-panel"><span class="eyebrow">REVA Acoustic</span><h2>Coming soon</h2><p>This series is being prepared and will be available here once the products are uploaded.</p></div>';
+      return;
+    }
+    if (emptyState) emptyState.style.display = 'none';
+    window.applyProductWhatsappLinks?.();
+
     const sortedProducts = [...filtered].sort(compareProductCode);
     const totalPages = Math.max(1, Math.ceil(sortedProducts.length / pageSize));
     if (currentPage > totalPages) currentPage = totalPages;
     const pageStart = (currentPage - 1) * pageSize;
     const pageProducts = sortedProducts.slice(pageStart, pageStart + pageSize);
-    const pageCategory = activeCategory || 'All designs';
+    const pageCategory = activeCategory || (isDualLayer ? 'All Products' : 'All designs');
     const categorySection = document.createElement('section');
     categorySection.className = 'product-category catalog-page';
     categorySection.innerHTML = `
