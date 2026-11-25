@@ -873,6 +873,7 @@ section {
 }
 
 .product-card .thumb {
+  position: relative;
   overflow: hidden;
   background: #eee;
   display: block;
@@ -891,6 +892,32 @@ section {
   flex-direction: column;
   gap: 10px;
   flex: 1;
+}
+
+.card-product-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 4px 12px;
+  flex-wrap: wrap;
+}
+
+.card-finish-name {
+  margin-left: auto;
+  font-size: 0.78rem;
+  text-align: right;
+}
+
+.card-finish-status {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: #171a12;
+  color: #fff;
+  font-size: 0.75rem;
+  pointer-events: none;
 }
 
 .product-card .sku {

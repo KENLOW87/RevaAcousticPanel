@@ -56,6 +56,15 @@ function getCatalogColorDefaults() {
   return map;
 }
 
+const finishOrder = ['LC', 'DC', 'WG', 'MG', 'OY', 'OM', 'BW', 'GB'];
+
+function compareFinishCodes(a, b) {
+  const first = finishOrder.indexOf(a);
+  const second = finishOrder.indexOf(b);
+  return (first < 0 ? finishOrder.length : first)
+    - (second < 0 ? finishOrder.length : second) || a.localeCompare(b);
+}
+
 // Merged finish list: every code seen in the catalog, colorDefaults, or the
 // override file, with override name/hex taking priority. Shared across every
 // series — rename a finish once, it updates everywhere that code is used.
@@ -64,7 +73,7 @@ function getFinishes() {
   const catalogDefaults = getCatalogColorDefaults();
   const codes = new Set([...catalogDefaults.keys(), ...Object.keys(colorDefaults), ...Object.keys(overrides)]);
   return Array.from(codes)
-    .sort()
+    .sort(compareFinishCodes)
     .map((code) => {
       const fallback = catalogDefaults.get(code) || colorDefaults[code];
       return {
@@ -79,7 +88,7 @@ function getFinishes() {
 function applyFinishNames(colors) {
   const finishes = getFinishes();
   const byCode = new Map(finishes.map((f) => [f.code, f]));
-  return colors.map((c) => ({
+  return [...colors].sort((a, b) => compareFinishCodes(a.code, b.code)).map((c) => ({
     ...c,
     comingSoon: byCode.get(c.code)?.comingSoon ?? false,
     name: byCode.get(c.code)?.name || c.name,

@@ -362,9 +362,13 @@
     card.innerHTML = `
       <a class="thumb" href="/product.html?id=${product.id}">
         <img src="${initialColor.image}" alt="${product.name} - ${initialColor.name}" loading="lazy" />
+        <span class="card-finish-status" ${initialColor.comingSoon ? '' : 'hidden'}>Coming soon</span>
       </a>
       <div class="body">
-        <div class="sku">${product.sku}${product.comingSoon ? ' · Coming soon' : ''}</div>
+        <div class="card-product-meta">
+          <div class="sku">${product.sku}${product.comingSoon ? ' · Coming soon' : ''}</div>
+          <span class="card-finish-name" aria-live="polite"></span>
+        </div>
         <h3>${product.name}</h3>
         <div class="swatches"></div>
         <div class="card-actions">
@@ -379,19 +383,33 @@
     const img = card.querySelector('img');
     const swatchRow = card.querySelector('.swatches');
 
-    product.colors.forEach((color, idx) => {
+    const finishName = card.querySelector('.card-finish-name');
+    const finishStatus = card.querySelector('.card-finish-status');
+    finishName.textContent = initialColor.name;
+
+    product.colors.forEach((color) => {
       const btn = document.createElement('button');
       btn.className = 'swatch' + (color.code === initialColor.code ? ' active' : '');
       btn.dataset.finish = color.code;
       btn.style.backgroundColor = color.hex;
       btn.title = color.comingSoon ? `${color.name} · Coming soon` : color.name;
       btn.setAttribute('aria-label', btn.title);
-      btn.addEventListener('mouseenter', () => {
+      btn.type = 'button';
+      btn.setAttribute('aria-pressed', String(color.code === initialColor.code));
+
+      const selectFinish = () => {
         img.src = color.image;
         img.alt = `${product.name} - ${color.name}`;
-        swatchRow.querySelectorAll('.swatch').forEach((s) => s.classList.remove('active'));
+        finishName.textContent = color.name;
+        finishStatus.hidden = !color.comingSoon;
+        const previous = swatchRow.querySelector('.swatch.active');
+        previous?.classList.remove('active');
+        previous?.setAttribute('aria-pressed', 'false');
         btn.classList.add('active');
-      });
+        btn.setAttribute('aria-pressed', 'true');
+      };
+      btn.addEventListener('mouseenter', selectFinish);
+      btn.addEventListener('click', selectFinish);
       swatchRow.appendChild(btn);
     });
 
