@@ -309,12 +309,28 @@ a {
   font-weight: 500;
 }
 
+.catalog-heading {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr);
+  align-items: center;
+  gap: 24px 32px;
+}
+
 .series-filters {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
-  justify-content: center;
+  justify-content: flex-end;
+}
+
+@media (max-width: 900px) {
+  .catalog-heading {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .series-filters {
+    justify-content: flex-start;
+  }
 }
 
 .upcoming-finish-pill,
