@@ -313,23 +313,18 @@ a {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(0, 1.8fr);
   align-items: center;
-  gap: 24px 32px;
+  gap: 24px 20px;
 }
 
 .series-filters {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
-  justify-content: flex-end;
 }
 
 @media (max-width: 900px) {
   .catalog-heading {
     grid-template-columns: minmax(0, 1fr);
-  }
-
-  .series-filters {
-    justify-content: flex-start;
   }
 }
 
