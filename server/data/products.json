@@ -2660,6 +2660,12 @@
         "image": "/images/products/B%20Series/B15/MG.jpg"
       },
       {
+        "code": "OM",
+        "name": "Oatmeal",
+        "hex": "#BF9F62",
+        "image": "/images/products/B%20Series/B15/OM.jpg"
+      },
+      {
         "code": "OY",
         "name": "Orange Yellow",
         "hex": "#E8A91C",
