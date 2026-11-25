@@ -120,7 +120,7 @@
     allColors.filter((color) => seriesColors.has(color.code)).forEach((color) => {
       const pill = document.createElement('button');
       pill.className = 'pill';
-      pill.innerHTML = `<span class="dot" style="background:${color.hex}"></span>${color.name}${color.comingSoon ? ' · Coming soon' : ''}`;
+      pill.innerHTML = `<span class="dot" data-finish="${color.code}" style="background-color:${color.hex}"></span>${color.name}${color.comingSoon ? ' · Coming soon' : ''}`;
       pill.addEventListener('click', () => setActiveColor(color.code, pill));
       filterRow.appendChild(pill);
     });
@@ -374,7 +374,8 @@
     product.colors.forEach((color, idx) => {
       const btn = document.createElement('button');
       btn.className = 'swatch' + (color.code === initialColor.code ? ' active' : '');
-      btn.style.background = color.hex;
+      btn.dataset.finish = color.code;
+      btn.style.backgroundColor = color.hex;
       btn.title = color.comingSoon ? `${color.name} · Coming soon` : color.name;
       btn.setAttribute('aria-label', btn.title);
       btn.addEventListener('mouseenter', () => {

@@ -88,7 +88,7 @@ function renderProductDetail(product) {
   const swatches = product.colors
     .map(
       (c) =>
-        `<button class="pd-swatch${c.code === activeColor.code ? ' active' : ''}" style="background:${escapeAttr(c.hex)}" title="${escapeAttr(c.name)}${c.comingSoon ? ' · Coming soon' : ''}" aria-label="${escapeAttr(c.name)}${c.comingSoon ? ' · Coming soon' : ''}"></button>`
+        `<button class="pd-swatch${c.code === activeColor.code ? ' active' : ''}" data-finish="${escapeAttr(c.code)}" style="background-color:${escapeAttr(c.hex)}" title="${escapeAttr(c.name)}${c.comingSoon ? ' · Coming soon' : ''}" aria-label="${escapeAttr(c.name)}${c.comingSoon ? ' · Coming soon' : ''}"></button>`
     )
     .join('');
 

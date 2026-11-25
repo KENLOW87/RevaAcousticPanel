@@ -1441,6 +1441,14 @@ section {
   color: var(--muted);
 }
 
+[data-finish="BW"] {
+  background-image: linear-gradient(135deg, #0072bc 50%, #fff 50%);
+}
+
+[data-finish="GB"] {
+  background-image: linear-gradient(118deg, #000 50%, #95d92e 50%);
+}
+
 .pd-swatch-row {
   display: flex;
   gap: 10px;

@@ -92,7 +92,8 @@
     product.colors.forEach((color) => {
       const btn = document.createElement('button');
       btn.className = 'pd-swatch' + (color.code === activeColor.code ? ' active' : '');
-      btn.style.background = color.hex;
+      btn.dataset.finish = color.code;
+      btn.style.backgroundColor = color.hex;
       btn.title = color.comingSoon ? `${color.name} · Coming soon` : color.name;
       btn.setAttribute('aria-label', btn.title);
       btn.addEventListener('click', () => {
