@@ -20,9 +20,18 @@
   let allColors = [];
   let activeColor = null;
   let activeCategory = null;
-  const seriesOrder = ['A Series', 'B Series', 'C Series', 'AMF Series', 'BMF Series'];
+  const allProductsTab = 'All Products';
+  const seriesOrder = [allProductsTab, 'A Series', 'B Series', 'C Series', 'AMF Series', 'BMF Series'];
   const requestedSeries = new URLSearchParams(location.search).get('series');
-  let activeSeries = requestedSeries ? `${requestedSeries.replace(/\s+Series$/i, '')} Series` : 'A Series';
+  let activeSeries = seriesOrder.find((series) => seriesQuery(series) === requestedSeries?.replace(/\s+Series$/i, '')) || 'A Series';
+
+  function seriesQuery(series) {
+    return series === allProductsTab ? 'All' : series.replace(' Series', '');
+  }
+
+  function productsForSeries(series) {
+    return series === allProductsTab ? allProducts : allProducts.filter((product) => product.series === series);
+  }
   let searchTerm = '';
   let lastResultCount = 0;
   let searchReportTimer = null;
@@ -46,7 +55,6 @@
       ]);
       allProducts = await productsRes.json();
       allColors = await colorsRes.json();
-      if (!seriesOrder.includes(activeSeries)) activeSeries = 'A Series';
       renderSeriesFilters();
       renderFilters();
       render();
@@ -60,7 +68,7 @@
     if (!seriesFilters) return;
     seriesFilters.innerHTML = '';
     seriesOrder.forEach((series) => {
-      const count = allProducts.filter((product) => product.series === series).length;
+      const count = productsForSeries(series).length;
       const button = document.createElement('button');
       button.className = `series-tab${series === activeSeries ? ' active' : ''}`;
       button.type = 'button';
@@ -68,7 +76,7 @@
       button.addEventListener('click', () => {
         activeSeries = series;
         const url = new URL(location.href);
-        url.searchParams.set('series', series.replace(' Series', ''));
+        url.searchParams.set('series', seriesQuery(series));
         history.replaceState(null, '', url);
         seriesFilters.querySelectorAll('.series-tab').forEach((tab) => tab.classList.remove('active'));
         button.classList.add('active');
@@ -91,8 +99,7 @@
     allPill.addEventListener('click', () => setActiveColor(null));
     filterRow.appendChild(allPill);
 
-    const seriesColors = new Set(allProducts
-      .filter((product) => product.series === activeSeries)
+    const seriesColors = new Set(productsForSeries(activeSeries)
       .flatMap((product) => product.colors.map((color) => color.code)));
     allColors.filter((color) => seriesColors.has(color.code)).forEach((color) => {
       const pill = document.createElement('button');
@@ -147,7 +154,7 @@
   }
 
   function render() {
-    const seriesProducts = allProducts.filter((p) => p.series === activeSeries);
+    const seriesProducts = productsForSeries(activeSeries);
     const baseFiltered = seriesProducts.filter((p) => matchesColor(p) && matchesSearch(p));
     const filtered = baseFiltered.filter(matchesCategory);
     lastResultCount = filtered.length;
@@ -156,7 +163,11 @@
     const hasProducts = seriesProducts.length > 0;
     const finishCount = new Set(seriesProducts.flatMap((product) => product.colors.map((color) => color.code))).size;
     if (seriesLabel) seriesLabel.textContent = activeSeries;
-    if (catalogTitle) catalogTitle.textContent = hasProducts ? `${activeSeries} PET Acoustic Wall Panel Designs` : `${activeSeries} Coming Soon`;
+    if (catalogTitle) {
+      catalogTitle.textContent = activeSeries === allProductsTab
+        ? allProductsTab
+        : `${activeSeries} ${hasProducts ? 'PET Acoustic Wall Panel Designs' : 'Coming Soon'}`;
+    }
     if (catalogDescription) {
       catalogDescription.textContent = hasProducts
         ? `Explore ${seriesProducts.length} decorative PET acoustic wall panel designs in ${finishCount} finishes for homes, offices and studios in Malaysia. Filter by finish or search a design code to find the right panel.`
