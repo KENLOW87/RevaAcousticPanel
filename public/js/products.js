@@ -1,9 +1,8 @@
-// Catalog page: fetch products, render grid, handle color filter + search,
+// Catalog page: fetch products, render grid, handle series navigation and search,
 // and let a shopper swap each card's thumbnail by hovering/clicking a swatch.
 
 (function () {
   const grid = document.getElementById('product-grid');
-  const filterRow = document.getElementById('color-filters');
   const searchInput = document.getElementById('product-search');
   const resultCount = document.getElementById('result-count');
   const emptyState = document.getElementById('empty-state');
@@ -14,14 +13,12 @@
   const categoryNav = document.getElementById('category-nav');
   const sidebar = categoryNav?.closest('aside');
   const sidebarTitle = sidebar?.querySelector('h2');
-  const toolbar = document.querySelector('.catalog-toolbar');
+  const searchControls = document.querySelector('.catalog-search');
   const catalogPager = document.getElementById('catalog-pager');
 
   if (!grid) return;
 
   let allProducts = [];
-  let allColors = [];
-  let activeColor = null;
   let activeCategory = null;
   const allProductsTab = 'All Products';
   const dualLayerTab = 'Dual Layer Series';
@@ -59,14 +56,10 @@
 
   async function init() {
     try {
-      const [productsRes, colorsRes] = await Promise.all([
-        fetch('/api/products'),
-        fetch('/api/products/colors'),
-      ]);
-      allProducts = await productsRes.json();
-      allColors = await colorsRes.json();
+      const response = await fetch('/api/products');
+      if (!response.ok) throw new Error('Could not load the catalog');
+      allProducts = await response.json();
       renderSeriesFilters();
-      renderFilters();
       render();
     } catch (err) {
       grid.innerHTML = '<p class="loading-row">Could not load the catalog. Please refresh.</p>';
@@ -92,68 +85,22 @@
         history.replaceState(null, '', url);
         seriesFilters.querySelectorAll('.series-tab').forEach((tab) => tab.classList.remove('active'));
         button.classList.add('active');
-        activeColor = null;
         activeCategory = null;
         if (series === allProductsTab) {
           searchTerm = '';
           if (searchInput) searchInput.value = '';
         }
         currentPage = 1;
-        renderFilters();
         render();
       });
       seriesFilters.appendChild(button);
     });
   }
 
-  function renderFilters() {
-    if (!filterRow) return;
-    filterRow.innerHTML = '';
-    const allPill = document.createElement('button');
-    allPill.className = 'pill active';
-    allPill.textContent = 'All finishes';
-    allPill.addEventListener('click', () => setActiveColor(null));
-    filterRow.appendChild(allPill);
-
-    const seriesColors = new Set(productsForSeries(activeSeries)
-      .flatMap((product) => product.colors.map((color) => color.code)));
-    const visibleColors = allColors.filter((color) => seriesColors.has(color.code));
-    visibleColors.sort((a, b) => Number(Boolean(a.comingSoon)) - Number(Boolean(b.comingSoon)));
-    visibleColors.forEach((color) => {
-      const pill = document.createElement('button');
-      pill.className = 'pill';
-      pill.innerHTML = `<span class="dot" data-finish="${color.code}" style="background-color:${color.hex}"></span>${color.name}${color.comingSoon ? ' · Coming soon' : ''}`;
-      pill.addEventListener('click', () => setActiveColor(color.code, pill));
-      filterRow.appendChild(pill);
-    });
-
-    const upcoming = document.createElement('span');
-    upcoming.className = 'upcoming-finish-pill';
-    upcoming.textContent = 'More colours coming soon';
-    filterRow.appendChild(upcoming);
-  }
-
-  function setActiveColor(code, pillEl) {
-    activeColor = code;
-    currentPage = 1;
-    filterRow.querySelectorAll('.pill').forEach((p) => p.classList.remove('active'));
-    if (pillEl) {
-      pillEl.classList.add('active');
-    } else {
-      filterRow.querySelector('.pill').classList.add('active');
-    }
-    render();
-  }
-
   function matchesSearch(product) {
     if (!searchTerm) return true;
     const haystack = `${product.id} ${product.sku} ${product.name}`.toLowerCase();
     return haystack.includes(searchTerm);
-  }
-
-  function matchesColor(product) {
-    if (!activeColor) return true;
-    return product.colors.some((c) => c.code === activeColor);
   }
 
   function browseCategory(product) {
@@ -219,7 +166,7 @@
   function render() {
     const isOverview = activeSeries === allProductsTab;
     const isDualLayer = activeSeries === dualLayerTab;
-    if (toolbar) toolbar.style.display = isOverview ? 'none' : '';
+    if (searchControls) searchControls.hidden = isOverview;
     if (sidebar) {
       sidebar.style.display = '';
       sidebar.setAttribute('aria-label', isOverview || isDualLayer ? 'Product series' : 'Product categories');
@@ -227,7 +174,7 @@
     if (sidebarTitle) sidebarTitle.textContent = isOverview || isDualLayer ? 'Series' : 'Category';
 
     const seriesProducts = productsForSeries(activeSeries);
-    const baseFiltered = seriesProducts.filter((p) => matchesColor(p) && matchesSearch(p));
+    const baseFiltered = seriesProducts.filter(matchesSearch);
     const filtered = baseFiltered.filter(matchesCategory);
     lastResultCount = filtered.length;
 
@@ -246,7 +193,7 @@
     }
     if (catalogDescription) {
       catalogDescription.textContent = hasProducts
-        ? `Explore ${seriesProducts.length} decorative PET acoustic wall panel designs in ${finishCount} finishes for homes, offices and studios in Malaysia. Filter by finish or search a design code to find the right panel.`
+        ? `Explore ${seriesProducts.length} decorative PET acoustic wall panel designs in ${finishCount} finishes for homes, offices and studios in Malaysia. Search by design code to find the right panel.`
         : `We are preparing the ${seriesName} product collection. Check back soon for the latest REVA Acoustic designs.`;
     }
 
@@ -298,7 +245,7 @@
       }
       if (emptyState) emptyState.style.display = 'block';
       if (emptyState) emptyState.innerHTML = hasProducts
-        ? '<p>No designs match your filters. Try clearing the search or finish filter.</p>'
+        ? '<p>No designs match your filters. Try clearing the search or choosing another category.</p>'
         : '<div class="coming-soon-panel"><span class="eyebrow">REVA Acoustic</span><h2>Coming soon</h2><p>This series is being prepared and will be available here once the products are uploaded.</p></div>';
       return;
     }
@@ -354,10 +301,7 @@
     const card = document.createElement('div');
     card.className = 'product-card';
 
-    const displayColors = activeColor
-      ? product.colors.filter((c) => c.code === activeColor)
-      : product.colors;
-    const initialColor = displayColors[0] || product.colors[0];
+    const initialColor = product.colors[0];
 
     card.innerHTML = `
       <a class="thumb" href="/product.html?id=${product.id}">
