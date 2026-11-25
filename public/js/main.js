@@ -69,7 +69,12 @@ window.applyProductWhatsappLinks = applyProductWhatsappLinks;
 // Build the Products mega-menu from the catalog so new series appear there
 // automatically. Empty planned series stay visible as Coming Soon.
 (function () {
-  const seriesOrder = ['A Series', 'B Series', 'C Series', 'AMF Series', 'BMF Series'];
+  const seriesGroups = [
+    ['A Series', ['A Series']],
+    ['B Series', ['B Series']],
+    ['C Series', ['C Series']],
+    ['Dual Layer Series', ['AMF Series', 'BMF Series']],
+  ];
   const categoryOrder = [
     'Geometric / Facet',
     'Linear / Ribbed',
@@ -91,10 +96,10 @@ window.applyProductWhatsappLinks = applyProductWhatsappLinks;
       const response = await fetch('/api/products');
       if (!response.ok) throw new Error('products fetch failed');
       const products = await response.json();
-      const groups = new Map(seriesOrder.map((series) => [series, products.filter((product) => product.series === series)]));
+      const groups = seriesGroups.map(([label, series]) => [label, products.filter((product) => series.includes(product.series))]);
 
       menus.forEach((menu) => {
-        menu.querySelector('.nav-product-list').innerHTML = [...groups.entries()].map(([series, items]) => {
+        menu.querySelector('.nav-product-list').innerHTML = groups.map(([series, items]) => {
           if (!items.length) {
             return `<div class="nav-series-menu-block is-coming-soon"><div class="nav-series-menu-heading"><span>${escapeHtml(series)}</span><span class="nav-series-badge">Coming soon</span></div><p>Products will be available soon.</p></div>`;
           }

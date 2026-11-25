@@ -24,16 +24,23 @@
   let activeColor = null;
   let activeCategory = null;
   const allProductsTab = 'All Products';
-  const seriesOrder = [allProductsTab, 'A Series', 'B Series', 'C Series', 'AMF Series', 'BMF Series'];
-  const requestedSeries = new URLSearchParams(location.search).get('series');
-  let activeSeries = seriesOrder.find((series) => seriesQuery(series) === requestedSeries?.replace(/\s+Series$/i, '')) || allProductsTab;
+  const dualLayerTab = 'Dual Layer Series';
+  const dualLayerSeries = ['AMF Series', 'BMF Series'];
+  const seriesOrder = [allProductsTab, 'A Series', 'B Series', 'C Series', dualLayerTab];
+  const requestedSeries = new URLSearchParams(location.search).get('series')?.replace(/\s+Series$/i, '');
+  const requestedTab = ['AMF', 'BMF', 'Dual Layer'].includes(requestedSeries) ? 'Dual-Layer' : requestedSeries;
+  let activeSeries = seriesOrder.find((series) => seriesQuery(series) === requestedTab) || allProductsTab;
 
   function seriesQuery(series) {
-    return series === allProductsTab ? 'All' : series.replace(' Series', '');
+    if (series === allProductsTab) return 'All';
+    if (series === dualLayerTab) return 'Dual-Layer';
+    return series.replace(' Series', '');
   }
 
   function productsForSeries(series) {
-    return series === allProductsTab ? allProducts : allProducts.filter((product) => product.series === series);
+    if (series === allProductsTab) return allProducts;
+    const includedSeries = series === dualLayerTab ? dualLayerSeries : [series];
+    return allProducts.filter((product) => includedSeries.includes(product.series));
   }
   let searchTerm = '';
   let lastResultCount = 0;
