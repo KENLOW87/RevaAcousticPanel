@@ -12,6 +12,9 @@
   const catalogTitle = document.getElementById('catalog-title');
   const catalogDescription = document.getElementById('catalog-description');
   const categoryNav = document.getElementById('category-nav');
+  const sidebar = categoryNav?.closest('aside');
+  const sidebarTitle = sidebar?.querySelector('h2');
+  const toolbar = document.querySelector('.catalog-toolbar');
   const catalogPager = document.getElementById('catalog-pager');
 
   if (!grid) return;
@@ -84,6 +87,10 @@
         button.classList.add('active');
         activeColor = null;
         activeCategory = null;
+        if (series === allProductsTab) {
+          searchTerm = '';
+          if (searchInput) searchInput.value = '';
+        }
         currentPage = 1;
         renderFilters();
         render();
@@ -155,7 +162,53 @@
     return numberA - numberB || codeA.localeCompare(codeB);
   }
 
+  function renderSeriesOverview() {
+    if (catalogDescription) catalogDescription.textContent = 'Choose a series to explore its acoustic PET wall panel designs.';
+    if (emptyState) emptyState.style.display = 'none';
+    renderPager(1);
+
+    const seriesList = seriesOrder.filter((series) => series !== allProductsTab).map((series) => {
+      const products = productsForSeries(series);
+      const href = `?series=${encodeURIComponent(seriesQuery(series))}`;
+      const status = !products.length || products.some((product) => product.comingSoon)
+        ? 'Coming soon'
+        : `${products.length} designs`;
+      return { series, href, status, image: products[0]?.defaultImage };
+    });
+
+    if (categoryNav) {
+      categoryNav.innerHTML = seriesList.map(({series, href, status}) =>
+        `<a href="${href}"><span>${series}</span><small>${status}</small></a>`
+      ).join('');
+    }
+
+    grid.innerHTML = `
+      <section class="product-category catalog-page">
+        <div class="product-category-head"><h2>Browse by series</h2></div>
+        <div class="product-grid category-grid">
+          ${seriesList.map(({series, href, status, image}) => `
+            <article class="product-card">
+              ${image ? `<a class="thumb" href="${href}" aria-label="Browse ${series}"><img src="${image}" alt="" loading="lazy" /></a>` : ''}
+              <div class="body">
+                <div class="sku">${status}</div>
+                <h3><a href="${href}">${series}</a></h3>
+              </div>
+            </article>
+          `).join('')}
+        </div>
+      </section>
+    `;
+  }
+
   function render() {
+    const isOverview = activeSeries === allProductsTab;
+    if (toolbar) toolbar.style.display = isOverview ? 'none' : '';
+    if (sidebar) {
+      sidebar.style.display = '';
+      sidebar.setAttribute('aria-label', isOverview ? 'Product series' : 'Product categories');
+    }
+    if (sidebarTitle) sidebarTitle.textContent = isOverview ? 'Series' : 'Category';
+
     const seriesProducts = productsForSeries(activeSeries);
     const baseFiltered = seriesProducts.filter((p) => matchesColor(p) && matchesSearch(p));
     const filtered = baseFiltered.filter(matchesCategory);
@@ -170,6 +223,10 @@
         ? allProductsTab
         : `${activeSeries} ${hasProducts ? 'PET Acoustic Wall Panel Designs' : 'Coming Soon'}`;
     }
+    if (isOverview) {
+      renderSeriesOverview();
+      return;
+    }
     if (catalogDescription) {
       catalogDescription.textContent = hasProducts
         ? `Explore ${seriesProducts.length} decorative PET acoustic wall panel designs in ${finishCount} finishes for homes, offices and studios in Malaysia. Filter by finish or search a design code to find the right panel.`
@@ -183,6 +240,7 @@
     grid.innerHTML = '';
 
     if (filtered.length === 0) {
+      if (sidebar) sidebar.style.display = 'none';
       if (catalogPager) {
         catalogPager.innerHTML = '';
         catalogPager.hidden = true;
