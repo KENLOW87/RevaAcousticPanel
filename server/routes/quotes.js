@@ -1,5 +1,6 @@
 const express = require('express');
 const { loadQuotes, saveQuotes } = require('../quotesStore');
+const { forwardQuoteToBubble } = require('../bubbleLead');
 
 const router = express.Router();
 
@@ -17,7 +18,10 @@ router.post('/', (req, res) => {
   if (!isNonEmptyString(email, 180) || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
     return res.status(400).json({ error: 'Please provide a valid email address.' });
   }
-  if (phone !== undefined && phone !== null && phone !== '' && !isNonEmptyString(String(phone), 40)) {
+  // Phone is required since 2026-11: the Bubble CRM identifies a customer by phone number and
+  // the salesman follows up over WhatsApp, so an enquiry without one cannot be actioned.
+  // Needs at least 7 digits to survive bubble-lead's own canonicalisation.
+  if (!isNonEmptyString(String(phone ?? ''), 40) || String(phone).replace(/\D/g, '').length < 7) {
     return res.status(400).json({ error: 'Please provide a valid phone number.' });
   }
   if (message !== undefined && message !== null && String(message).length > 2000) {
@@ -40,7 +44,11 @@ router.post('/', (req, res) => {
   quotes.push(quote);
   saveQuotes(quotes);
 
+  // Answer the visitor first — our own store is the record of truth, and the CRM forward must
+  // never hold up the form or fail it. forwardQuoteToBubble swallows its own errors.
   res.status(201).json({ success: true, id: quote.id });
+
+  forwardQuoteToBubble(quote);
 });
 
 module.exports = router;
